@@ -1,0 +1,1298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>【AutoCAD】AutoCAD使用、学习记录</title>
+    <url>/2021/07/11/%E3%80%90AutoCAD%E3%80%91AutoCAD%E4%BD%BF%E7%94%A8tips/</url>
+    <content><![CDATA[<h1 id="AutoCAD使用tips"><a href="#AutoCAD使用tips" class="headerlink" title="AutoCAD使用tips"></a>AutoCAD使用tips</h1><p>完成机械设计课程设计（内容为双级斜齿圆柱齿轮减速箱），记录对该软件的学习心得。</p>
+<h2 id="一、图层设置"><a href="#一、图层设置" class="headerlink" title="一、图层设置"></a>一、图层设置</h2><p>首先设置不同图层的颜色、线宽（粗线用0.5mm线宽，细线用0.25mm）、线形（虚线、点画线、实线）</p>
+<table>
+<thead>
+<tr>
+<th>线形</th>
+<th>标号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>点画线</td>
+<td>ACAD_ISO04W100</td>
+</tr>
+<tr>
+<td>虚线</td>
+<td>ACAD_ISO02W100</td>
+</tr>
+<tr>
+<td>双点画线</td>
+<td>ACAD_ISO05W100</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<h2 id="二、标注设置"><a href="#二、标注设置" class="headerlink" title="二、标注设置"></a>二、标注设置</h2><p>快捷键D+SPACE修改设置，根据不同要求修改，注意<strong>置为当前</strong>生效。</p>
+<p>注意：缩放后标注时，尺寸需要乘以比例系数（在标注设置中修改）</p>
+<h2 id="三、各种功能"><a href="#三、各种功能" class="headerlink" title="三、各种功能"></a>三、各种功能</h2><h3 id="3-1-直线，多线段，圆，圆弧，矩形，椭圆"><a href="#3-1-直线，多线段，圆，圆弧，矩形，椭圆" class="headerlink" title="3.1 直线，多线段，圆，圆弧，矩形，椭圆"></a>3.1 直线，多线段，圆，圆弧，矩形，椭圆</h3><h3 id="3-2-图案填充"><a href="#3-2-图案填充" class="headerlink" title="3.2 图案填充"></a>3.2 图案填充</h3><h3 id="3-3-移动、拉伸、缩放"><a href="#3-3-移动、拉伸、缩放" class="headerlink" title="3.3 移动、拉伸、缩放"></a>3.3 移动、拉伸、缩放</h3><h3 id="3-4-旋转、镜像"><a href="#3-4-旋转、镜像" class="headerlink" title="3.4 旋转、镜像"></a>3.4 旋转、镜像</h3><h3 id="3-5-修剪"><a href="#3-5-修剪" class="headerlink" title="3.5 修剪"></a>3.5 修剪</h3><h3 id="3-6-圆角"><a href="#3-6-圆角" class="headerlink" title="3.6 圆角"></a>3.6 圆角</h3><h3 id="3-7-阵列"><a href="#3-7-阵列" class="headerlink" title="3.7 阵列"></a>3.7 阵列</h3><p>圆周阵列和行列阵列</p>
+<h3 id="3-8-文字、标注"><a href="#3-8-文字、标注" class="headerlink" title="3.8 文字、标注"></a>3.8 文字、标注</h3><h2 id="四、快捷键"><a href="#四、快捷键" class="headerlink" title="四、快捷键"></a>四、快捷键</h2><p>输入快捷键，<strong>回车或空格</strong>确认。</p>
+<p>这里列举一些常用的：</p>
+<table>
+<thead>
+<tr>
+<th align="center">功能</th>
+<th align="center">快捷键(大小写均可)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">直线</td>
+<td align="center">L</td>
+</tr>
+<tr>
+<td align="center">圆</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">剪裁</td>
+<td align="center">TR</td>
+</tr>
+<tr>
+<td align="center">填充</td>
+<td align="center">H</td>
+</tr>
+<tr>
+<td align="center">标注设置</td>
+<td align="center">D</td>
+</tr>
+<tr>
+<td align="center">移动</td>
+<td align="center">M</td>
+</tr>
+<tr>
+<td align="center">圆角</td>
+<td align="center">F</td>
+</tr>
+<tr>
+<td align="center">多线段</td>
+<td align="center">SPLINE</td>
+</tr>
+<tr>
+<td align="center">修改坐标原点</td>
+<td align="center">UCS</td>
+</tr>
+<tr>
+<td align="center">添加引线</td>
+<td align="center">MLD</td>
+</tr>
+<tr>
+<td align="center">直线标注</td>
+<td align="center">DLI</td>
+</tr>
+<tr>
+<td align="center">直径标注</td>
+<td align="center">DDI</td>
+</tr>
+<tr>
+<td align="center">角度标注</td>
+<td align="center">DAN</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>AutoCAD</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【AD】Altium designer2020大学阶段快速入门（一）</title>
+    <url>/2021/06/22/%E3%80%90AD%E3%80%91Altium%20designer2020%E5%A4%A7%E5%AD%A6%E9%98%B6%E6%AE%B5%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20201117122521448.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center"></p>
+<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>第一次写blog，既是对自己过去学习的总结，也是学习经验的分享，希望能帮助到大家。<br>这一篇主要讲解ad20的基本参数设置。<br>下一篇会分享一些自己掌握的ad使用技巧。</p>
+<h1 id="二、Altium-designer-2020下载和安装"><a href="#二、Altium-designer-2020下载和安装" class="headerlink" title="二、Altium designer 2020下载和安装"></a>二、Altium designer 2020下载和安装</h1><p>altium designer在大学里电子专业算是比较常用的软件，主要用来设计电路板，感觉对新手还是很友好的。<br>下载和安装教程都能在网上找到，而且资源很多，这里就不进行讲解了。实在找不到资源或者安装有问题，可以私信问我要。</p>
+<span id="more"></span>
+
+<h1 id="三、软件参数设置"><a href="#三、软件参数设置" class="headerlink" title="三、软件参数设置"></a>三、软件参数设置</h1><h2 id="参数设置（preferences）–System"><a href="#参数设置（preferences）–System" class="headerlink" title="参数设置（preferences）–System"></a>参数设置（preferences）–System</h2><p><strong>在新建工程之前</strong>，先对preferences（优选项）进行设置。<br>我的界面是已经汉化过的。<br>汉化方式如下：<br><img src="https://img-blog.csdnimg.cn/20201103202238326.png"><br>点击红色方框圈住的 Setup system preferences<br><img src="https://img-blog.csdnimg.cn/20201103202827548.png"><br>选择System→General<br>勾选 Use localized resources<br><img src="https://img-blog.csdnimg.cn/202011032029337.png#pic_center" alt="在这里插入图片描述"></p>
+<p>选中Display localized dialogs 和 Localized menus，之后重启软件即可。<br>另外，<strong>禁用网络连接</strong>可以大大<strong>提高启动速度</strong>。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201106194428594.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201106214616752.png" alt="在这里插入图片描述"><br>在账号管理这里选择No</p>
+<p><img src="https://img-blog.csdnimg.cn/20201106215548325.png" alt="在这里插入图片描述"><br>自动检查频率选择Never</p>
+<h2 id="参数设置（preferences）–Schematic"><a href="#参数设置（preferences）–Schematic" class="headerlink" title="参数设置（preferences）–Schematic"></a>参数设置（preferences）–Schematic</h2><p><img src="https://img-blog.csdnimg.cn/20201106214853857.png" alt="在这里插入图片描述"><br>原理图的可以是mil（密耳），是千分之一英尺，与mm（毫米）的换算公式为：<br>1mil = 0.0254mm.<br>在原理图中这个不太重要，原理图主要表示电路连接关系。<br>图纸尺寸默认选择可以自己设置大小，根据自己的原理图内容多少来确定。</p>
+<h2 id="参数设置（preferences）–PCB"><a href="#参数设置（preferences）–PCB" class="headerlink" title="参数设置（preferences）–PCB"></a>参数设置（preferences）–PCB</h2><p>还有就是PCB Editor地方需要更改：<br><img src="https://img-blog.csdnimg.cn/20201106194504358.png" alt="在这里插入图片描述"></p>
+<p>旋转步进的角度设置，有时候绘制PCB时需要倾斜一定角度摆放元件，比如一些多引脚的IC需要引出I/O时，可能会需要用到这个功能。调整该旋转步进角度后，保持拖动元件，按<strong>Space</strong>键就会按照设定的角度旋转。</p>
+<p><strong>其他默认即可。</strong></p>
+<p>还有一个很便利的功能，当你更换电脑之后重新安装altium designer，这个时候重新配置自己习惯的优选项设置（preferences）显得有些麻烦，ad提供了导出DXP优选项参数文件（*.DXPPrf）<br>导出并保存，在新的电脑中加载该文件即可方便的配置自己的设置。<br><img src="https://img-blog.csdnimg.cn/20201106195231467.png" alt="在这里插入图片描述"></p>
+<h1 id="四、新建工程"><a href="#四、新建工程" class="headerlink" title="四、新建工程"></a>四、新建工程</h1><p>画图之前第一件事就是<strong>新建工程</strong>！很多初学者上来就直接新建原理图（schematic)和PCB，忽略了工程（project），后续会导致画完原理图无法导入网络表。 </p>
+<p>步骤是先新建工程，在这个工程下新建原理图和PCB并都要<strong>保存路径！</strong><br>紧接着是安装库文件。<br>新建工程后，点击右下方Panels→Components<img src="https://img-blog.csdnimg.cn/20201106204759910.png#pic_center" alt="在这里插入图片描述"><br>选择File-based labraries preferences<img src="https://img-blog.csdnimg.cn/20201106204950841.png#pic_center" alt="在这里插入图片描述"><br>点击安装</p>
+<p><img src="https://img-blog.csdnimg.cn/20201106204944174.png#pic_center" alt="在这里插入图片描述"><br>安装这两个官方给的封装库和原理图库。第一个是连接件的库，第二个是其他元件的库。<br>在后续绘制原理图时，就可以直接从库里调用元件使用。</p>
+<p>如果有完整的封装库，绘制起来会非常快速，直接使用库里的元件，自己不需要重新根据技术手册画封装，把时间都花在电路设计，PCB布局布线，可以大大减少开发时间。</p>
+<p>AD完整的封装库可以去JLC、CSDN等自己查找。</p>
+<h2 id="PCB规则设置"><a href="#PCB规则设置" class="headerlink" title="PCB规则设置"></a>PCB规则设置</h2><p>新建工程后，在工程下新建原理图，保存。<br>原理图的菜单栏和PCB的菜单栏是不一样的。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201107095830315.png#pic_center" alt="在这里插入图片描述"><br>点击原理图界面菜单栏中的工具，点击原理图优选项设计，与之前在Preferences中的设置是一样的，不用修改。</p>
+<p>接着在同个工程下新建PCB，保存。<br><img src="https://img-blog.csdnimg.cn/20201107100117391.png#pic_center" alt="在这里插入图片描述"><br>菜单栏是不一样的，点击设计→规则，进行PCB规则及约束编辑器</p>
+<p>学生阶段做电路设计、PCB layout，一般都会去JLC进行打样，在PCB规则设置中要参考JLC的工艺要求。如果是去其他公司进行打样的，一定要先查清楚工艺要求，再进行设计！下文的规则设置是根据JLC的工艺要求。</p>
+<p>对于<strong>线隙</strong>（clearance）:<br><img src="https://img-blog.csdnimg.cn/20201107101415586.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201107101543179.png#pic_center" alt="在这里插入图片描述"><br>这是线隙的工艺需求，最小3.5mil，这里我选择留一定的余量，保证能够满足要求。<br>最小间距（clearance）设置为<strong>15mil</strong>，一定要选择忽略同一封装内的焊盘间距，因为一些多引脚的IC比如LQFP64，焊盘间距是小于15mil的，不勾选的话，一导入元件，这个元件的焊盘都会<strong>变绿</strong>（表示超过了clearance设定）<br>其余的间距都选择为15mil即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201107102049558.png" alt="在这里插入图片描述"><br>一定不能允许短路！（线路交叉）</p>
+<p>对于<strong>线宽</strong>（width）：<br><img src="https://img-blog.csdnimg.cn/20201107102219629.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201107102312887.png#pic_center" alt="在这里插入图片描述"><br>加工最小线宽为3.5Mil<br>一般来说，信号线走<strong>10mil</strong>即可，走大电流的线要加粗（<strong>40mil</strong>甚至以上）。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201107102558511.png" alt="在这里插入图片描述"><br>允许布线层，画双面板的话勾选这两个 Top Layer（顶层） 和Bottom Layer（底层）</p>
+<p>对于<strong>过孔</strong>（vias）：<br><img src="https://img-blog.csdnimg.cn/20201107102735161.png" alt="在这里插入图片描述"><br>工艺要求：最小孔径为0.2mm,最大孔径为6.3mm<br>我的设置如下：<br><img src="https://img-blog.csdnimg.cn/20201107102852319.png" alt="在这里插入图片描述"><br>铺铜（Polygon）：<br>在PCB绘制中，铺铜，给铜赋予GND网络，可以减小地线阻抗，降低干扰。铺铜也是一门艺术，有很多的技术细节，数字地模拟地要分开铺之类的。</p>
+<p>PlaneConnect和PolygonConnect都各有三个选项：Relief Connect（十字连接） 、Direct Connect（直接连接）、No Connect（不连接）.<br>这里我选择的都是Direct Connect保证连接的稳定性。<br>对于PlaneClearance，我设置的是20mil.太小可能会导致不同网络间的短路。</p>
+<p>另外，新建工程的时候PCB的规则设置是不会跟随过去的，只有系统的Preferences（优选项设置）才是相同的。我平时的习惯是建立好一个工程模板，包括原理图和PCB。在完成新项目的时候直接复制这个工程在这基础上进行修改。</p>
+<h1 id="五、-最后"><a href="#五、-最后" class="headerlink" title="五、 最后"></a>五、 最后</h1><p>第一篇博客，表达方式和叙述结构都有待提高，谢谢各位读者能够看到这里！<br>我作为大学本科在读，写的东西可能偏简单，偏向给学生看的，写的不好还请见谅。</p>
+<p>关于altium designer2020规则设置就讲到这儿，本系列下一篇就会开始讲解原理图和PCB设计的流程，和一些技巧的分享。</p>
+<p>如果觉得这篇文章对你们有帮助就点个赞吧，博主也还在学习当中，如果对内容有疑问或者不清楚的地方或者觉得哪里写的有问题，都可以私信或者评论区交流~</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2020/11/07</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>AltiumDesigner</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【C++】复习</title>
+    <url>/2021/07/28/%E3%80%90C++%E3%80%91%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="C-学习"><a href="#C-学习" class="headerlink" title="C++ 学习"></a>C++ 学习</h1><p>记录复习一下C++的类和一些其他知识。<strong>来源</strong>：</p>
+<p><a href="https://www.runoob.com/">菜鸟教程</a></p>
+<span id="more"></span>
+
+<h2 id="类-amp-对象"><a href="#类-amp-对象" class="headerlink" title="类&amp;对象"></a>类&amp;对象</h2><h3 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class name</span><br><span class="line">&#123;</span><br><span class="line">	Access specifiers:</span><br><span class="line">		Data members/variables;</span><br><span class="line">		Member functions();		</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class name name1;</span><br><span class="line">class name name2;</span><br></pre></td></tr></table></figure>
+
+<h3 id="访问数据成员："><a href="#访问数据成员：" class="headerlink" title="访问数据成员："></a>访问数据成员：</h3><table>
+<thead>
+<tr>
+<th>访问修饰符</th>
+<th>访问方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>.</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>使用类成员函数或.</td>
+</tr>
+<tr>
+<td>private</td>
+<td>使用类成员函数</td>
+</tr>
+</tbody></table>
+<h3 id="类成员函数"><a href="#类成员函数" class="headerlink" title="类成员函数"></a>类成员函数</h3><p>定义和原型在类内部，类成员函数是类的一个成员，可以操作类的任意对象，访问对象中所有成员。</p>
+<p>成员函数可以写在类定义内部，也可以在类外部定义（使用**范围解析运算符::**）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">double Box::getvolume(void)</span><br><span class="line">&#123;</span><br><span class="line">	return length*breadth*height;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用成员函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class name.function();</span><br></pre></td></tr></table></figure>
+
+<h3 id="类访问修饰符"><a href="#类访问修饰符" class="headerlink" title="类访问修饰符"></a>类访问修饰符</h3><table>
+<thead>
+<tr>
+<th>public</th>
+<th>在类的外部可以被访问</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private(默认)</td>
+<td>类的外部不可访问，只有类和友元函数可访问，不能被派生类访问</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>与private类似，但可以被派生类访问</td>
+</tr>
+</tbody></table>
+<h3 id="构造函数与析构函数"><a href="#构造函数与析构函数" class="headerlink" title="构造函数与析构函数"></a>构造函数与析构函数</h3><ul>
+<li><p>构造函数：创建类的新对象时执行。可以用来初始化对象</p>
+</li>
+<li><p>析构函数：删除所创建的对象时执行。</p>
+</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><table>
+<thead>
+<tr>
+<th align="left">访问</th>
+<th align="left">public</th>
+<th align="left">protected</th>
+<th align="left">private</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">同一个类</td>
+<td align="left">yes</td>
+<td align="left">yes</td>
+<td align="left">yes</td>
+</tr>
+<tr>
+<td align="left">派生类</td>
+<td align="left">yes</td>
+<td align="left">yes</td>
+<td align="left">no</td>
+</tr>
+<tr>
+<td align="left">外部的类</td>
+<td align="left">yes</td>
+<td align="left">no</td>
+<td align="left">no</td>
+</tr>
+</tbody></table>
+<p>假设有一个基类 <strong>Shape</strong>，<strong>Rectangle</strong> 是它的派生类，如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"> </span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">// 基类</span><br><span class="line">class Shape </span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      void setWidth(int w)</span><br><span class="line">      &#123;</span><br><span class="line">         width = w;</span><br><span class="line">      &#125;</span><br><span class="line">      void setHeight(int h)</span><br><span class="line">      &#123;</span><br><span class="line">         height = h;</span><br><span class="line">      &#125;</span><br><span class="line">   protected:</span><br><span class="line">      int width;</span><br><span class="line">      int height;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">// 派生类</span><br><span class="line">class Rectangle: public Shape</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      int getArea()</span><br><span class="line">      &#123; </span><br><span class="line">         return (width * height); </span><br><span class="line">      &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">   Rectangle Rect;</span><br><span class="line"> </span><br><span class="line">   Rect.setWidth(5);</span><br><span class="line">   Rect.setHeight(7);</span><br><span class="line"> </span><br><span class="line">   // 输出对象的面积</span><br><span class="line">   cout &lt;&lt; &quot;Total area: &quot; &lt;&lt; Rect.getArea() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="重载运算符和重载函数"><a href="#重载运算符和重载函数" class="headerlink" title="重载运算符和重载函数"></a>重载运算符和重载函数</h2><p>C++ 允许在同一作用域中的某个<strong>函数</strong>和<strong>运算符</strong>指定多个定义，分别称为<strong>函数重载</strong>和<strong>运算符重载</strong>。</p>
+<p>重载声明是指一个与之前已经在该作用域内声明过的函数或方法具有相同名称的声明，但是它们的参数列表和定义（实现）不相同。</p>
+<h2 id="数据抽象与数据封装"><a href="#数据抽象与数据封装" class="headerlink" title="数据抽象与数据封装"></a>数据抽象与数据封装</h2><p>数据抽象是指，只向外界提供关键信息，并隐藏其后台的实现细节，即只表现必要的信息而不呈现细节。</p>
+<p>例如cout，不需要理解 <strong>cout</strong> 是如何在用户的屏幕上显示文本。只需要知道公共接口即可，cout 的底层实现可以自由改变。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">class Adder&#123;</span><br><span class="line">   public:</span><br><span class="line">      // 构造函数</span><br><span class="line">      Adder(int i = 0)</span><br><span class="line">      &#123;</span><br><span class="line">        total = i;</span><br><span class="line">      &#125;</span><br><span class="line">      // 对外的接口</span><br><span class="line">      void addNum(int number)</span><br><span class="line">      &#123;</span><br><span class="line">          total += number;</span><br><span class="line">      &#125;</span><br><span class="line">      // 对外的接口</span><br><span class="line">      int getTotal()</span><br><span class="line">      &#123;</span><br><span class="line">          return total;</span><br><span class="line">      &#125;;</span><br><span class="line">   private:</span><br><span class="line">      // 对外隐藏的数据</span><br><span class="line">      int total;</span><br><span class="line">&#125;;</span><br><span class="line">int main( )</span><br><span class="line">&#123;</span><br><span class="line">   Adder a;</span><br><span class="line">   </span><br><span class="line">   a.addNum(10);</span><br><span class="line">   a.addNum(20);</span><br><span class="line">   a.addNum(30);</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Total &quot; &lt;&lt; a.getTotal() &lt;&lt;endl;</span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口（抽象类）"><a href="#接口（抽象类）" class="headerlink" title="接口（抽象类）"></a>接口（抽象类）</h2><ul>
+<li>如果类中至少有一个函数被声明为纯虚函数，则这个类就是抽象类。</li>
+<li>纯虚函数是通过在声明中使用 “= 0” 来指定的。</li>
+<li>抽象类不能被用于实例化对象，它只能作为<strong>接口</strong>使用。</li>
+<li>设计<strong>抽象类</strong>（通常称为 ABC）的目的，是为了给其他类提供一个可以继承的适当的基类。</li>
+<li>如果没有在派生类中重写纯虚函数，就尝试实例化该类的对象，会导致编译错误。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"> </span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">// 基类</span><br><span class="line">class Shape </span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">   // 提供接口框架的纯虚函数</span><br><span class="line">   virtual int getArea() = 0;</span><br><span class="line">   void setWidth(int w)</span><br><span class="line">   &#123;</span><br><span class="line">      width = w;</span><br><span class="line">   &#125;</span><br><span class="line">   void setHeight(int h)</span><br><span class="line">   &#123;</span><br><span class="line">      height = h;</span><br><span class="line">   &#125;</span><br><span class="line">protected:</span><br><span class="line">   int width;</span><br><span class="line">   int height;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">// 派生类</span><br><span class="line">class Rectangle: public Shape</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">   int getArea()</span><br><span class="line">   &#123; </span><br><span class="line">      return (width * height); </span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br><span class="line">class Triangle: public Shape</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">   int getArea()</span><br><span class="line">   &#123; </span><br><span class="line">      return (width * height)/2; </span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">   Rectangle Rect;</span><br><span class="line">   Triangle  Tri;</span><br><span class="line"> </span><br><span class="line">   Rect.setWidth(5);</span><br><span class="line">   Rect.setHeight(7);</span><br><span class="line">   // 输出对象的面积</span><br><span class="line">   cout &lt;&lt; &quot;Total Rectangle area: &quot; &lt;&lt; Rect.getArea() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   Tri.setWidth(5);</span><br><span class="line">   Tri.setHeight(7);</span><br><span class="line">   // 输出对象的面积</span><br><span class="line">   cout &lt;&lt; &quot;Total Triangle area: &quot; &lt;&lt; Tri.getArea() &lt;&lt; endl; </span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result:</span><br><span class="line">Total Rectangle area: 35</span><br><span class="line">Total Triangle area: 17</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件和流"><a href="#文件和流" class="headerlink" title="文件和流"></a>文件和流</h2><table>
+<thead>
+<tr>
+<th align="left">数据类型</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ofstream</td>
+<td align="left">该数据类型表示输出文件流，用于创建文件并向文件写入信息。</td>
+</tr>
+<tr>
+<td align="left">ifstream</td>
+<td align="left">该数据类型表示输入文件流，用于从文件读取信息。</td>
+</tr>
+<tr>
+<td align="left">fstream</td>
+<td align="left">该数据类型通常表示文件流，且同时具有 ofstream 和 ifstream 两种功能，这意味着它可以创建文件，向文件写入信息，从文件读取信息。</td>
+</tr>
+</tbody></table>
+<h2 id="动态内存"><a href="#动态内存" class="headerlink" title="动态内存"></a>动态内存</h2><p>C++ 程序中的内存分为两个部分：</p>
+<ul>
+<li><strong>栈：</strong>在函数内部声明的所有变量都将占用栈内存。</li>
+<li><strong>堆：</strong>这是程序中未使用的内存，在程序运行时可用于动态分配内存。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一维数组</span><br><span class="line">// 动态分配,数组长度为 m</span><br><span class="line">int *array=new int [m];</span><br><span class="line"> </span><br><span class="line">//释放内存</span><br><span class="line">delete [] array;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">二维数组</span><br><span class="line">int **array</span><br><span class="line">// 假定数组第一维长度为 m， 第二维长度为 n</span><br><span class="line">// 动态分配空间</span><br><span class="line">array = new int *[m];</span><br><span class="line">for( int i=0; i&lt;m; i++ )</span><br><span class="line">&#123;</span><br><span class="line">    array[i] = new int [n]  ;</span><br><span class="line">&#125;</span><br><span class="line">//释放</span><br><span class="line">for( int i=0; i&lt;m; i++ )</span><br><span class="line">&#123;</span><br><span class="line">    delete [] array[i];</span><br><span class="line">&#125;</span><br><span class="line">delete [] array;</span><br></pre></td></tr></table></figure>
+
+<h2 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h2><h3 id="定义命名空间"><a href="#定义命名空间" class="headerlink" title="定义命名空间"></a>定义命名空间</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">namespace namespace_name &#123;</span><br><span class="line">   // 代码声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="调用命名空间"><a href="#调用命名空间" class="headerlink" title="调用命名空间"></a>调用命名空间</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name::code;  // code 可以是变量或函数</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">也可以使用 using namespace 指令，这样在使用命名空间时就可以不用在前面加上命名空间的名称。这个指令会告诉编译器，后续的代码将使用指定的命名空间中的名称。</span><br></pre></td></tr></table></figure>
+
+<h2 id="STL（标准模板库）"><a href="#STL（标准模板库）" class="headerlink" title="STL（标准模板库）"></a>STL（标准模板库）</h2><p>C++ 标准模板库的核心包括以下三个组件：</p>
+<table>
+<thead>
+<tr>
+<th align="left">组件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">容器（Containers）</td>
+<td align="left">容器是用来管理某一类对象的集合。C++ 提供了各种不同类型的容器，比如 deque、list、vector、map 等。</td>
+</tr>
+<tr>
+<td align="left">算法（Algorithms）</td>
+<td align="left">算法作用于容器。它们提供了执行各种操作的方式，包括对容器内容执行初始化、排序、搜索和转换等操作。</td>
+</tr>
+<tr>
+<td align="left">迭代器（iterators）</td>
+<td align="left">迭代器用于遍历对象集合的元素。这些集合可能是容器，也可能是容器的子集。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   // 创建一个向量存储 int</span><br><span class="line">   vector&lt;int&gt; vec; </span><br><span class="line">   int i;</span><br><span class="line"> </span><br><span class="line">   // 显示 vec 的原始大小</span><br><span class="line">   cout &lt;&lt; &quot;vector size = &quot; &lt;&lt; vec.size() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   // 推入 5 个值到向量中</span><br><span class="line">   for(i = 0; i &lt; 5; i++)&#123;</span><br><span class="line">      vec.push_back(i);</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   // 显示 vec 扩展后的大小</span><br><span class="line">   cout &lt;&lt; &quot;extended vector size = &quot; &lt;&lt; vec.size() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   // 访问向量中的 5 个值</span><br><span class="line">   for(i = 0; i &lt; 5; i++)&#123;</span><br><span class="line">      cout &lt;&lt; &quot;value of vec [&quot; &lt;&lt; i &lt;&lt; &quot;] = &quot; &lt;&lt; vec[i] &lt;&lt; endl;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   // 使用迭代器 iterator 访问值</span><br><span class="line">   vector&lt;int&gt;::iterator v = vec.begin();</span><br><span class="line">   while( v != vec.end()) &#123;</span><br><span class="line">      cout &lt;&lt; &quot;value of v = &quot; &lt;&lt; *v &lt;&lt; endl;</span><br><span class="line">      v++;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">result:</span><br><span class="line">vector size = 0</span><br><span class="line">extended vector size = 5</span><br><span class="line">value of vec [0] = 0</span><br><span class="line">value of vec [1] = 1</span><br><span class="line">value of vec [2] = 2</span><br><span class="line">value of vec [3] = 3</span><br><span class="line">value of vec [4] = 4</span><br><span class="line">value of v = 0</span><br><span class="line">value of v = 1</span><br><span class="line">value of v = 2</span><br><span class="line">value of v = 3</span><br><span class="line">value of v = 4</span><br></pre></td></tr></table></figure>
+
+<p>关于上面实例中所使用的各种函数，有几点要注意：</p>
+<ul>
+<li>push_back( ) 成员函数在向量的末尾插入值，如果有必要会扩展向量的大小。</li>
+<li>size( ) 函数显示向量的大小。</li>
+<li>begin( ) 函数返回一个指向向量开头的迭代器。</li>
+<li>end( ) 函数返回一个指向向量末尾的迭代器。</li>
+</ul>
+<h2 id="C-标准库"><a href="#C-标准库" class="headerlink" title="C++标准库"></a>C++标准库</h2><ul>
+<li><strong>标准函数库：</strong> 这个库是由通用的、独立的、不属于任何类的函数组成的。函数库继承自 <strong>C 语言</strong>。</li>
+<li><strong>面向对象类库：</strong> 这个库是类及其相关函数的集合。</li>
+</ul>
+<h3 id="标准函数库"><a href="#标准函数库" class="headerlink" title="标准函数库"></a>标准函数库</h3><p>标准函数库分为以下几类：</p>
+<ul>
+<li>输入/输出 I/O</li>
+<li>字符串和字符处理</li>
+<li>数学</li>
+<li>时间、日期和本地化</li>
+<li>动态分配</li>
+<li>其他</li>
+<li>宽字符函数</li>
+</ul>
+<h3 id="面向对象类库"><a href="#面向对象类库" class="headerlink" title="面向对象类库"></a>面向对象类库</h3><p>标准的 C++ 面向对象类库定义了大量支持一些常见操作的类，比如输入/输出 I/O、字符串处理、数值处理。面向对象类库包含以下内容：</p>
+<ul>
+<li>标准的 C++ I/O 类</li>
+<li>String 类</li>
+<li>数值类</li>
+<li>STL 容器类</li>
+<li>STL 算法</li>
+<li>STL 函数对象</li>
+<li>STL 迭代器</li>
+<li>STL 分配器</li>
+<li>本地化库</li>
+<li>异常处理类</li>
+<li>杂项支持库</li>
+</ul>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【C】C语言复习</title>
+    <url>/2021/07/14/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h1><p><a href="https://www.runoob.com/cprogramming/c-tutorial.html">菜鸟教程</a></p>
+<span id="more"></span>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>两种方式定义常量：</p>
+<ul>
+<li>#define预处理器</li>
+<li>const关键字</li>
+</ul>
+<h2 id="储存类"><a href="#储存类" class="headerlink" title="储存类"></a>储存类</h2><ul>
+<li>auto</li>
+<li>register</li>
+<li>static</li>
+<li>extern</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>算术运算符</li>
+<li>关系运算符</li>
+<li>逻辑运算符</li>
+<li>位运算符</li>
+<li>赋值运算符</li>
+<li>杂项运算符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">sizeof()</td>
+<td align="left">返回变量的大小。</td>
+<td align="left">sizeof(a) 将返回 4，其中 a 是整数。</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">返回变量的地址。</td>
+<td align="left">&a; 将给出变量的实际地址。</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">指向一个变量。</td>
+<td align="left">*a; 将指向一个变量。</td>
+</tr>
+<tr>
+<td align="left">? :</td>
+<td align="left">条件表达式</td>
+<td align="left">如果条件为真 ? 则值为 X : 否则值为 Y</td>
+</tr>
+</tbody></table>
+<h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><ul>
+<li><p>if</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if(boolean_expression)</span><br><span class="line">&#123;</span><br><span class="line">   /* 如果布尔表达式为真将执行的语句 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>if…else</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">if(boolean_expression)</span><br><span class="line">&#123;</span><br><span class="line">   /* 如果布尔表达式为真将执行的语句 */</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">   /* 如果布尔表达式为假将执行的语句 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>嵌套if</p>
+</li>
+<li><p>switch</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">switch(expression)&#123;</span><br><span class="line">    case constant-expression  :</span><br><span class="line">       statement(s);</span><br><span class="line">       break; /* 可选的 */</span><br><span class="line">    case constant-expression  :</span><br><span class="line">       statement(s);</span><br><span class="line">       break; /* 可选的 */</span><br><span class="line">  </span><br><span class="line">    /* 您可以有任意数量的 case 语句 */</span><br><span class="line">    default : /* 可选的 */</span><br><span class="line">       statement(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>嵌套switch</p>
+</li>
+</ul>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
+<li><p>while</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">while(condition)</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>for</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li>定义</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">return_type function_name( parameter list )</span><br><span class="line">&#123;</span><br><span class="line">   body of the function</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>声明</li>
+<li>调用</li>
+<li>参数<ol>
+<li>传值调用</li>
+<li>引用调用</li>
+</ol>
+</li>
+</ul>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ul>
+<li>局部变量</li>
+<li>全局变量</li>
+<li>形式参数</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li><p>声明一维数组：<code>type arrayName [ arraySize ];</code></p>
+</li>
+<li><p>声明多维数组：<code>type name[size1][size2]...[sizeN];</code></p>
+</li>
+</ul>
+<h2 id="enum（枚举）"><a href="#enum（枚举）" class="headerlink" title="enum（枚举）"></a>enum（枚举）</h2><p>定义枚举类型的同时定义枚举变量：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">enum DAY</span><br><span class="line">&#123;</span><br><span class="line">      MON=1, TUE, WED, THU, FRI, SAT, SUN</span><br><span class="line">&#125; day;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>第一个枚举成员的默认值为整型的 0，后续枚举成员的值在前一个成员上加 1。在这个例子中把第一个枚举成员的值定义为 1，第二个就为 2，以此类推。</p>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type *var-name;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>eg</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"> </span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">   int  var = 20;   /* 实际变量的声明 */</span><br><span class="line">   int  *ip;        /* 指针变量的声明 */</span><br><span class="line"> </span><br><span class="line">   ip = &amp;var;  /* 在指针变量中存储 var 的地址 */</span><br><span class="line"> </span><br><span class="line">   printf(&quot;var 变量的地址: %p\n&quot;, &amp;var  );</span><br><span class="line"> </span><br><span class="line">   /* 在指针变量中存储的地址 */</span><br><span class="line">   printf(&quot;ip 变量存储的地址: %p\n&quot;, ip );</span><br><span class="line"> </span><br><span class="line">   /* 使用指针访问值 */</span><br><span class="line">   printf(&quot;*ip 变量的值: %d\n&quot;, *ip );</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">var 变量的地址: 0x7ffeeef168d8</span><br><span class="line">ip 变量存储的地址: 0x7ffeeef168d8</span><br><span class="line">*ip 变量的值: 20</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结：</strong></p>
+</li>
+<li><p>指针就是内存地址，指针变量是用来存放内存地址的变量。</p>
+</li>
+<li><p>使用“&amp;”取地址，使用“*”访问地址。</p>
+</li>
+</ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串实际上是使用 <strong>null</strong> 字符 <strong>\0</strong> 终止的一维字符数组。</p>
+<p>在定义时，计算数组长度要将结束符算进去。</p>
+<p>定义方式：</p>
+<ul>
+<li>char site[6] = {‘h’ , ‘e’ , ‘l’ , ‘l’ , ‘o’ , ‘\0’};</li>
+<li>char site[] = “hello”;</li>
+</ul>
+<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><ul>
+<li>结构体</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">struct tag &#123; </span><br><span class="line">    member-list</span><br><span class="line">    member-list </span><br><span class="line">    member-list  </span><br><span class="line">    ...</span><br><span class="line">&#125; variable-list ;</span><br></pre></td></tr></table></figure>
+
+<p><strong>tag</strong> 是结构体标签。</p>
+<p><strong>member-list</strong> 是标准的变量定义，比如 int i  或者 float f</p>
+<p><strong>variable-list</strong> 是结构变量。</p>
+<p>定义时至少出现2个；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">struct SIMPLE</span><br><span class="line">&#123;</span><br><span class="line">    int a;</span><br><span class="line">    int b;</span><br><span class="line">    int c;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">struct SIMPLE example1;</span><br><span class="line">struct SIMPLE example2;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>访问结构体成员</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">example1.a=1;</span><br><span class="line">example1.b=2;</span><br><span class="line">example1.c=3;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>结构体指针</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">定义结构体指针：struct Books *struct_pointer;</span><br><span class="line">结构体定义：struct Books Book1;</span><br><span class="line">地址：struct_pointer = &amp;Book1;</span><br><span class="line">成员访问：struct_pointer-&gt;title;</span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line"> </span><br><span class="line">struct Books</span><br><span class="line">&#123;</span><br><span class="line">   char  title[50];</span><br><span class="line">   char  author[50];</span><br><span class="line">   char  subject[100];</span><br><span class="line">   int   book_id;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">/* 函数声明 */</span><br><span class="line">void printBook( struct Books *book );</span><br><span class="line">int main( )</span><br><span class="line">&#123;</span><br><span class="line">   struct Books Book1;        /* 声明 Book1，类型为 Books */</span><br><span class="line">   struct Books Book2;        /* 声明 Book2，类型为 Books */</span><br><span class="line"> </span><br><span class="line">   /* Book1 详述 */</span><br><span class="line">   strcpy( Book1.title, &quot;C Programming&quot;);</span><br><span class="line">   strcpy( Book1.author, &quot;Nuha Ali&quot;); </span><br><span class="line">   strcpy( Book1.subject, &quot;C Programming Tutorial&quot;);</span><br><span class="line">   Book1.book_id = 6495407;</span><br><span class="line"> </span><br><span class="line">   /* Book2 详述 */</span><br><span class="line">   strcpy( Book2.title, &quot;Telecom Billing&quot;);</span><br><span class="line">   strcpy( Book2.author, &quot;Zara Ali&quot;);</span><br><span class="line">   strcpy( Book2.subject, &quot;Telecom Billing Tutorial&quot;);</span><br><span class="line">   Book2.book_id = 6495700;</span><br><span class="line"> </span><br><span class="line">   /* 通过传 Book1 的地址来输出 Book1 信息 */</span><br><span class="line">   printBook( &amp;Book1 );</span><br><span class="line"> </span><br><span class="line">   /* 通过传 Book2 的地址来输出 Book2 信息 */</span><br><span class="line">   printBook( &amp;Book2 );</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line">void printBook( struct Books *book )</span><br><span class="line">&#123;</span><br><span class="line">   printf( &quot;Book title : %s\n&quot;, book-&gt;title);</span><br><span class="line">   printf( &quot;Book author : %s\n&quot;, book-&gt;author);</span><br><span class="line">   printf( &quot;Book subject : %s\n&quot;, book-&gt;subject);</span><br><span class="line">   printf( &quot;Book book_id : %d\n&quot;, book-&gt;book_id);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Book title : C Programming</span><br><span class="line">Book author : Nuha Ali</span><br><span class="line">Book subject : C Programming Tutorial</span><br><span class="line">Book book_id : 6495407</span><br><span class="line">Book title : Telecom Billing</span><br><span class="line">Book author : Zara Ali</span><br><span class="line">Book subject : Telecom Billing Tutorial</span><br><span class="line">Book book_id : 6495700</span><br></pre></td></tr></table></figure>
+
+<h2 id="共用体"><a href="#共用体" class="headerlink" title="共用体"></a>共用体</h2><p>​    <strong>共用体</strong>是一种特殊的数据类型，允许在相同的内存位置存储不同的数据类型。可以定义一个带有多成员的共用体，但是任何时候只能有一个成员带有值。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">union [union tag]</span><br><span class="line">&#123;</span><br><span class="line">   member definition;</span><br><span class="line">   member definition;</span><br><span class="line">   ...</span><br><span class="line">   member definition;</span><br><span class="line">&#125; [one or more union variables];</span><br></pre></td></tr></table></figure>
+
+<h2 id="typedef"><a href="#typedef" class="headerlink" title="typedef"></a>typedef</h2><p><strong>#define</strong> 是 C 指令，用于为各种数据类型定义别名，与 <strong>typedef</strong> 类似，但是它们有以下几点不同：</p>
+<ul>
+<li><strong>typedef</strong> 仅限于为类型定义符号名称，**#define** 不仅可以为类型定义别名，也能为数值定义别名，比如可以定义 1 为 ONE。</li>
+<li><strong>typedef</strong> 是由编译器执行解释的，**#define** 语句是由预编译器进行处理的。</li>
+</ul>
+<h2 id="输入-amp-输出"><a href="#输入-amp-输出" class="headerlink" title="输入&amp;输出"></a>输入&amp;输出</h2><ul>
+<li>getchar() &amp; putchar()函数</li>
+<li>scanf() &amp;printf()函数</li>
+</ul>
+<p>使用前需要 <code>#include &lt;stdio.h&gt;</code></p>
+<h2 id="预处理器"><a href="#预处理器" class="headerlink" title="预处理器"></a>预处理器</h2><p>C 预处理器本质是一个文本替换工具</p>
+<table>
+<thead>
+<tr>
+<th>#define</th>
+<th>定义宏</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>#include</td>
+<td>包含一个源代码文件</td>
+</tr>
+<tr>
+<td>#undef</td>
+<td>取消已定义的宏</td>
+</tr>
+<tr>
+<td>#ifdef</td>
+<td>如果宏已经定义，则返回真</td>
+</tr>
+<tr>
+<td>#ifndef</td>
+<td>如果宏没有定义，则返回真</td>
+</tr>
+<tr>
+<td>#if</td>
+<td>如果给定条件为真，则编译下面代码</td>
+</tr>
+<tr>
+<td>#else</td>
+<td>#if 的替代方案</td>
+</tr>
+<tr>
+<td>#elif</td>
+<td>如果前面的 #if 给定条件不为真，当前条件为真，则编译下面代码</td>
+</tr>
+<tr>
+<td>#endif</td>
+<td>结束一个 #if……#else 条件编译块</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>头文件防止重复编译：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#ifndef _HEAD_H</span><br><span class="line">#define _HEAD_H</span><br><span class="line">...</span><br><span class="line"> // ... some declaration codes</span><br><span class="line">...</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure></li>
+<li><p>条件编译，避免使用大段注释//</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#if 常量表达式1</span><br><span class="line">// ... some codes</span><br><span class="line">#elif 常量表达式2</span><br><span class="line">// ... other codes</span><br><span class="line">#elif 常量表达式3</span><br><span class="line">// ...</span><br><span class="line">...</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><p>建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
+<h3 id="引用头文件的语法"><a href="#引用头文件的语法" class="headerlink" title="引用头文件的语法"></a>引用头文件的语法</h3><ul>
+<li><p>引用系统头文件，在系统目录的标准列表中：<code>#include &lt;file&gt;</code></p>
+</li>
+<li><p>引用用户头文件，在包含当前文件目录下：<code>#include &quot;file&quot;</code>，如果在程序目录没找到就去编译器的类库路径目录下寻找该文件。</p>
+</li>
+</ul>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>强制类型转换是把变量从一种类型转换为另一种数据类型。</p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归指的是在函数的定义中使用函数自身的方法。</p>
+<p>语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void recursion()</span><br><span class="line">&#123;</span><br><span class="line">   statements;</span><br><span class="line">   ... ... ...</span><br><span class="line">   recursion(); /* 函数调用自身 */</span><br><span class="line">   ... ... ...</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   recursion();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h2 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h2><p>执行程序时，可以从命令行传值给 C 程序。这些值被称为<strong>命令行参数</strong>，它们对程序很重要，特别是想从外部控制程序，而不是在代码内对这些值进行硬编码时。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main( int argc, char *argv[] )  </span><br><span class="line">&#123;</span><br><span class="line">   if( argc == 2 )</span><br><span class="line">   &#123;</span><br><span class="line">      printf(&quot;The argument supplied is %s\n&quot;, argv[1]);</span><br><span class="line">   &#125;</span><br><span class="line">   else if( argc &gt; 2 )</span><br><span class="line">   &#123;</span><br><span class="line">      printf(&quot;Too many arguments supplied.\n&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">   else</span><br><span class="line">   &#123;</span><br><span class="line">      printf(&quot;One argument expected.\n&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>argv[0]</strong> 存储程序的名称，<strong>argv[1]</strong> 是一个指向第一个命令行参数的指针，如果没有提供任何参数，argc 将为 1，否则，如果传递了一个参数，<strong>argc</strong> 将被设置为 2。</p>
+<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><ol>
+<li>冒泡排序</li>
+<li>选择排序</li>
+<li>插入排序</li>
+<li>希尔排序</li>
+<li>归并排序</li>
+<li>快速排序</li>
+</ol>
+]]></content>
+      <categories>
+        <category>C</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Git】Git学习记录</title>
+    <url>/2021/07/11/%E3%80%90Git%E3%80%91Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="Git学习"><a href="#Git学习" class="headerlink" title="Git学习"></a>Git学习</h1><p>Git是目前世界上最先进的分布式版本控制系统（没有之一）。</p>
+<p>本篇记录我学习Git的过程。</p>
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰Git教程</a><br><a href="https://www.runoob.com/git/git-tutorial.html">菜鸟教程</a></p>
+<span id="more"></span>
+
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>版本库：repository</p>
+<p>在文件夹里右键点击Git Bash Here</p>
+<ul>
+<li>初始化Git仓库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>添加文件到Git仓库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add &lt;file&gt;</span><br><span class="line">git commit -m &lt;message&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>eg</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br><span class="line">git add readme.txt</span><br><span class="line">git commit -m &quot;wrote readme.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>git add可以添加多个文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add test1.txt test2.txt</span><br></pre></td></tr></table></figure>
+
+<p>.表示当前目录下所有文件，故可以这么写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<h2 id="时光机穿梭"><a href="#时光机穿梭" class="headerlink" title="时光机穿梭"></a>时光机穿梭</h2><ul>
+<li><p>版本回退</p>
+<ol>
+<li><p><code>HEAD</code>指向的版本就是当前版本，Git允许在版本的历史之间穿梭，使用</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git reset --hard commit_id</span><br></pre></td></tr></table></figure>
+
+<p>上一个版本是HEAD^，上两个版本就是HEAD^^，上一百个版本就是HEAD~100</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure></li>
+<li><p>穿梭前用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</p>
+</li>
+<li><p>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</p>
+</li>
+</ol>
+</li>
+<li><p>工作区（working directory）、版本库（Repository）、暂存区（stage）</p>
+<ol>
+<li><p>用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；</p>
+</li>
+<li><p>用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+<p><strong>使用<code>git status</code>查看状态。</strong></p>
+</li>
+</ol>
+</li>
+<li><p>管理修改</p>
+</li>
+<li><p>撤销修改</p>
+<ol>
+<li>当改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。</li>
+<li>当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就把暂存区文件退回工作区，再使<code>git chectout -- file</code>。</li>
+<li>已经提交了不合适的修改到版本库时，想要撤销本次提交，使用<strong>版本回退</strong>。不过前提是没有推送到远程库。</li>
+</ol>
+</li>
+<li><p>删除文件</p>
+<ol>
+<li><p>删除工作区某个文件，直接在文件管理器删除或<code>rm test.txt</code></p>
+</li>
+<li><p>此时版本库和工作区不一致，若要删除版本库中该文件，则用<code>git rm file</code>,然后<code>git commit</code></p>
+</li>
+<li><p>如果工作区文件删错了需要恢复，使用<code>git chectout -- file</code></p>
+<p><code>git chectout</code> 是用版本库中的版本替换工作区的版本。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><ul>
+<li><p>添加远程库(先有本地库后有远程库)</p>
+<p>​    先链接SSH，<code>ssh-keygen -t rsa -C &quot;youreamil@example.com&quot;</code>,然后一路回车，找到id_ras.pub文件，复制里面的Key添加到<strong>github/gitee</strong>。</p>
+<ol>
+<li>关联远程库：<code>git remote add origin git@server-name:path/repo-name.git</code></li>
+<li>关联后，使用<code>git push -u origin master</code>第一次推送master分支的所有内容</li>
+<li>此后每次推送均使用<code>git push origin master</code></li>
+</ol>
+</li>
+<li><p>从远程库克隆（从零开发，先创建远程库，再克隆到本地）</p>
+<ol>
+<li>创建远程库，勾选<code>Initialize this repository with a README</code>,自动创建README.md文件</li>
+<li><code>git clone git@server-name:path/repo-name.git</code>，此方式通过SSH（速度最快），也可以使用Https协议，但速度较慢:<code>git clone https://github.com/server-name/repo-name.git</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><ul>
+<li>创建与合并分支<ol>
+<li>查看分支：<code>git branch</code></li>
+<li>创建分支：<code>git branch &lt;name&gt;</code></li>
+<li>切换分支：<code>git switch &lt;name&gt;</code></li>
+<li>创建+切换分支：<code>git switch -c &lt;name&gt;</code></li>
+<li>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></li>
+<li>删除分支：<code>git branch -d &lt;name&gt;</code></li>
+</ol>
+</li>
+<li>解决冲突：把Git合并失败的文件手动编辑为我们希望的内容，再提交。</li>
+<li>分支管理策略</li>
+<li>Bug分支</li>
+<li>Feature分支</li>
+<li>多人协作</li>
+<li>Rebase</li>
+</ul>
+<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><ul>
+<li><p>创建标签</p>
+<ol>
+<li>命令<code>git tag &lt;tagname&gt;</code>用于新建一个标签，默认为<code>HEAD</code>，也可以指定一个commit id；</li>
+<li>命令<code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</li>
+<li>命令<code>git tag</code>可以查看所有标签。</li>
+</ol>
+<p>查看历史提交的commit id:<code>git log --pretty=oneline --abbrev-commit</code></p>
+</li>
+<li><p>操作标签</p>
+<ol>
+<li>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</li>
+<li>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</li>
+<li>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</li>
+<li>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</li>
+</ol>
+</li>
+</ul>
+<h2 id="Sourcetree"><a href="#Sourcetree" class="headerlink" title="Sourcetree"></a>Sourcetree</h2><p>​    可视化软件</p>
+<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><ol>
+<li><p>创建远程库</p>
+</li>
+<li><p>克隆远程库到本地<code>git clone git@server-name:path/repo-name.git</code>或<code>git clone https://github.com/server-name/repo-name.git</code></p>
+</li>
+<li><p>修改工作区文件，添加到暂存区，添加到本地库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;message&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>推送到远程库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Git】gitee使用过程中学习记录、遇到的错误记录与解决方案(持续更新中)</title>
+    <url>/2021/06/22/%E3%80%90Git%E3%80%91gitee%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E3%80%81%E9%81%87%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇作为记录使用gitee过程中学习记录、遇到的错误问题以及找到的解决方案。(持续更新中)</p>
+<h1 id="问题列举"><a href="#问题列举" class="headerlink" title="问题列举"></a>问题列举</h1><h2 id="1、The-file-will-have-its-original-line-endings-in-your-working-directory"><a href="#1、The-file-will-have-its-original-line-endings-in-your-working-directory" class="headerlink" title="1、The file will have its original line endings in your working directory"></a>1、The file will have its original line endings in your working directory</h2><p>使用git add . 时提示The file will have its original line endings in your working directory</p>
+<p><img src="https://img-blog.csdnimg.cn/20201111224352463.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="2、Your-push-would-publish-a-private-email-address-error-hook-declined-to-update-refs-heads-master"><a href="#2、Your-push-would-publish-a-private-email-address-error-hook-declined-to-update-refs-heads-master" class="headerlink" title="2、Your push would publish a private email address. error: hook declined to update refs/heads/master"></a>2、Your push would publish a private email address. error: hook declined to update refs/heads/master</h2><p>使用git push origin master 时无法推上去</p>
+<p><img src="https://img-blog.csdnimg.cn/20201111224713714.png#pic_center" alt="在这里插入图片描述"></p>
+<span id="more"></span>
+
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><h2 id="solutions-to-question-1"><a href="#solutions-to-question-1" class="headerlink" title="solutions to question 1"></a>solutions to question 1</h2><p>解决方案：<br>此时需要分别执行如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line">git config core.autocrlf false</span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<p>. 代表当前目录下所有文件</p>
+<h2 id="solutions-to-question-2"><a href="#solutions-to-question-2" class="headerlink" title="solutions to question 2"></a>solutions to question 2</h2><p>进入gitee网站，登录个人账号，点击设置，邮箱管理，不勾选“不公开我的邮箱地址”<br>重新输入命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><p>Git基本操作如下：</p>
+<p><strong>1.远程建立仓库（在Git网站里）</strong><br>仓库名称、仓库介绍、选择语言、模板不选择、使用read.me文件初始化这个仓库，分支模型选择单分支</p>
+<p><strong>2.本地建立仓库</strong><br>自己建立一个文件夹后，打开文件夹<br>右键选择 git bash<br><strong>方法一（常用）</strong>：<br>git init    初始化<br>git remote add origin +链接   取得联系<br>git pull origin master 把远程仓库的代码拉下来<br>方法二：<br>git clone<br>生成本地库，把远程库的包括文件夹拉下来</p>
+<p><strong>3.本地库提交到远程库</strong><br>git status  获取当前状态<br>git add xxx文件<br>git add .    提交当前目录所有文件<br>git commit -m “Add:xxx备注”<br>git push origin master</p>
+<p><strong>4.解决冲突</strong></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>记录下更新时间：<br>第一次于2020.11.11</p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Hexo】Hexo个人博客配置</title>
+    <url>/2021/08/11/%E3%80%90Hexo%E3%80%91Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E4%BB%8E0%E5%88%B01/</url>
+    <content><![CDATA[<h1 id="Hexo个人博客配置"><a href="#Hexo个人博客配置" class="headerlink" title="Hexo个人博客配置"></a>Hexo个人博客配置</h1><p>使用hexo+github搭建个人免费博客</p>
+<p>安装之前，先注册一个github账号</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><ul>
+<li>Windows：下载并安装 <a href="https://git-scm.com/download/win">git</a>.</li>
+<li>Mac：使用 <a href="http://mxcl.github.com/homebrew/">Homebrew</a>, <a href="http://www.macports.org/">MacPorts</a> 或者下载 <a href="http://sourceforge.net/projects/git-osx-installer/">安装程序</a>。</li>
+<li>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code></li>
+<li>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></li>
+</ul>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p><a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
+<span id="more"></span>
+
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>创建名为<code>username.github.io</code>的仓库</p>
+<h2 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h2><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
+<ol>
+<li><p>用git bash执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/. ssh <span class="comment">#检查本机已存在的ssh密钥</span></span><br></pre></td></tr></table></figure></li>
+<li><p>```markup<br>ssh-keygen -t rsa -C “邮件地址”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到`.ssh\id_rsa.pub`文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</span><br><span class="line"></span><br><span class="line">将刚复制的内容粘贴到key那里，title随便填，保存。</span><br><span class="line"></span><br><span class="line">测试是否成功：</span><br><span class="line"></span><br><span class="line">```markup</span><br><span class="line">ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>如果提示<code>Are you sure you want to continue connecting (yes/no)?</code>，输入yes，然后会看到：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">You’ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+
+<p>看到这个信息说明SSH已配置成功！</p>
+<p>此时你还需要配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;liuxianan&quot;// 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email  &quot;xxx@qq.com&quot;// 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>为避免不必要的问题，建议全部使用git bash来执行；</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在电脑的某个地方新建一个名为hexo的文件夹（名字可以随便取），比如我的是<code>D:\hexo\hexo</code>，由于这个文件夹将来就作为你存放代码的地方，所以最好不要随便放。</p>
+<p>进入该文件夹，右键选择git bash，弹出命令行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+
+<p>hexo会自动下载一些文件到这个目录，包括node_modules，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo g # 生成</span><br><span class="line">$ hexo s # 启动服务</span><br></pre></td></tr></table></figure>
+
+<p>执行以上命令之后，hexo就会在public文件夹生成相关html文件，这些文件将来都是要提交到github去的：</p>
+<p><code>hexo s</code>是开启本地预览服务，打开浏览器访问 <a href="http://localhost:4000/">http://localhost:4000</a> 即可看到内容</p>
+<p>第一次初始化的时候hexo已经帮我们写了一篇名为 Hello World 的文章，默认的主题比较丑。</p>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>本人比较喜欢的主题：hexo-theme-next</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>有时因为网络无法访问，可以到github仓库上下载next主题源码，然后复制到hexo/theme文件夹。</p>
+<p>修改hexo根目录下<code>_config.yml</code>中的<code>theme: landscape</code>改为<code>theme: next</code>，然后重新执行<code>hexo g</code>来重新生成。</p>
+<p>如果出现一些莫名其妙的问题，可以先执行<code>hexo clean</code>来清理一下public的内容，然后再来重新生成和发布。</p>
+<p>如果你一切都配置好了，发布上传很容易，一句<code>hexo d</code>就搞定，当然关键还是你要把所有东西配置好。</p>
+<p>首先，<code>ssh key</code>肯定要配置好。</p>
+<p>其次，配置<code>_config.yml</code>中有关deploy的部分：</p>
+<p>正确写法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>这个需要查阅你选择/使用的博客主题，找到他的相关配置文件，即对应<code>主题目录下的_config.yml</code>，进行修改。</p>
+<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><p>以markdown文件形式写好博客，将该文件复制到hexo根目录下/source/_posts中。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: postName #文章页面上的显示名称，一般是中文</span><br><span class="line">date: 2013-12-02 15:30:16 #文章生成时间，一般不改，当然也可以任意修改</span><br><span class="line">categories: 默认分类 #分类</span><br><span class="line">tags: [tag1,tag2,tag3] #文章标签，可空，多标签请用格式，注意:后面有个空格</span><br><span class="line"><span class="section">description: 附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">以下是正文</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建about、categories页"><a href="#新建about、categories页" class="headerlink" title="新建about、categories页"></a>新建about、categories页</h3><p>在hexo根目录下/source/中新建名为about的文件夹和名为categories的文件夹，将想要显示在about、categories的内容(.md)文件放进去就可以了。</p>
+<h3 id="让博客列表不显示全部内容"><a href="#让博客列表不显示全部内容" class="headerlink" title="让博客列表不显示全部内容"></a>让博客列表不显示全部内容</h3><p>默认情况下，生成的博文目录会显示全部的文章内容，如何设置文章摘要的长度呢？</p>
+<p>答案是在合适的位置加上<code>&lt;!--more--&gt;</code>即可。</p>
+<h2 id="上传博客"><a href="#上传博客" class="headerlink" title="上传博客"></a>上传博客</h2><p>修改完博客内容和主题等配置后，上传步骤如下：</p>
+<ol>
+<li>hexo clean</li>
+<li>hexo g</li>
+<li>hexo s  #这一步可以没有，这一步可以用来在线本地预览</li>
+<li>hexo d</li>
+</ol>
+<h2 id="关联到自己新注册的域名"><a href="#关联到自己新注册的域名" class="headerlink" title="关联到自己新注册的域名"></a>关联到自己新注册的域名</h2><p>平常用默认的 <code>xxx.github.io</code> 来访问，如果你想更个性一点，想拥有一个属于自己的域名，那也是可以的。步骤：</p>
+<ol>
+<li><p>去阿里云申请域名</p>
+</li>
+<li><p>实名制</p>
+</li>
+<li><p>域名解析</p>
+<p>域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下<code>你的用户名.github.io</code>的IP，然后到你的域名DNS设置页，将A记录指向你ping出来的IP，将CNAME指向<code>你的用户名.github.io</code>，<code>这样可以保证无论是否添加www都可以访问，如下：</code></p>
+</li>
+<li><p>在hexo的source目录下新建CNAME的文件（没有后缀），内容写里面填写你的域名。</p>
+<p>在你绑定了新域名之后，原来的<code>你的用户名.github.io</code>并没有失效，而是会自动跳转到你的新域名。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Hexo】 转载：hexo发生error：spawn failed错误的解决方法</title>
+    <url>/2021/07/29/%E3%80%90Hexo%E3%80%91%E8%BD%AC%E8%BD%BD%EF%BC%9Ahexo%E5%8F%91%E7%94%9Ferror%EF%BC%9Aspawn%20failed%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="转载：hexo发生error：spawn-failed错误的解决方法"><a href="#转载：hexo发生error：spawn-failed错误的解决方法" class="headerlink" title="转载：hexo发生error：spawn failed错误的解决方法"></a>转载：hexo发生error：spawn failed错误的解决方法</h1><p>原文链接：<a href="https://blog.csdn.net/HTL2018/article/details/106876940">https://blog.csdn.net/HTL2018/article/details/106876940</a></p>
+<h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><ul>
+<li>  先是出现错误：</li>
+</ul>
+<p>  <code>  error：spawn failed...</code></p>
+<ul>
+<li><p>然后经过一些博客的操作会出现以下问题：</p>
+<p><code>fatal: cannot lock ref &#39;HEAD&#39;: unable to resolve reference HEAD: Invalid argument error: src refspec</code></p>
+</li>
+<li><p>或者：</p>
+<p><code>error: src refspec HEAD does not match any.</code>等等</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<p><strong>总结一下</strong>：<br>问题大多是因为<code>git</code>进行<code>push</code>或者<code>hexo d</code>的时候改变了一些<code>.deploy_git</code>文件下的内容。</p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><ol>
+<li>删除<code>.deploy_git</code>文件夹;</li>
+<li>输入<code>git config --global core.autocrlf false</code></li>
+<li>然后，依次执行：<br><code>hexo clean</code><br><code>hexo g</code><br><code>hexo d</code></li>
+</ol>
+<p>问题解决。暴力直接，有效。</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【LeetCode】算法简单题Day1</title>
+    <url>/2021/07/29/%E3%80%90LeetCode%E3%80%91%E7%AE%97%E6%B3%95%E7%AE%80%E5%8D%95%E9%A2%98Day1/</url>
+    <content><![CDATA[<h1 id="算法简单题-2021-7-29"><a href="#算法简单题-2021-7-29" class="headerlink" title="算法简单题 2021.7.29"></a>算法简单题 2021.7.29</h1><p>来源：力扣（LeetCode），解题均使用C++</p>
+<h2 id="Q1"><a href="#Q1" class="headerlink" title="Q1"></a>Q1</h2><p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="keyword">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;nums.<span class="built_in">size</span>();j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[i]+nums[j]==target)</span><br><span class="line">                    <span class="keyword">return</span>&#123;i,j&#125;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="Q2"><a href="#Q2" class="headerlink" title="Q2"></a>Q2</h2><p>给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。</p>
+<p>如果反转后整数超过 32 位的有符号整数的范围 [−231,  231 − 1] ，就返回 0。</p>
+<p>假设环境不允许存储 64 位整数（有符号或无符号）。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rev = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x!=<span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (rev &lt; INT_MIN/<span class="number">10</span> || rev &gt;INT_MAX/<span class="number">10</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">int</span> digit = x % <span class="number">10</span>;</span><br><span class="line">                rev = rev*<span class="number">10</span>+digit;</span><br><span class="line">                x =x /<span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> rev; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q3"><a href="#Q3" class="headerlink" title="Q3"></a>Q3</h2><p>给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。</p>
+<p>回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。例如，121 是回文，而 123 不是。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> rev = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> x1=x;</span><br><span class="line">        <span class="keyword">while</span>(x1!=<span class="number">0</span>)</span><br><span class="line">        &#123;       </span><br><span class="line">                <span class="keyword">int</span> digit = x1 % <span class="number">10</span>;</span><br><span class="line">                rev = rev * <span class="number">10</span> + digit;</span><br><span class="line">                x1 = x1 /<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(rev==x &amp;&amp; x&gt;=<span class="number">0</span>)&#123;<span class="keyword">return</span> <span class="literal">true</span>;&#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Q4"><a href="#Q4" class="headerlink" title="Q4"></a>Q4</h2><p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</p>
+<p>字符          数值<br>I             1<br>V             5<br>X             10<br>L             50<br>C             100<br>D             500<br>M             1000<br>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
+<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
+<p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。<br>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。<br>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。<br>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    map&lt;<span class="keyword">char</span>,<span class="keyword">int</span>&gt;symbolvalues=&#123;</span><br><span class="line">        &#123;<span class="string">&#x27;I&#x27;</span>, <span class="number">1</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;V&#x27;</span>, <span class="number">5</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;X&#x27;</span>, <span class="number">10</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;L&#x27;</span>, <span class="number">50</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;C&#x27;</span>, <span class="number">100</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;D&#x27;</span>, <span class="number">500</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&#x27;M&#x27;</span>, <span class="number">1000</span>&#125;,</span><br><span class="line">        &#125;;   </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.<span class="built_in">length</span>()<span class="number">-1</span>;i++)</span><br><span class="line">        &#123;              </span><br><span class="line">            <span class="keyword">int</span> a=symbolvalues[s[i]];</span><br><span class="line">            <span class="keyword">int</span> b=symbolvalues[s[i+<span class="number">1</span>]];</span><br><span class="line">            <span class="keyword">if</span>(a&lt;b)&#123;ans +=-symbolvalues[s[i]];&#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;ans += symbolvalues[s[i]];&#125;</span><br><span class="line"></span><br><span class="line">        &#125;    </span><br><span class="line">            ans += symbolvalues[s[s.<span class="built_in">length</span>()<span class="number">-1</span>]];</span><br><span class="line">            <span class="keyword">return</span> ans;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【MATLAB】修改黑色炫酷主题darcula.prf</title>
+    <url>/2021/06/22/%E3%80%90MATLAB%E3%80%91%E4%BF%AE%E6%94%B9%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98darcula.prf/</url>
+    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20201117185149994.png" alt="在这里插入图片描述"></p>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>最近MATLAB用的比较多，个人也比较喜欢黑色炫酷主题，在这里记录、分享修改MATLAB主题色的方法。<br>使用的Matlab版本为MATLAB R2019b</p>
+<h2 id="二、修改前"><a href="#二、修改前" class="headerlink" title="二、修改前"></a>二、修改前</h2><p><img src="https://img-blog.csdnimg.cn/20201117183657203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="三、修改后"><a href="#三、修改后" class="headerlink" title="三、修改后"></a>三、修改后</h2><p><img src="https://img-blog.csdnimg.cn/20201117184056199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<span id="more"></span>
+
+<h2 id="四、操作步骤"><a href="#四、操作步骤" class="headerlink" title="四、操作步骤"></a>四、操作步骤</h2><p>在Matlab命令行中输入prefdir，回车运行<br>获取matlab.prf所在路径<br>将matlab.prf文件用记事本打开<br>修改前内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#MATLAB Preferences</span><br><span class="line">#Mon Nov 02 15:26:39 CST 2020</span><br><span class="line">DeploytoollastOpenFile=SF:\\matlab R2019b\\bin\\untitled1.prj</span><br><span class="line">MatlabExitConfirm=Bfalse</span><br><span class="line">DeploytoolrecentProjects=SF:\\matlab R2019b\\bin\\untitled1.prj;F:\\matlab R2019b\\bin\\test_matlab_java.prj;F:\\matlab R2019b\\bin\\javaCallMatlab.prj</span><br><span class="line">RLOrderB2_WB_2014b_1=S0:1:</span><br><span class="line">RLHiddenB2_WB_2014b_1=I16376</span><br><span class="line">CommandWindowClearConfirmation=Btrue</span><br><span class="line">RLWidthB2_WB_2014b_1_1=I204</span><br><span class="line">RLWidthB2_WB_2014b_1_0=I130</span><br><span class="line">EditorMRU8=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\src\\readme-color.txt</span><br><span class="line">EditorMRU7=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\src\\matlabThemeChooser.m</span><br><span class="line">EditorMRU6=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\src\\applyPrfFile.m</span><br><span class="line">EditorMRU5=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\prf\\darcula.prf</span><br><span class="line">EditorMRU4=SF:\\matlab R2019b\\bin\\ColorSetting.m</span><br><span class="line">EditorMRU3=SF:\\matlab R2019b\\bin\\applyPrfFile.m</span><br><span class="line">EditorMRU2=SF:\\matlab R2019b\\bin\\darcula.prf</span><br><span class="line">EditorMRU1=SF:\\matlab R2019b\\bin\\matlabThemeChooser.m</span><br><span class="line">RLPrevInitB2_WB_2014b_1=Btrue</span><br><span class="line">HasAppendedMlxToFileExtensionsKey=Btrue</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>建议先备份该文件</strong><br>然后将该文件的内容修改为如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ColorsUseSystem=Bfalse</span><br><span class="line">ColorsUseMLintAutoFixBackground=Btrue</span><br><span class="line">Editor.VariableHighlighting.Automatic=Btrue</span><br><span class="line">Editor.NonlocalVariableHighlighting=Btrue</span><br><span class="line">EditorCodepadHighVisible=Btrue</span><br><span class="line">EditorCodeBlockDividers=Btrue</span><br><span class="line">Editorhighlight-caret-row-boolean=Bfalse</span><br><span class="line">EditorRightTextLineVisible=Btrue</span><br><span class="line">EditorRightTextLimitLineWidth=I1</span><br><span class="line">ColorsText=C-5654586</span><br><span class="line">ColorsBackground=C-14803426</span><br><span class="line">Colors_M_Keywords=C-3377102</span><br><span class="line">Colors_M_Comments=C-8355712</span><br><span class="line">Colors_M_Strings=C-9795751</span><br><span class="line">Colors_M_UnterminatedStrings=C-4440260</span><br><span class="line">Colors_M_SystemCommands=C-7707333</span><br><span class="line">Colors_M_Errors=C-6411993</span><br><span class="line">Colors_M_TypeSection=C-14739</span><br><span class="line">Color_CmdWinErrors=C-38040</span><br><span class="line">Color_CmdWinWarnings=C-26368</span><br><span class="line">Colors_HTML_HTMLLinks=C-14124066</span><br><span class="line">Colors_M_Warnings=C-11382726</span><br><span class="line">ColorsMLintAutoFixBackground=C-12569813</span><br><span class="line">Editor.VariableHighlighting.Color=C-13477571</span><br><span class="line">Editor.NonlocalVariableHighlighting.TextColor=C-6785366</span><br><span class="line">Editorhighlight-lines=C-16777216</span><br><span class="line">Editorhighlight-caret-row-boolean=Btrue</span><br><span class="line">Editorhighlight-caret-row-boolean-color=C-14145496</span><br><span class="line">EditorRightTextLineVisible=Btrue</span><br><span class="line">EditorRightTextLimitLineColor=C-11711155</span><br><span class="line">EditorRightTextLineLimit=I80</span><br><span class="line">ColorsSearchResult=C-15379935</span><br><span class="line">Desktop.Font.Code=F0 13 Monospaced</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="五、拓展"><a href="#五、拓展" class="headerlink" title="五、拓展"></a>五、拓展</h2><p>还可以在工具栏→预设进一步修改<br><img src="https://img-blog.csdnimg.cn/20201117184632717.png#pic_center" alt="在这里插入图片描述"><br>可以进一步修改颜色和字体大小。<br><img src="https://img-blog.csdnimg.cn/20201117184710942.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201117184716293.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>Matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Keil】修改Keil为黑色炫酷主题</title>
+    <url>/2021/06/22/%E3%80%90Keil%E3%80%91%E5%88%86%E4%BA%ABKeil5%E4%BF%AE%E6%94%B9%E4%B8%BA%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>经常使用Keil写程序，面对白底黑字多少有点伤眼，分享一个可以修改Keil为黑色背景、缓解眼部疲劳的方法。<br>修改后的效果如下：<br><img src="https://img-blog.csdnimg.cn/20201117180815368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>只能改到这种程度，要修改其他位置的颜色比如工具栏和项目栏只能修改系统设置（暂时没有搞定）有大佬能搞定的话可以支支招~</p>
+<span id="more"></span>
+
+<h2 id="二、具体步骤"><a href="#二、具体步骤" class="headerlink" title="二、具体步骤"></a>二、具体步骤</h2><p><strong>核心</strong>是修改Keil安装路径→UV4→global.prop文件，用记事本打开该文件，修改其中的部分。</p>
+<p><strong>修改前</strong>的global.prop文件用txt打开如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># properties for all file types</span><br><span class="line">indent.automatic=1</span><br><span class="line">virtual.space=0</span><br><span class="line">view.whitespace=0</span><br><span class="line">view.endofline=0</span><br><span class="line">code.page=936</span><br><span class="line">caretline.visible=1</span><br><span class="line">highlight.matchingbraces=1</span><br><span class="line">print.syntax.coloring=1</span><br><span class="line">use.tab.color=1</span><br><span class="line">create.backup.files=0</span><br><span class="line">auto.load.ext.modfiles=0</span><br><span class="line">save.prj.before.dbg=0</span><br><span class="line">save.files.before.dbg=0</span><br><span class="line">function.scanner.project=1</span><br><span class="line">function.scanner.files=1</span><br><span class="line">function.scanner.modules=1</span><br><span class="line"></span><br><span class="line"># properties for c/cpp files</span><br><span class="line">syntax.colouring.cpp=1</span><br><span class="line">use.tab.cpp=0</span><br><span class="line">tabsize.cpp=4</span><br><span class="line">line.margin.visible.cpp=1</span><br><span class="line">fold.cpp=1</span><br><span class="line">monospaced.font.cpp=1</span><br><span class="line"></span><br><span class="line"># properties for asm files</span><br><span class="line">syntax.colouring.asm=1</span><br><span class="line">use.tab.asm=0</span><br><span class="line">tabsize.asm=4</span><br><span class="line">line.margin.visible.asm=1</span><br><span class="line">monospaced.font.asm=1</span><br><span class="line"></span><br><span class="line"># properties for other files</span><br><span class="line">use.tabs=0</span><br><span class="line">tabsize=4</span><br><span class="line">line.margin.visible.txt=0</span><br><span class="line">monospaced.font.txt=1</span><br><span class="line"></span><br><span class="line"># setting for code completion and syntax check</span><br><span class="line">cc.autolist=1</span><br><span class="line">cc.highlightsyntax=1</span><br><span class="line">cc.showparameters=1</span><br><span class="line">cc.triggerlist=1</span><br><span class="line">cc.triggernumchars=3</span><br><span class="line">cc.enter.as.fillup=0</span><br><span class="line">cc.usealpha4inactcode=1</span><br><span class="line">cc.alphavalue=50</span><br><span class="line"></span><br><span class="line"># autosave for editor files</span><br><span class="line">autosave=0</span><br><span class="line">autosave.interval=5</span><br><span class="line"></span><br><span class="line"># vertical edge at right margin</span><br><span class="line">edge.mode=0</span><br><span class="line">edge.column=80</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Specification for text selection and caret line</span><br><span class="line">selection.fore=#000000</span><br><span class="line">selection.back=#86C7F7</span><br><span class="line">caret.fore=#000000</span><br><span class="line">caret.back=#DEFEE6</span><br><span class="line"></span><br><span class="line"># Color for vertical edge</span><br><span class="line">edge.colour=#66FAFA</span><br><span class="line"></span><br><span class="line"># C/C++ Editor files</span><br><span class="line">template.cpp=&quot;#define&quot;,&quot;#define |&quot;;&quot;#if&quot;,&quot;#if |\r\n\r\n#endif&quot;;\\</span><br><span class="line">    &quot;#include&quot;,&quot;#include &quot;;&quot;Header&quot;,&quot;// Header:\r\n// File Name: |\r\n// Author:\r\n// Date:\r\n&quot;;\\</span><br><span class="line">    &quot;continue&quot;,&quot;continue;&quot;;&quot;do&quot;,&quot;do\r\n&#123;\r\n\t// TODO: enter the block content here\r\n\t\r\n\t|\r\n&#125; while ();\r\n&quot;;\\</span><br><span class="line">    &quot;enum&quot;,&quot;enum |\r\n&#123;\r\n\t\r\n&#125;;\r\n&quot;;&quot;for&quot;,&quot;for(|;;)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;fpointer_type&quot;,&quot;typedef int (* |F)();\r\n&quot;;&quot;function&quot;,&quot;void function(|)\r\n&#123;\r\n\r\n&#125;\r\n&quot;;\\</span><br><span class="line">    &quot;if&quot;,&quot;if (|)&quot;;&quot;ifelse&quot;,&quot;if (|)\r\n&#123;\r\n&#125;\r\nelse\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;struct&quot;,&quot;struct | \r\n&#123;\r\n\r\n&#125;;\r\n&quot;;&quot;switch&quot;,&quot;switch (|)\r\n&#123;\r\n\tcase:\r\n\t\tbreak;\r\n\tcase:\r\n\t\tbreak;\r\n\tdefault:\r\n\t\tbreak;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;void&quot;,&quot;void | ();\r\n&quot;;&quot;while&quot;,&quot;while (|)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    </span><br><span class="line">font.monospace.cpp=Courier New</span><br><span class="line">style.cpp.32=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.cpp.4=font:Courier New,size:10,fore:#008000,back:#FFFFFF</span><br><span class="line">style.cpp.10=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.cpp.1=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.cpp.2=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.cpp.5=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.cpp.6=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.cpp.11=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.cpp.9=font:Courier New,size:10,fore:#7F7F00,back:#FFFFFF</span><br><span class="line">style.cpp.7=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.cpp.34=font:Courier New,size:10,fore:#500000,back:#20FFFF</span><br><span class="line">style.cpp.35=font:Courier New,size:10,fore:#FF0000,back:#FFFFFF</span><br><span class="line">style.cpp.16=font:Courier New,size:10,fore:#B00040,back:#FFFFFF</span><br><span class="line">style.cpp.12=font:Courier New,size:10,fore:#000000,back:#E0C0E0</span><br><span class="line">style.cpp.86=font:Courier New,size:10,fore:#696969,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Asm Editor files</span><br><span class="line">font.monospace.asm=Courier New</span><br><span class="line">style.asm.32=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.1=font:Courier New,size:10,fore:#616161,back:#FFFFFF</span><br><span class="line">style.asm.2=font:Courier New,size:10,fore:#FF0000,back:#FFFFFF</span><br><span class="line">style.asm.3=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.4=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.5=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.6=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.7=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.9=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.10=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.11=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.asm.12=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.8=font:Courier New,size:10,fore:#46AA03,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Editor Text files</span><br><span class="line">font.monospace.txt=Consolas</span><br><span class="line">style.txt.32=font:Verdana,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>修改后</strong>的global.prop文件用txt打开如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># properties for all file types</span><br><span class="line">indent.automatic=1</span><br><span class="line">virtual.space=0</span><br><span class="line">view.whitespace=0</span><br><span class="line">view.endofline=0</span><br><span class="line">code.page=936</span><br><span class="line">caretline.visible=1</span><br><span class="line">highlight.matchingbraces=1</span><br><span class="line">print.syntax.coloring=1</span><br><span class="line">use.tab.color=1</span><br><span class="line">create.backup.files=0</span><br><span class="line">auto.load.ext.modfiles=0</span><br><span class="line">save.prj.before.dbg=0</span><br><span class="line">save.files.before.dbg=0</span><br><span class="line">function.scanner.project=1</span><br><span class="line">function.scanner.files=1</span><br><span class="line">function.scanner.modules=1</span><br><span class="line"></span><br><span class="line"># properties for c/cpp files</span><br><span class="line">syntax.colouring.cpp=1</span><br><span class="line">use.tab.cpp=0</span><br><span class="line">tabsize.cpp=4</span><br><span class="line">line.margin.visible.cpp=1</span><br><span class="line">fold.cpp=1</span><br><span class="line">monospaced.font.cpp=1</span><br><span class="line"></span><br><span class="line"># properties for asm files</span><br><span class="line">syntax.colouring.asm=1</span><br><span class="line">use.tab.asm=0</span><br><span class="line">tabsize.asm=4</span><br><span class="line">line.margin.visible.asm=1</span><br><span class="line">monospaced.font.asm=1</span><br><span class="line"></span><br><span class="line"># properties for other files</span><br><span class="line">use.tabs=0</span><br><span class="line">tabsize=4</span><br><span class="line">line.margin.visible.txt=0</span><br><span class="line">monospaced.font.txt=1</span><br><span class="line"></span><br><span class="line"># setting for code completion and syntax check</span><br><span class="line">cc.autolist=1</span><br><span class="line">cc.highlightsyntax=1</span><br><span class="line">cc.showparameters=1</span><br><span class="line">cc.triggerlist=1</span><br><span class="line">cc.triggernumchars=3</span><br><span class="line">cc.enter.as.fillup=0</span><br><span class="line">cc.usealpha4inactcode=1</span><br><span class="line">cc.alphavalue=50</span><br><span class="line"></span><br><span class="line"># autosave for editor files</span><br><span class="line">autosave=0</span><br><span class="line">autosave.interval=5</span><br><span class="line"></span><br><span class="line"># vertical edge at right margin</span><br><span class="line">edge.mode=0</span><br><span class="line">edge.column=80</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Specification for text selection and caret line</span><br><span class="line">selection.fore=#000000</span><br><span class="line">selection.back=#005EB3</span><br><span class="line">caret.fore=#FFFFFF</span><br><span class="line">caret.back=#000000</span><br><span class="line"></span><br><span class="line"># Color for vertical edge</span><br><span class="line">edge.colour=#66FAFA</span><br><span class="line"></span><br><span class="line"># C/C++ Editor files</span><br><span class="line">template.cpp=&quot;#define&quot;,&quot;#define |&quot;;&quot;#if&quot;,&quot;#if |\r\n\r\n#endif&quot;;\\</span><br><span class="line">    &quot;#include&quot;,&quot;#include &quot;;&quot;Header&quot;,&quot;// Header:\r\n// File Name: |\r\n// Author:\r\n// Date:\r\n&quot;;\\</span><br><span class="line">    &quot;continue&quot;,&quot;continue;&quot;;&quot;do&quot;,&quot;do\r\n&#123;\r\n\t// TODO: enter the block content here\r\n\t\r\n\t|\r\n&#125; while ();\r\n&quot;;\\</span><br><span class="line">    &quot;enum&quot;,&quot;enum |\r\n&#123;\r\n\t\r\n&#125;;\r\n&quot;;&quot;for&quot;,&quot;for(|;;)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;fpointer_type&quot;,&quot;typedef int (* |F)();\r\n&quot;;&quot;function&quot;,&quot;void function(|)\r\n&#123;\r\n\r\n&#125;\r\n&quot;;\\</span><br><span class="line">    &quot;if&quot;,&quot;if (|)&quot;;&quot;ifelse&quot;,&quot;if (|)\r\n&#123;\r\n&#125;\r\nelse\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;struct&quot;,&quot;struct | \r\n&#123;\r\n\r\n&#125;;\r\n&quot;;&quot;switch&quot;,&quot;switch (|)\r\n&#123;\r\n\tcase:\r\n\t\tbreak;\r\n\tcase:\r\n\t\tbreak;\r\n\tdefault:\r\n\t\tbreak;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;void&quot;,&quot;void | ();\r\n&quot;;&quot;while&quot;,&quot;while (|)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    </span><br><span class="line">font.monospace.cpp=Fixedsys</span><br><span class="line">font.acpmonofontname.cpp=Fixedsys</span><br><span class="line">font.acppropfontname.cpp=Fixedsys</span><br><span class="line">style.cpp.32=font:Fixedsys,size:14,fore:#9CDCFE,back:#1E1E1E</span><br><span class="line">style.cpp.4=font:Fixedsys,size:14,fore:#4EC9B0,back:#1E1E1E</span><br><span class="line">style.cpp.10=font:Fixedsys,size:14,fore:#DCDCDC,back:#1E1E1E</span><br><span class="line">style.cpp.1=font:Fixedsys,size:14,fore:#57A64A,back:#1E1E1E</span><br><span class="line">style.cpp.2=font:Fixedsys,size:14,fore:#007F00,back:#1E1E1E</span><br><span class="line">style.cpp.5=font:Fixedsys,size:14,fore:#007ACC,back:#1E1E1E</span><br><span class="line">style.cpp.6=font:Fixedsys,size:14,fore:#FF80FF,back:#1E1E1E</span><br><span class="line">style.cpp.11=font:Fixedsys,size:14,fore:#DCDCDC,back:#1E1E1E</span><br><span class="line">style.cpp.9=font:Fixedsys,size:14,fore:#4EC9B0,back:#1E1E1E</span><br><span class="line">style.cpp.7=font:Fixedsys,size:14,fore:#FF80FF,back:#1E1E1E</span><br><span class="line">style.cpp.34=font:Fixedsys,size:14,fore:#500000,back:#007ACC</span><br><span class="line">style.cpp.35=font:Fixedsys,size:14,fore:#FF0000,back:#1E1E1E</span><br><span class="line">style.cpp.16=font:Fixedsys,size:14,fore:#9CDCFE,back:#1E1E1E</span><br><span class="line">style.cpp.12=font:Fixedsys,size:14,fore:#FF80FF,back:#1E1E1E</span><br><span class="line">style.cpp.86=font:Fixedsys,size:14,fore:#696969,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Asm Editor files</span><br><span class="line">font.monospace.asm=Courier New</span><br><span class="line">style.asm.32=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.1=font:Courier New,size:10,fore:#616161,back:#FFFFFF</span><br><span class="line">style.asm.2=font:Courier New,size:10,fore:#FF0000,back:#FFFFFF</span><br><span class="line">style.asm.3=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.4=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.5=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.6=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.7=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.9=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.10=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.11=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.asm.12=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.8=font:Courier New,size:10,fore:#46AA03,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Editor Text files</span><br><span class="line">font.monospace.txt=Consolas</span><br><span class="line">style.txt.32=font:Verdana,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>Keil</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【MD】Markdown学习</title>
+    <url>/2021/07/14/%E3%80%90MD%E3%80%91markdown%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="Markdown学习"><a href="#Markdown学习" class="headerlink" title="Markdown学习"></a>Markdown学习</h1><p>推荐一个非常好用的Markdown编辑器：Typora</p>
+<span id="more"></span>
+
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#一级标题</span><br><span class="line">##二级标题</span><br><span class="line">###三级标题</span><br><span class="line">####四级标题</span><br><span class="line">#####五级标题</span><br><span class="line">######六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="段落格式"><a href="#段落格式" class="headerlink" title="段落格式"></a>段落格式</h2><ul>
+<li>字体</li>
+<li>分割线</li>
+<li>删除线</li>
+<li>下划线</li>
+<li>脚注</li>
+</ul>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><ul>
+<li>无序列表和有序列表</li>
+<li>列表嵌套</li>
+</ul>
+<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li>代码区块 </li>
+</ul>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br></pre></td></tr></table></figure>
+
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line"></span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Multisim14.0】buck电路的仿真实现</title>
+    <url>/2021/06/22/%E3%80%90Multisim14.0%E3%80%91buck%E7%94%B5%E8%B7%AF%E7%9A%84%E4%BB%BF%E7%9C%9F%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<h1 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h1><p>使用multisim仿真buck电路，有时间会进行Buck电路的进一步分析。</p>
+<p><strong>文件已上传：</strong><br><a href="https://download.csdn.net/download/weixin_45988024/13120497">https://download.csdn.net/download/weixin_45988024/13120497</a>.</p>
+<span id="more"></span>
+
+
+
+<h1 id="二、原理图"><a href="#二、原理图" class="headerlink" title="二、原理图"></a>二、原理图</h1><p>电路搭建：</p>
+<h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p><img src="https://img-blog.csdnimg.cn/20201117190137315.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><p><img src="https://img-blog.csdnimg.cn/20201117190619725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>区别在于电流的获取，方案二是用一个小阻值的取样电阻，通过测两端电压间接测量。方案一是使用电流探针，也可以完成测量，结果是近似相同的。</p>
+<h1 id="三、具体步骤、参数设定及分析。"><a href="#三、具体步骤、参数设定及分析。" class="headerlink" title="三、具体步骤、参数设定及分析。"></a>三、具体步骤、参数设定及分析。</h1><p>VI为12VDC，信号发生器设置如下：</p>
+<p> <img src="https://img-blog.csdnimg.cn/20201117190856971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>Mos选用N沟道的功率mos，为2N6755</p>
+<p>续流二极管选用：SS34，由于在multisim中没有找到SS54，考虑选用SS34应该勉强满足需求。<br> <img src="https://img-blog.csdnimg.cn/20201117190934540.png#pic_center" alt="在这里插入图片描述"></p>
+<p>电感根据公式计算得：<br> <img src="https://img-blog.csdnimg.cn/202011171909431.png#pic_center" alt="在这里插入图片描述"></p>
+<p>计算得到：Lmin=32uH，选用35uH功率电感。Vin=12V，Iout=3A;<br>KIND×Iout为输出电流纹波量，设定KIND 为0.2,Fsw=150kHz<br>R2电阻取1Ω，作为取样电阻，测两端电压间接测量电流波形。</p>
+<p>测量电感两端电压波形，以及电感所在支路电流，如下：<br> <img src="https://img-blog.csdnimg.cn/20201117190953901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>橙色线为电感电压，白色线为电感电流，Ton期间，UL=4.851V；Toff期间，UL=-7.34V;<br>根据Uo理论值=Ui·D=7.2V；理论UL=12-7.2=4.8V(Ton),UL=-7.2V（Toff）;<br>误差不大，可以认为仿真成功。<br>分析波形，Ton期间，电流回路如下图：<br> <img src="https://img-blog.csdnimg.cn/20201117191005936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>UL&gt;0且为定值;根据UL=Ldi/dt;电感电流线性上升。</p>
+<p>Toff期间，电流回路如下：<br> <img src="https://img-blog.csdnimg.cn/20201117191012897.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>UL&lt;0，并且为定值，根据公式，电感电流线性下降，但没有降落到0，可以判断此时buck电路为CCM模式。</p>
+<h1 id="四、替代方案"><a href="#四、替代方案" class="headerlink" title="四、替代方案"></a>四、替代方案</h1><p>可以尝试脉冲源+肖特基二极管组合，也有比较好的效果，不过脉冲源调不了占空比。<br><img src="https://img-blog.csdnimg.cn/20201117191216686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201117191222771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>波形如下：<img src="https://img-blog.csdnimg.cn/20201117191232945.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br>UL都接近+-6V。</p>
+<h1 id="五、踩坑分享"><a href="#五、踩坑分享" class="headerlink" title="五、踩坑分享"></a>五、踩坑分享</h1><ol>
+<li>   续流二极管选到了快恢复管TVS。</li>
+<li>   信号发生器没有给偏置，导致输入的方波是上下对称的。</li>
+<li>   之前选用的是三极管，这次选用的是大功率NMOS，用三极管一直都调整不出理想的波形。（猜测三极管没有选择好大功率的）</li>
+</ol>
+<h1 id="六、体会"><a href="#六、体会" class="headerlink" title="六、体会"></a>六、体会</h1><p>multisim14跟ad20的鼠标操作不同，有时候会搞混，多用用就熟悉了。</p>
+<p>调仿真，需要耐心和细心，特别是元件的选择对最终结果有很大的影响。</p>
+<p>合理的仿真对电路原理有很大的帮助，帮助你加深对电路原理的理解，另外，电流探针测出来的电流跟取样电阻间接测的效果差不多。</p>
+]]></content>
+      <categories>
+        <category>Multisim</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【MIT自学】6.002电路与电子学笔记</title>
+    <url>/2021/07/28/%E3%80%90MIT%E8%87%AA%E5%AD%A6%E3%80%916.002%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="MIT-6-002电路与电子学笔记"><a href="#MIT-6-002电路与电子学笔记" class="headerlink" title="MIT 6.002电路与电子学笔记"></a>MIT 6.002电路与电子学笔记</h1><h2 id="集总电路抽象介绍"><a href="#集总电路抽象介绍" class="headerlink" title="集总电路抽象介绍"></a>集总电路抽象介绍</h2><p>麦克斯韦方程</p>
+<p>使用质点离散化，进行集总元件抽象，以简单的代数代替微分方程</p>
+<h2 id="基本电路分析方法（线性）"><a href="#基本电路分析方法（线性）" class="headerlink" title="基本电路分析方法（线性）"></a>基本电路分析方法（线性）</h2><ul>
+<li><p>KVL（基尔霍夫电压定律） 、KCL（基尔霍夫电流定律）</p>
+</li>
+<li><p>元件合并（串并）</p>
+</li>
+<li><p>节点分析法</p>
+<p>选择一节点为参考地，假设其他未知节点对地电压，然后对<code>除参考地节点外</code>其余节点应用KCL</p>
+</li>
+<li><p>叠加定理</p>
+<p>线性与非线性的差异：线性具有齐次性和叠加性</p>
+<p>叠加定理：电路输出是由每个独立源单独作用的总和。（若有受控源，则每次分析独立源时，对受控源分析一次。）</p>
+</li>
+<li><p>戴维宁定律</p>
+<p>将一个二端口网络等效成一个电压源串联一个电阻，</p>
+<p>电压源Vs=开路电压，R为等效电阻，</p>
+<p>R=开路电压/短路电流</p>
+</li>
+<li><p>诺顿定理</p>
+<p>将一个二端口网络等效成一个电流源并联一个电阻</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="数字抽象"><a href="#数字抽象" class="headerlink" title="数字抽象"></a>数字抽象</h2><p>噪声容限</p>
+<p>数字系统的静态规律：如果输入信号在输入信号的域值范围内则系统可以保证输出信号大小在输出信号域值范围</p>
+<p>$$<br>V_{OH}&gt;V_{IH}&gt;V_{IL}&gt;V_{OL}<br>$$</p>
+<h2 id="数字门内部"><a href="#数字门内部" class="headerlink" title="数字门内部"></a>数字门内部</h2><p>引进了MOSFET场效应晶体管器件，作为开关</p>
+<p>MOS，三端G（Gate栅极）D（Drain漏级）S（Source源极）</p>
+<p>NMOS导通条件：VGS&gt;=VT 。断开：VGS&lt;VT，VT为门电压</p>
+<ul>
+<li>MOS的S模型：导通时认为Ron=0。</li>
+<li>MOS的SR模型：导通时存在Ron不等于0</li>
+</ul>
+<p>注意：数字门的符号隐去了内部的细节如电源连接、RL、GND</p>
+<h2 id="非线性分析"><a href="#非线性分析" class="headerlink" title="非线性分析"></a>非线性分析</h2><ul>
+<li>任意电路可用分析法：KCL,KVL,简化法，节点法</li>
+<li>仅线性电路可用分析法：叠加定理、戴维宁诺顿定理</li>
+</ul>
+<p>对于非线性电路，方法大致有三：</p>
+<ol>
+<li>节点法：直接求表达式，用方程求解</li>
+<li>图解法：通过作出v-i曲线图和负载线，求解交点，得解。</li>
+<li>增量分析法（小信号分析法）</li>
+</ol>
+<h2 id="增量分析"><a href="#增量分析" class="headerlink" title="增量分析"></a>增量分析</h2><ul>
+<li>增量方法（小信号方法）</li>
+</ul>
+<ol>
+<li><p>取某一直流偏移量或偏压点VD,ID</p>
+</li>
+<li><p>将小信号vd叠加在VD上</p>
+</li>
+<li><p>响应id对小信号vd近似为线性的</p>
+<center>总改变量=直流偏移量+叠加的小信号</center>
+$$
+iD=ID+id
+$$
+`叠加小信号为什么是线性的？`可以用泰勒展开进行证明（忽略高次项）</li>
+</ol>
+<ul>
+<li><p>图形法</p>
+<p>即用<strong>工作点的斜率×增量</strong>，相加后的结果来近似曲线上对应该点</p>
+<p>静态工作点即为直流偏置（DC offset）点</p>
+</li>
+</ul>
+<h2 id="受控源和放大器"><a href="#受控源和放大器" class="headerlink" title="受控源和放大器"></a>受控源和放大器</h2><ol>
+<li><p>受控源有4种</p>
+<p>电压控制电压源（VCVS），电压控制电流源（VCCS）</p>
+<p>电流控制电压源（CCVS），电流控制电流源（CCCS）</p>
+</li>
+<li><p>放大器</p>
+<p>信号放大是模拟和数字处理的关键</p>
+</li>
+</ol>
+<ul>
+<li><p>对于模拟信号</p>
+<p>将信号放大后进行传输，受噪声的干扰较小</p>
+</li>
+<li><p>对于数字信号</p>
+<p>由于静态规则，故需要放大<br>$$<br>{（V_{OH}-V_{OL}）\over（V_{IH}-V_{IL}）}<br>$$</p>
+</li>
+</ul>
+<p>​        放大器是一个三端网络（输入、输出、电源），一般在图中忽略电源端。</p>
+<p>​        </p>
+<h2 id="场效应管放大器大信号分析"><a href="#场效应管放大器大信号分析" class="headerlink" title="场效应管放大器大信号分析"></a>场效应管放大器大信号分析</h2><p>场效应管SCS模型，处于<strong>饱和状态</strong>的场效应管的开关电流源模型要比S或SR模型更加精确。</p>
+<p>当<br>$$<br>V_{DS}&gt;=V_{GS}-V_T<br>$$<br>场效应管相当于电流源</p>
+<p>“饱和定律”：让放大电路满足<br>$$<br>V_{GS}&gt;=V_T<br>$$</p>
+<p>$$<br>V_{DS}&gt;=V_{GS}-V_T<br>$$</p>
+<p>饱和规律下存在有效运行区间（有效输入范围和输出范围）</p>
+<h2 id="放大器小信号模型"><a href="#放大器小信号模型" class="headerlink" title="放大器小信号模型"></a>放大器小信号模型</h2><p>选择合适的DC offset，最好是工作点位于输入工作范围的中点处，输入有最大限度的波动。</p>
+<h2 id="电容与一阶系统"><a href="#电容与一阶系统" class="headerlink" title="电容与一阶系统"></a>电容与一阶系统</h2><ol>
+<li><p>列出微分方程，然后求特解、齐次解、通解</p>
+</li>
+<li><p>观察法</p>
+<p>运用<br>$$<br>exp({-t\over \tau})<br>$$<br>或<br>$$<br>1-exp({-t\over \tau})<br>$$<br>以及初值、终值，直接写出Vo表达式</p>
+<p><code>区分零状态和零输入响应</code></p>
+</li>
+</ol>
+<h2 id="二阶系统"><a href="#二阶系统" class="headerlink" title="二阶系统"></a>二阶系统</h2><p>RLC电路</p>
+<p>能量在电容和电感之间来回转移，但有能量损耗，能量损耗源于电阻消耗能量，最终系统总能量为0.</p>
+<h2 id="正弦稳态（SSS）"><a href="#正弦稳态（SSS）" class="headerlink" title="正弦稳态（SSS）"></a>正弦稳态（SSS）</h2><p>其它信号可以表示成一系列正弦信号的叠加。</p>
+<p>通常是对正弦量的特解感兴趣，也就是在<strong>暂态已经结束</strong>之后。</p>
+<h2 id="阻抗模型"><a href="#阻抗模型" class="headerlink" title="阻抗模型"></a>阻抗模型</h2><ul>
+<li>电容阻抗：1/（SC）</li>
+<li>电阻：R</li>
+<li>电感：SL</li>
+</ul>
+<p>就能够轻松地获取传递函数（利用分压器、分流器、KVL等）</p>
+<h2 id="滤波器"><a href="#滤波器" class="headerlink" title="滤波器"></a>滤波器</h2><ul>
+<li>包括低通、高通、带通、带阻</li>
+<li>根据直觉去看待滤波器，其实就是利用电容电感的低频、高频特性。直观分析电路。</li>
+<li>采用复阻抗可以很快地求解一阶、二阶电路</li>
+</ul>
+<h2 id="运算放大器抽象"><a href="#运算放大器抽象" class="headerlink" title="运算放大器抽象"></a>运算放大器抽象</h2><p>理想运放：</p>
+<ul>
+<li><p>输入阻抗无穷大</p>
+</li>
+<li><p>输出阻抗为0</p>
+</li>
+<li><p>放大倍数正无穷</p>
+</li>
+<li><p>没有饱和</p>
+<p>内部MOS饱和会导致直接放大到上限或下限（供电电源的限制）</p>
+</li>
+</ul>
+<ol>
+<li>负反馈下：有虚短虚断性质</li>
+<li>正反馈下：运放进入饱和状态，Vout为上下限值</li>
+</ol>
+<p>利用负反馈，可以构建<strong>加法减法器、积分、微分器</strong>。</p>
+<p>利用正反馈，可以构建<strong>比较器、振荡器</strong>。</p>
+<h2 id="电能和功率"><a href="#电能和功率" class="headerlink" title="电能和功率"></a>电能和功率</h2><p>待机功率和使用功率</p>
+<h2 id="能耗，CMOS管"><a href="#能耗，CMOS管" class="headerlink" title="能耗，CMOS管"></a>能耗，CMOS管</h2><p>使用PMOS和NMOS组成CMOS，使得理想的待机功耗为0.</p>
+]]></content>
+      <categories>
+        <category>MIT自学</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【Robotics】机器人路径规划之RRT算法</title>
+    <url>/2021/08/24/%E3%80%90Robotics%E3%80%91%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92%E4%B9%8BRRT%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="快速搜索随机树（RRT算法）"><a href="#快速搜索随机树（RRT算法）" class="headerlink" title="快速搜索随机树（RRT算法）"></a>快速搜索随机树（RRT算法）</h1><p>RRT算法步骤（个人理解）：</p>
+<ol>
+<li>将初始点作为随机搜索树的根，并添加入搜索树</li>
+<li>随机生成一个点</li>
+<li>计算搜索树中距离该点最近的点（自己定义代价函数）</li>
+<li>根据最近点和随机点，生成新节点，方向为最近点朝向随机点，步长自己定义</li>
+<li>判断新节点是否满足条件，若满足则将新节点加入到搜索树中；若不满足，回到第二步</li>
+<li>重复2-5步，直到搜索次数到达限定值还未搜索到目标值，代表搜索失败；</li>
+</ol>
+<p>​       若某次中将“终点”加入到搜索树，说明搜索成功。（“终点”可以是距离实际终点一定误差的点）</p>
+<p>Matlab代码参考：<a href="http://rkala.in/codes.php">http://rkala.in/codes.php</a></p>
+<p>附上代码：</p>
+<span id="more"></span>
+
+<h2 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%astart.m</span><br><span class="line">map=im2bw(imread(&#x27;map1.bmp&#x27;)); % input map read from a bmp file. for new maps write the file name here，灰度图转为二值图</span><br><span class="line">source=[10 10]; % source position in Y, X format，根节点坐标</span><br><span class="line">goal=[490 490]; % goal position in Y, X format，目标节点坐标</span><br><span class="line">stepsize=20; % size of each step of the RRT，步长</span><br><span class="line">disTh=20; % nodes closer than this threshold are taken as almost the same</span><br><span class="line">maxFailedAttempts = 10000;</span><br><span class="line">display=true; % display of RRT</span><br><span class="line"></span><br><span class="line">%%%%% parameters end here %%%%%</span><br><span class="line"></span><br><span class="line">tic;   %%保存当前时间</span><br><span class="line">if ~feasiblePoint(source,map), error(&#x27;source lies on an obstacle or outside map&#x27;); end  %%抛出错误信息</span><br><span class="line">if ~feasiblePoint(goal,map), error(&#x27;goal lies on an obstacle or outside map&#x27;); end  %%判断起始点位置是否落在地图中</span><br><span class="line">if display, imshow(map);rectangle(&#x27;position&#x27;,[1 1 size(map)-1],&#x27;edgecolor&#x27;,&#x27;k&#x27;); end  %%画矩形，对应图片大小</span><br><span class="line">RRTree=double([source -1]); % RRT rooted at the source, representation node and parent index</span><br><span class="line">failedAttempts=0;</span><br><span class="line">counter=0;</span><br><span class="line">pathFound=false;</span><br><span class="line">while failedAttempts&lt;=maxFailedAttempts  % loop to grow RRTs</span><br><span class="line">    if rand &lt; 0.5</span><br><span class="line">        sample=rand(1,2) .* size(map); % random sample，随机生成元素，元素属于0到1.令矩阵对应元素相乘，生成随机点。</span><br><span class="line">    else</span><br><span class="line">        sample=goal; % sample taken as goal to bias tree generation to goal</span><br><span class="line">    end</span><br><span class="line">    [A, I]=min( distanceCost(RRTree(:,1:2),sample) ,[],1); % find closest as per the function in the metric node to the sample,找距离最小的元素，A表示距离，I表示索引</span><br><span class="line">    closestNode = RRTree(I(1),1:2);%I表示索引，返回最近节点坐标</span><br><span class="line">    theta=atan2(sample(1)-closestNode(1),sample(2)-closestNode(2));  % direction to extend sample to produce new node</span><br><span class="line">    newPoint = double(int32(closestNode(1:2) + stepsize * [sin(theta)  cos(theta)]));%%根据步长，线性拓展新节点</span><br><span class="line">    if ~checkPath(closestNode(1:2), newPoint, map) % if extension of closest node in tree to the new point is feasible可行的</span><br><span class="line">        failedAttempts=failedAttempts+1;</span><br><span class="line">        continue;</span><br><span class="line">    end</span><br><span class="line">    if distanceCost(newPoint,goal)&lt;disTh, pathFound=true;break; end % goal reached，如果新节点和目标节点距离在一定范围内，认为找到了目标</span><br><span class="line">    [A, I2]=min( distanceCost(RRTree(:,1:2),newPoint) ,[],1); % check if new node is not already pre-existing in the tree</span><br><span class="line">    if distanceCost(newPoint,RRTree(I2(1),1:2))&lt;disTh, failedAttempts=failedAttempts+1;continue; end </span><br><span class="line">    RRTree=[RRTree;newPoint I(1)]; % add node，拓展RRTree，I[1]其实表达是他的父节点</span><br><span class="line">    failedAttempts=0;</span><br><span class="line">    if display</span><br><span class="line">        line([closestNode(2);newPoint(2)],[closestNode(1);newPoint(1)]);</span><br><span class="line">        counter=counter+1;M(counter)=getframe;%%捕获坐标区或图窗作为影片帧</span><br><span class="line">    end</span><br><span class="line">end %%循环终止，代表搜索结束</span><br><span class="line">if display &amp;&amp; pathFound </span><br><span class="line">    line([closestNode(2);goal(2)],[closestNode(1);goal(1)]);</span><br><span class="line">    counter=counter+1;M(counter)=getframe;</span><br><span class="line">end</span><br><span class="line">if display </span><br><span class="line">    disp(&#x27;click/press any key&#x27;);</span><br><span class="line">    waitforbuttonpress; </span><br><span class="line">end</span><br><span class="line">if ~pathFound, error(&#x27;no path found. maximum attempts reached&#x27;); end</span><br><span class="line">path=[goal];</span><br><span class="line">prev=I(1);</span><br><span class="line">while prev&gt;0</span><br><span class="line">    path=[RRTree(prev,1:2);path];%%获取path，即从目标开始追溯每个父节点</span><br><span class="line">    prev=RRTree(prev,3);%%代表父节点</span><br><span class="line">end</span><br><span class="line">pathLength=0;</span><br><span class="line">for i=1:length(path)-1, pathLength=pathLength+distanceCost(path(i,1:2),path(i+1,1:2)); end</span><br><span class="line">fprintf(&#x27;processing time=%d \nPath Length=%d \n\n&#x27;, toc,pathLength); %%输出距离总长，停止计时</span><br><span class="line">imshow(map);rectangle(&#x27;position&#x27;,[1 1 size(map)-1],&#x27;edgecolor&#x27;,&#x27;k&#x27;);</span><br><span class="line">line(path(:,2),path(:,1));%%绘制最终的多段线。</span><br></pre></td></tr></table></figure>
+
+<h2 id="代价函数"><a href="#代价函数" class="headerlink" title="代价函数"></a>代价函数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%distanceCost.m</span><br><span class="line">%定义距离代价函数，欧式距离</span><br><span class="line">function h=distanceCost(a,b)</span><br><span class="line">h = sqrt((a(:,1)-b(:,1)).^2 + (a(:,2)-b(:,2)).^2 );</span><br></pre></td></tr></table></figure>
+
+<h2 id="检查路径"><a href="#检查路径" class="headerlink" title="检查路径"></a>检查路径</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%checkPath.m</span><br><span class="line">function feasible=checkPath(n,newPos,map)</span><br><span class="line">feasible=true;</span><br><span class="line">dir=atan2(newPos(1)-n(1),newPos(2)-n(2));</span><br><span class="line">for r=0:0.5:sqrt(sum((n-newPos).^2))</span><br><span class="line">    posCheck=n+r.*[sin(dir) cos(dir)];</span><br><span class="line">    if ~(feasiblePoint(ceil(posCheck),map) &amp;&amp; feasiblePoint(floor(posCheck),map) &amp;&amp; ... </span><br><span class="line">            feasiblePoint([ceil(posCheck(1)) floor(posCheck(2))],map) &amp;&amp; feasiblePoint([floor(posCheck(1)) ceil(posCheck(2))],map))</span><br><span class="line">        feasible=false;break;</span><br><span class="line">    end</span><br><span class="line">    if ~feasiblePoint(newPos,map), feasible=false; end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<h2 id="可达点"><a href="#可达点" class="headerlink" title="可达点"></a>可达点</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%feasiblePoint.m</span><br><span class="line">%判断可达性。</span><br><span class="line">function feasible=feasiblePoint(point,map)</span><br><span class="line">feasible=true;</span><br><span class="line">% check if collission-free spot and inside maps</span><br><span class="line">if ~(point(1)&gt;=1 &amp;&amp; point(1)&lt;=size(map,1) &amp;&amp; point(2)&gt;=1 &amp;&amp; point(2)&lt;=size(map,2) &amp;&amp; map(point(1),point(2))==1)</span><br><span class="line">    feasible=false;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p>![路径](C:\TMP\WeChat Files\503f38f022267988b10f3e86a97f0c1.png)</p>
+<p>![最终效果](C:\TMP\WeChat Files\277135c247cf4ecedaf4a4d04c90bfd.png)</p>
+]]></content>
+      <categories>
+        <category>Robotics</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【机器学习】深度学习入门</title>
+    <url>/2021/08/11/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="深度学习入门笔记"><a href="#深度学习入门笔记" class="headerlink" title="深度学习入门笔记"></a>深度学习入门笔记</h1><h2 id="Rosenblatt模型"><a href="#Rosenblatt模型" class="headerlink" title="Rosenblatt模型"></a>Rosenblatt模型</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># dataset.py</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">def get_beans(counts):</span><br><span class="line">	xs = np.random.rand(counts)</span><br><span class="line">	xs = np.sort(xs)</span><br><span class="line">	ys = [1.2*x+np.random.rand()/10 for x in xs]</span><br><span class="line">	return xs,ys</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># rosenblatt.py</span><br><span class="line">import dataset</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line"></span><br><span class="line"># 配置图像</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;bean size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line"></span><br><span class="line">w = 0.05</span><br><span class="line">alpha = 0.05</span><br><span class="line">for i in range(100):</span><br><span class="line">    for j in range(100):</span><br><span class="line">        x = xs[j]</span><br><span class="line">        y = ys[j]</span><br><span class="line">        y_pre = w * x</span><br><span class="line">        error = y - y_pre</span><br><span class="line">        w = w + error * x * alpha</span><br><span class="line"></span><br><span class="line">print(&quot;w=&quot;, w)</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>import numpy as np  # as xxx作为别名</li>
+<li>for i in range(100) 生成0-99的循环100次</li>
+<li>plt.scatter(xs,ys)#  绘制散点图</li>
+</ul>
+<h2 id="代价函数cost-function"><a href="#代价函数cost-function" class="headerlink" title="代价函数cost_function"></a>代价函数cost_function</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#代价函数由平方误差推导得到</span><br><span class="line">#代价函数：e=(y-w*x)^2=x^2*w^2+(-2x*y)*w+y^2</span><br><span class="line">#a=x^2</span><br><span class="line">#b=-2x*y</span><br><span class="line">#求解斜率：k=2aw+b</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#  cost_function.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line"># 配置图像</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;bean size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line"># plt.show()</span><br><span class="line"></span><br><span class="line">ws = np.arange(0, 3, 0.01)</span><br><span class="line">es_a = []  # 定义列表</span><br><span class="line">for w in ws:</span><br><span class="line">    y_pre = xs * w</span><br><span class="line">    es = (1 / 100) * np.sum((ys - y_pre) ** 2)</span><br><span class="line">    es_a.append(es)  # 列表末尾添加新对象</span><br><span class="line">es_min = min(es_a)</span><br><span class="line">print(&quot;es最小值&quot; + str(es_min))</span><br><span class="line">w_num = es_a.index(es_min)</span><br><span class="line">print(&quot;w的下标&quot; + str(w_num))</span><br><span class="line">print(str(ws[w_num]))</span><br><span class="line"># 配置图像</span><br><span class="line"># plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line"># plt.xlabel(&quot;w&quot;)</span><br><span class="line"># plt.ylabel(&quot;es_average&quot;)</span><br><span class="line"># plt.plot(ws, es_a)</span><br><span class="line"># plt.show()</span><br><span class="line"></span><br><span class="line">plt.title(&quot;final&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;xs&quot;)</span><br><span class="line">plt.ylabel(&quot;y_pre&quot;)</span><br><span class="line">ys = xs * ws[w_num]</span><br><span class="line">plt.plot(xs, ys)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>np.arange()</li>
+<li>list.append()  #  列表末尾添加新对象</li>
+<li>np.sum()  #  元素求和</li>
+<li>list.min()  #  获得列表中的最小值</li>
+<li>list.index()  #  获得首次出现该元素的序列值</li>
+</ul>
+<h2 id="梯度下降和反向传播"><a href="#梯度下降和反向传播" class="headerlink" title="梯度下降和反向传播"></a>梯度下降和反向传播</h2><ul>
+<li>随机梯度下降</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># sgd1.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(500)</span><br><span class="line">w = 0.01</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"># 随机梯度下降</span><br><span class="line">for _ in range(500):</span><br><span class="line">    for i in range(500):</span><br><span class="line">        x = xs[i]</span><br><span class="line">        y = ys[i]</span><br><span class="line">        k = 2 * (x ** 2) * w + (-2 * x * y)</span><br><span class="line">        alpha = 0.1</span><br><span class="line">        w = w - alpha * k</span><br><span class="line">        plt.clf()  # 清空窗口</span><br><span class="line">        plt.scatter(xs, ys)</span><br><span class="line">        y_pre = w * xs</span><br><span class="line">        plt.xlim(0, 1.2)</span><br><span class="line">        plt.ylim(0, 1.2)</span><br><span class="line">        plt.plot(xs, y_pre)</span><br><span class="line">        plt.pause(0.01)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>批量梯度下降</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># sgd2.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(500)</span><br><span class="line">w = 0.01</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"># 批量梯度下降</span><br><span class="line">alpha = 0.1</span><br><span class="line">for _ in range(50):</span><br><span class="line">    for i in range(10):</span><br><span class="line">        xs_sum = xs[10*_+i]</span><br><span class="line">        ys_sum = ys[10*_+i]</span><br><span class="line">        k = 2 * (xs_sum ** 2) * w + (-2 * xs_sum * ys_sum)</span><br><span class="line">        k = k/10</span><br><span class="line">        w = w - alpha * k</span><br><span class="line">    plt.clf()  # 清空窗口</span><br><span class="line">    y_pre = w * xs</span><br><span class="line">    plt.xlim(0, 1.2)</span><br><span class="line">    plt.ylim(0, 1.2)</span><br><span class="line">    plt.scatter(xs, ys)</span><br><span class="line">    plt.plot(xs, y_pre)</span><br><span class="line">    plt.pause(0.01)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>固定步长梯度下降</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># sgd3.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(500)</span><br><span class="line">w = 0.01</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"># 固定步长梯度下降</span><br><span class="line">step = 0.01  #步长</span><br><span class="line">alpha = 0.1</span><br><span class="line">for _ in range(50):</span><br><span class="line">    for i in range(10):</span><br><span class="line">        xs_sum = xs[10 * _ + i]</span><br><span class="line">        ys_sum = ys[10 * _ + i]</span><br><span class="line">        k = 2 * (xs_sum ** 2) * w + (-2 * xs_sum * ys_sum)</span><br><span class="line">        k = k / 10</span><br><span class="line">        if k &gt; 0:</span><br><span class="line">            w = w - step</span><br><span class="line">        else:</span><br><span class="line">            w = w + step</span><br><span class="line">    plt.clf()  # 清空窗口</span><br><span class="line">    y_pre = w * xs</span><br><span class="line">    plt.xlim(0, 1.2)</span><br><span class="line">    plt.ylim(0, 1.2)</span><br><span class="line">    plt.scatter(xs, ys)</span><br><span class="line">    plt.plot(xs, y_pre)</span><br><span class="line">    plt.pause(0.01)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>plt.clf()#清空窗口</li>
+<li>plt.xlim(a,b)</li>
+<li>plt.ylim(a,b)</li>
+<li>plt.pause(time)#延时</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 预测函数为y=wx+b时，进行的方差代价函数图绘制（3维）</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">from mpl_toolkits.mplot3d import Axes3D</span><br><span class="line"></span><br><span class="line">m = 100</span><br><span class="line">xs, ys = dataset.get_beans(m)</span><br><span class="line">plt.title(&quot;Size-Toxicity Function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&#x27;Bean Size&#x27;)</span><br><span class="line">plt.ylabel(&#x27;Toxicity&#x27;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line"></span><br><span class="line">w = 0.01</span><br><span class="line">b = 0.01</span><br><span class="line">y_pre = xs * w + b</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax = Axes3D(fig)</span><br><span class="line">ax.set_zlim(0, 2)</span><br><span class="line">#  随机梯度下降</span><br><span class="line">ws = np.arange(0, 2, 0.1)</span><br><span class="line">bs = np.arange(-3, 3, 0.1)</span><br><span class="line"></span><br><span class="line">for w in ws:</span><br><span class="line">    es = []</span><br><span class="line">    for b in bs:</span><br><span class="line">        y_pre = xs * w + b</span><br><span class="line">        e = (1 / m) * np.sum((ys - y_pre) ** 2)</span><br><span class="line">        es.append(e)</span><br><span class="line">    figure = ax.plot(bs, es, w, zdir=&#x27;y&#x27;)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># dataset.py</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">def get_beans(counts):</span><br><span class="line">	xs = np.random.rand(counts)</span><br><span class="line">	xs = np.sort(xs)</span><br><span class="line">	ys = np.zeros(counts)</span><br><span class="line">	for i in range(counts):</span><br><span class="line">		x = xs[i]</span><br><span class="line">		yi = 0.7*x+(0.5-np.random.rand())/50+0.5</span><br><span class="line">		if yi &gt; 0.8:</span><br><span class="line">			ys[i] = 1</span><br><span class="line">	return xs,ys</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># activation.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line">w = 0.01</span><br><span class="line">b = 0.01</span><br><span class="line">z = w * xs + b</span><br><span class="line">a = 1 / (1 + np.exp(-z))</span><br><span class="line"></span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, a)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"># 随机梯度下降</span><br><span class="line">for _ in range(5000):</span><br><span class="line">    alpha = 0.05</span><br><span class="line">    for i in range(100):</span><br><span class="line">        x = xs[i]</span><br><span class="line">        y = ys[i]</span><br><span class="line"></span><br><span class="line">        z = w * x + b</span><br><span class="line">        a = 1 / (1 + np.exp(-z))  # 激活函数</span><br><span class="line">        e = (y - a) ** 2  # 代价函数</span><br><span class="line"></span><br><span class="line">        # 链式法则，反向传播，调整参数</span><br><span class="line">        deda = -2 * (y - a)</span><br><span class="line">        dadz = a * (1 - a)</span><br><span class="line">        dzdw = x</span><br><span class="line">        dedw = deda * dadz * dzdw</span><br><span class="line">        dzdb = 1</span><br><span class="line">        dedb = deda * dadz * dzdb</span><br><span class="line"></span><br><span class="line">        w = w - dedw * alpha</span><br><span class="line">        b = b - dedb * alpha  # 反向传播</span><br><span class="line">    if _ % 100 == 0:</span><br><span class="line">        plt.clf()  # 清空窗口</span><br><span class="line">        plt.scatter(xs, ys)</span><br><span class="line">        z = w * xs + b</span><br><span class="line">        a = 1 / (1 + np.exp(-z))</span><br><span class="line">        plt.xlim(0, 1)</span><br><span class="line">        plt.ylim(0, 1.2)</span><br><span class="line">        plt.plot(xs, a)</span><br><span class="line">        plt.pause(0.01)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>引进了sigmoid函数作为神经网络的激活函数，将变量映射到0，1之间</p>
+<p>$$<br>a= {1\over (1+exp(-z))}<br>$$</p>
+<p>$$<br>0&lt;=a&lt;=1<br>$$</p>
+<h2 id="隐藏层"><a href="#隐藏层" class="headerlink" title="隐藏层"></a>隐藏层</h2><p>引入一层隐藏层，第一层有2个神经元。</p>
+<p>权重和偏置的下标较为繁琐，容易混乱。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 定义激活函数</span><br><span class="line">def sigmoid(x):</span><br><span class="line">    return 1 / (1 + np.exp(-x))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 定义前向传播函数</span><br><span class="line">def forward_progration(x):</span><br><span class="line">    z11_1 = w11_1 * x + b1_1</span><br><span class="line">    a11_1 = sigmoid(z11_1)</span><br><span class="line">    z21_1 = w21_1 * x + b2_1</span><br><span class="line">    a21_1 = sigmoid(z21_1)</span><br><span class="line">    z1_2 = w11_2 * a11_1 + w12_2 * a21_1 + b1_2</span><br><span class="line">    a1_2 = sigmoid(z1_2)</span><br><span class="line">    return z11_1, a11_1, z21_1, a21_1, z1_2, a1_2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"># 第一层神经元</span><br><span class="line"># 参数的下标：ab_c,a表示第a个神经元，b表示对应第b个输入，c表示第c层</span><br><span class="line">w11_1 = np.random.rand()</span><br><span class="line">w21_1 = np.random.rand()</span><br><span class="line">b1_1 = np.random.rand()</span><br><span class="line">b2_1 = np.random.rand()</span><br><span class="line"># 第二层神经元，输出</span><br><span class="line">w11_2 = np.random.rand()</span><br><span class="line">w12_2 = np.random.rand()</span><br><span class="line">b1_2 = np.random.rand()</span><br><span class="line"></span><br><span class="line"># 随机梯度下降</span><br><span class="line">for _ in range(5000):</span><br><span class="line">    alpha = 0.05</span><br><span class="line">    for i in range(100):</span><br><span class="line">        x = xs[i]</span><br><span class="line">        y = ys[i]</span><br><span class="line"></span><br><span class="line">        # 前向传播</span><br><span class="line">        z11_1, a11_1, z21_1, a21_1, z1_2, a1_2 = forward_progration(x)</span><br><span class="line">        # 代价函数</span><br><span class="line">        e = (y - a1_2) ** 2</span><br><span class="line"></span><br><span class="line">        # 链式法则</span><br><span class="line">        deda1_2 = -2 * (y - a1_2)</span><br><span class="line">        da1_2dz1_2 = a1_2 * (1 - a1_2)</span><br><span class="line">        dz1_2dw11_2 = a11_1</span><br><span class="line">        dz1_2dw21_2 = a21_1</span><br><span class="line">        dedw11_2 = deda1_2 * da1_2dz1_2 * dz1_2dw11_2</span><br><span class="line">        dedw21_2 = deda1_2 * da1_2dz1_2 * dz1_2dw21_2</span><br><span class="line"></span><br><span class="line">        dz1_2db1_2 = 1</span><br><span class="line">        dedb1_2 = deda1_2 * da1_2dz1_2 * dz1_2db1_2</span><br><span class="line"></span><br><span class="line">        dz1_2da11_1 = w11_2</span><br><span class="line">        da11_1dz11_1 = a11_1 * (1 - a11_1)</span><br><span class="line">        dz11_1dw11_1 = x</span><br><span class="line">        dedw11_1 = deda1_2 * da1_2dz1_2 * dz1_2da11_1 * da11_1dz11_1 * dz11_1dw11_1</span><br><span class="line">        dz1_1db1_1 = 1</span><br><span class="line">        dedb1_1 = deda1_2 * da1_2dz1_2 * dz1_2da11_1 * da11_1dz11_1 * dz1_1db1_1</span><br><span class="line"></span><br><span class="line">        dz1_2da12_1 = w12_2</span><br><span class="line">        da12_1dz21_1 = a21_1 * (1 - a21_1)</span><br><span class="line">        dz21_1dw21_1 = x</span><br><span class="line">        dedw21_1 = deda1_2 * da1_2dz1_2 * dz1_2da12_1 * da12_1dz21_1 * dz21_1dw21_1</span><br><span class="line">        dz21_1db2_1 = 1</span><br><span class="line">        dedb2_1 = deda1_2 * da1_2dz1_2 * dz1_2da12_1 * da12_1dz21_1 * dz21_1db2_1</span><br><span class="line"></span><br><span class="line">        # 反向传播</span><br><span class="line">        w11_1 = w11_1 - alpha * dedw11_1</span><br><span class="line">        w21_1 = w21_1 - alpha * dedw21_1</span><br><span class="line">        b1_1 = b1_1 - alpha * dedb1_1</span><br><span class="line">        b2_1 = b2_1 - alpha * dedb2_1</span><br><span class="line">        w11_2 = w11_2 - alpha * dedw11_2</span><br><span class="line">        w12_2 = w12_2 - alpha * dedw21_2</span><br><span class="line">        b1_2 = b1_2 - alpha * dedb1_2</span><br><span class="line"></span><br><span class="line">    if _ % 100 == 0:</span><br><span class="line">        plt.clf()  # 清空窗口</span><br><span class="line">        plt.scatter(xs, ys)</span><br><span class="line">        z11_1, a11_1, z21_1, a21_1, z1_2, a1_2 = forward_progration(xs)</span><br><span class="line">        plt.xlim(0, 2.5)</span><br><span class="line">        plt.ylim(0, 1.2)</span><br><span class="line">        plt.plot(xs, a1_2)</span><br><span class="line">        plt.pause(0.01)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Keras框架"><a href="#Keras框架" class="headerlink" title="Keras框架"></a>Keras框架</h2><h3 id="Anaconda安装Keras"><a href="#Anaconda安装Keras" class="headerlink" title="Anaconda安装Keras"></a>Anaconda安装Keras</h3><ol>
+<li>首先安装anaconda，然后在Pycharm中配置使用。</li>
+<li>点击Anaconda Prompt进入命令行</li>
+<li>输入命令：conda create -n xxx python=3.8</li>
+<li>输入命令：conda activate xxx</li>
+<li>进入xxx后，输入:conda install tensorflow-gpu</li>
+<li>输入:conda install keras-gpu</li>
+<li>y回车确认</li>
+<li>等待安装后，进入pycharm新建项目，选择配置好的anaconda环境作为python的解释器</li>
+<li>完成！</li>
+</ol>
+<p><code>（Anaconda会自动帮我们安装适配的CUDA和Cudnn）</code></p>
+<p>具体怎么使用Keras的代码可以看下面章节。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Keras的中文文档写道：</span><br><span class="line">如果你以 TensorFlow 或 CNTK 后端运行，只要检测到任何可用的 GPU，那么代码将自动在 GPU 上运行。</span><br></pre></td></tr></table></figure>
+
+<p>但是我目前还没成功过，都是在CPU上进行训练的。。。</p>
+<h3 id="具体使用代码"><a href="#具体使用代码" class="headerlink" title="具体使用代码"></a>具体使用代码</h3><p>Keras中文文档网站：<a href="https://keras.io/zh/">https://keras.io/zh/</a></p>
+<p>通过Keras框架的代码，可以简洁地完成前向传播，激活函数，损失函数（代价函数）。</p>
+<p>使用时，仅需要考虑输入数据的维度，隐藏层神经元数量。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import time</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import plot_utils</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line"></span><br><span class="line">m = 100</span><br><span class="line">X, Y = dataset.get_beans4(m)</span><br><span class="line">plot_utils.show_scatter(X, Y)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(units=2, activation=&#x27;sigmoid&#x27;, input_dim=2))</span><br><span class="line">model.add(Dense(units=1, activation=&#x27;sigmoid&#x27;))</span><br><span class="line"></span><br><span class="line"># model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=&#x27;sgd&#x27;, metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])# 配置学习率lr=0.05</span><br><span class="line">model.fit(X, Y, epochs=5000, batch_size=10)</span><br><span class="line"></span><br><span class="line">pres = model.predict(X)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"># plot_utils.show_scatter_curve(X, Y, pres)</span><br><span class="line">plot_utils.show_scatter_surface(X, Y, model)</span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="深度学习-DeepLearning"><a href="#深度学习-DeepLearning" class="headerlink" title="深度学习 DeepLearning"></a>深度学习 DeepLearning</h2><p>隐藏层超过3层就叫做深度神经网络</p>
+<p>tensorflow游乐场（可视化）：<a href="http://playground.tensorflow.org/">http://playground.tensorflow.org/</a></p>
+<p>隐藏层1个神经元，就使得loss函数=0.5对应空间中的一条线，经过激活函数后会变成单个曲线</p>
+<p>隐藏层2个神经元，就使得loss函数=0.5对应空间中的两条相交线，经过激活函数后会变成2个曲线</p>
+<p>隐藏层3个神经元，就使得loss函数=0.5对应空间中的3条相交线，经过激活函数后会变成2个曲线</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># dataset.py</span><br><span class="line">import numpy as np</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">def get_beans(counts):</span><br><span class="line">	posX,posY = genSpiral(int(counts/2),0,1)</span><br><span class="line">	negX,negY = genSpiral(int(counts/2),np.pi,0)</span><br><span class="line">	X = np.vstack((posX,negX))</span><br><span class="line">	Y = np.hstack((posY,negY))</span><br><span class="line">	return X,Y</span><br><span class="line"></span><br><span class="line">def genSpiral(counts,deltaT, label):</span><br><span class="line">	X = np.zeros((counts,2))</span><br><span class="line">	Y = np.zeros(counts)</span><br><span class="line">	for i in range(counts):</span><br><span class="line">		r = i / counts * 5</span><br><span class="line">		t = 1.75 * i / counts * 2 * np.pi + deltaT;</span><br><span class="line">		x1 = r * np.sin(t) + random.uniform(-0.1,0.1)</span><br><span class="line">		x2 = r * np.cos(t) + random.uniform(-0.1,0.1)</span><br><span class="line">		X[i] = np.array([x1,x2])</span><br><span class="line">		Y[i] = label</span><br><span class="line">	return X,Y </span><br><span class="line"></span><br><span class="line">def dist(a, b):</span><br><span class="line">	dx = a[&#x27;x&#x27;] - b[&#x27;x&#x27;];</span><br><span class="line">	dy = a[&#x27;y&#x27;]- b[&#x27;y&#x27;];</span><br><span class="line">	return np.sqrt(dx * dx + dy * dy);</span><br><span class="line">def getCircleLabel(p, center):</span><br><span class="line">	radius = 1;</span><br><span class="line">	if dist(p, center) &lt; (radius * 0.5):</span><br><span class="line">		return 1</span><br><span class="line">	else:</span><br><span class="line">		return 0</span><br><span class="line"></span><br><span class="line">def randUniform(a=-1, b=1):</span><br><span class="line">  return np.random.rand() * (b - a) + a;</span><br><span class="line"></span><br><span class="line">def classifyCircleData(numSamples=100, noise=0):</span><br><span class="line">	points = [];</span><br><span class="line">	Y = []</span><br><span class="line">	X = []</span><br><span class="line">	radius = 1;</span><br><span class="line">	num = int(numSamples/2)</span><br><span class="line">	for i in range(num):</span><br><span class="line">		r = randUniform(0, radius * 0.5);</span><br><span class="line">		angle = randUniform(0, 2 * np.pi);</span><br><span class="line">		x = r * np.sin(angle);</span><br><span class="line">		y = r * np.cos(angle);</span><br><span class="line">		noiseX = randUniform(-radius, radius) * noise;</span><br><span class="line">		noiseY = randUniform(-radius, radius) * noise;</span><br><span class="line">		label = getCircleLabel(&#123;&#x27;x&#x27;: x + noiseX, &#x27;y&#x27;: y + noiseY&#125;, &#123;&#x27;x&#x27;: 0, &#x27;y&#x27;: 0&#125;);</span><br><span class="line">		X.append([x+1,y+1])</span><br><span class="line">		Y.append(label)</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">	for i in range(num):</span><br><span class="line">		r = randUniform(radius * 0.7, radius);</span><br><span class="line">		angle = randUniform(0, 2 * np.pi);</span><br><span class="line">		x = r * np.sin(angle);</span><br><span class="line">		y = r * np.cos(angle);</span><br><span class="line">		noiseX = randUniform(-radius, radius) * noise;</span><br><span class="line">		noiseY = randUniform(-radius, radius) * noise;</span><br><span class="line">		label = getCircleLabel(&#123;&#x27;x&#x27;: x + noiseX, &#x27;y&#x27;: y + noiseY&#125;, &#123;&#x27;x&#x27;: 0, &#x27;y&#x27;: 0&#125;);</span><br><span class="line">		X.append([x+1,y+1])</span><br><span class="line">		Y.append(label)</span><br><span class="line"></span><br><span class="line">	X = np.array(X)</span><br><span class="line">	Y = np.array(Y)</span><br><span class="line"></span><br><span class="line">	return X,Y</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># main.py</span><br><span class="line">import time</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import plot_utils</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line"></span><br><span class="line">m = 100</span><br><span class="line">X, Y = dataset.get_beans(m)</span><br><span class="line">plot_utils.show_scatter(X, Y)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(units=8, activation=&#x27;relu&#x27;, input_dim=2))</span><br><span class="line">model.add(Dense(units=8, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=8, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=1, activation=&#x27;sigmoid&#x27;))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=&#x27;sgd&#x27;, metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.fit(X, Y, epochs=5000, batch_size=10)</span><br><span class="line"></span><br><span class="line">pres = model.predict(X)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"># plot_utils.show_scatter_curve(X, Y, pres)</span><br><span class="line">plot_utils.show_scatter_surface(X, Y, model)</span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h2><h3 id="图像识别初步，使用mnist数据集进行训练，未采用卷积"><a href="#图像识别初步，使用mnist数据集进行训练，未采用卷积" class="headerlink" title="图像识别初步，使用mnist数据集进行训练，未采用卷积"></a>图像识别初步，使用mnist数据集进行训练，未采用卷积</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#图像识别初步，使用mnist数据集进行训练，未采用卷积</span><br><span class="line">import time</span><br><span class="line">from tensorflow.keras.datasets import mnist</span><br><span class="line"># import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line">from tensorflow.keras.utils import to_categorical</span><br><span class="line"></span><br><span class="line">(X_train, Y_train), (X_test, Y_test) = mnist.load_data()</span><br><span class="line">print(&quot;X_train shape:&quot; + str(X_train.shape))</span><br><span class="line">print(&quot;Y_train shape:&quot; + str(Y_train.shape))</span><br><span class="line">print(&quot;X_test shape:&quot; + str(X_test.shape))</span><br><span class="line">print(&quot;Y_test shape:&quot; + str(Y_test.shape))</span><br><span class="line"></span><br><span class="line">print(Y_train[0])</span><br><span class="line">plt.imshow(X_train[0], cmap=&#x27;gray&#x27;)</span><br><span class="line">plt.show()</span><br><span class="line">X_train = X_train.reshape(60000, 784) / 255.0</span><br><span class="line">X_test = X_test.reshape(10000, 784) / 255.0</span><br><span class="line"></span><br><span class="line">Y_train = to_categorical(Y_train, 10)</span><br><span class="line">Y_test = to_categorical(Y_test, 10)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(units=256, activation=&#x27;relu&#x27;, input_dim=784))</span><br><span class="line">model.add(Dense(units=256, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=256, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=10, activation=&#x27;softmax&#x27;))</span><br><span class="line"># 送入训练</span><br><span class="line"></span><br><span class="line">model.compile(loss=&#x27;categorical_crossentropy&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.fit(X_train, Y_train, epochs=5000, batch_size=1024)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"></span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line">print(model.get_weights())</span><br><span class="line">loss, accuracy = model.evaluate(X_test, Y_test)</span><br><span class="line">print(&quot;loss&quot; + str(loss))</span><br><span class="line">print(&quot;accuracy&quot; + str(accuracy))</span><br><span class="line"></span><br><span class="line"># 最后accuracy大概为96%</span><br></pre></td></tr></table></figure>
+
+<h3 id="LeNet-5（经典卷积神经网络）复现"><a href="#LeNet-5（经典卷积神经网络）复现" class="headerlink" title="LeNet-5（经典卷积神经网络）复现"></a>LeNet-5（经典卷积神经网络）复现</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#  LeNet-5（经典卷积神经网络）复现</span><br><span class="line">import time</span><br><span class="line">from tensorflow.keras.datasets import mnist</span><br><span class="line"># import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line">from tensorflow.keras.utils import to_categorical</span><br><span class="line">from tensorflow.keras.layers import Conv2D  # 二维卷积</span><br><span class="line">from tensorflow.keras.layers import AveragePooling2D  # 二维池化</span><br><span class="line">from tensorflow.keras.layers import Flatten  # 展平后，接入全连接层</span><br><span class="line"></span><br><span class="line">(X_train, Y_train), (X_test, Y_test) = mnist.load_data()</span><br><span class="line"></span><br><span class="line">X_train = X_train.reshape(60000, 28, 28, 1) / 255.0</span><br><span class="line">X_test = X_test.reshape(10000, 28, 28, 1) / 255.0</span><br><span class="line"></span><br><span class="line">Y_train = to_categorical(Y_train, 10)</span><br><span class="line">Y_test = to_categorical(Y_test, 10)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line"># filters表示过滤器（卷积核）数目，kernel_size表示卷积核大小，strides表示步长，padding：使用valid或same表示卷积的两种方式，</span><br><span class="line">model.add(</span><br><span class="line">    Conv2D(filters=6, kernel_size=(5, 5), strides=(1, 1), input_shape=(28, 28, 1), padding=&#x27;valid&#x27;, activation=&#x27;relu&#x27;))</span><br><span class="line">#  池化层，为2*2</span><br><span class="line">model.add(AveragePooling2D(pool_size=(2, 2)))</span><br><span class="line">#  不用输入input_shape,Keras会自动计算输入</span><br><span class="line">model.add(Conv2D(filters=16, kernel_size=(5, 5), strides=(1, 1), padding=&#x27;valid&#x27;, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(AveragePooling2D(pool_size=(2, 2)))</span><br><span class="line"># 展平后送入全连接层Dense</span><br><span class="line">model.add(Flatten())</span><br><span class="line">model.add(Dense(units=120, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=84, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=10, activation=&#x27;softmax&#x27;))</span><br><span class="line"># 对于最终结果为多种类，一般采用softmax激活函数来进行激活，效果较好。</span><br><span class="line"># 送入训练</span><br><span class="line"></span><br><span class="line"># 采用多分类交叉熵代价函数categorical_crossentropy，效果较好；（之前采用的是均方误差函数）</span><br><span class="line">model.compile(loss=&#x27;categorical_crossentropy&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">#  epochs表示训练次数，batch_size表示每次取出数据进行计算的数目</span><br><span class="line">model.fit(X_train, Y_train, epochs=50, batch_size=1024)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"># 评估测试表</span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line">print(model.get_weights())</span><br><span class="line">loss, accuracy = model.evaluate(X_test, Y_test)</span><br><span class="line">print(&quot;loss&quot; + str(loss))</span><br><span class="line">print(&quot;accuracy&quot; + str(accuracy))</span><br><span class="line"></span><br><span class="line">#  最终accuracy大概为98%</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+</search>

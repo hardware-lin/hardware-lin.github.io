@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hardware-lin.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一、前言最近MATLAB用的比较多，个人也比较喜欢黑色炫酷主题，在这里记录、分享修改MATLAB主题色的方法。使用的Matlab版本为MATLAB R2019b 二、修改前 三、修改后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【MATLAB】修改黑色炫酷主题darcula.prf">
+<meta property="og:url" content="http://hardware-lin.github.io/2021/06/22/%E3%80%90MATLAB%E3%80%91%E4%BF%AE%E6%94%B9%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98darcula.prf/index.html">
+<meta property="og:site_name" content="Hw-lin&#39;s Blog">
+<meta property="og:description" content="一、前言最近MATLAB用的比较多，个人也比较喜欢黑色炫酷主题，在这里记录、分享修改MATLAB主题色的方法。使用的Matlab版本为MATLAB R2019b 二、修改前 三、修改后">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201117185149994.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201117183657203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201117184056199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201117184632717.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201117184710942.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201117184716293.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2021-06-22T11:29:27.206Z">
+<meta property="article:modified_time" content="2021-07-28T13:20:23.027Z">
+<meta property="article:author" content="Hw-lin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201117185149994.png">
+
+<link rel="canonical" href="http://hardware-lin.github.io/2021/06/22/%E3%80%90MATLAB%E3%80%91%E4%BF%AE%E6%94%B9%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98darcula.prf/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【MATLAB】修改黑色炫酷主题darcula.prf | Hw-lin's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hw-lin's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://hardware-lin.github.io/2021/06/22/%E3%80%90MATLAB%E3%80%91%E4%BF%AE%E6%94%B9%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98darcula.prf/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Hw-lin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hw-lin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【MATLAB】修改黑色炫酷主题darcula.prf
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-22 19:29:27" itemprop="dateCreated datePublished" datetime="2021-06-22T19:29:27+08:00">2021-06-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-28 21:20:23" itemprop="dateModified" datetime="2021-07-28T21:20:23+08:00">2021-07-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Matlab/" itemprop="url" rel="index"><span itemprop="name">Matlab</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://img-blog.csdnimg.cn/20201117185149994.png" alt="在这里插入图片描述"></p>
+<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>最近MATLAB用的比较多，个人也比较喜欢黑色炫酷主题，在这里记录、分享修改MATLAB主题色的方法。<br>使用的Matlab版本为MATLAB R2019b</p>
+<h2 id="二、修改前"><a href="#二、修改前" class="headerlink" title="二、修改前"></a>二、修改前</h2><p><img src="https://img-blog.csdnimg.cn/20201117183657203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="三、修改后"><a href="#三、修改后" class="headerlink" title="三、修改后"></a>三、修改后</h2><p><img src="https://img-blog.csdnimg.cn/20201117184056199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<span id="more"></span>
+
+<h2 id="四、操作步骤"><a href="#四、操作步骤" class="headerlink" title="四、操作步骤"></a>四、操作步骤</h2><p>在Matlab命令行中输入prefdir，回车运行<br>获取matlab.prf所在路径<br>将matlab.prf文件用记事本打开<br>修改前内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#MATLAB Preferences</span><br><span class="line">#Mon Nov 02 15:26:39 CST 2020</span><br><span class="line">DeploytoollastOpenFile=SF:\\matlab R2019b\\bin\\untitled1.prj</span><br><span class="line">MatlabExitConfirm=Bfalse</span><br><span class="line">DeploytoolrecentProjects=SF:\\matlab R2019b\\bin\\untitled1.prj;F:\\matlab R2019b\\bin\\test_matlab_java.prj;F:\\matlab R2019b\\bin\\javaCallMatlab.prj</span><br><span class="line">RLOrderB2_WB_2014b_1=S0:1:</span><br><span class="line">RLHiddenB2_WB_2014b_1=I16376</span><br><span class="line">CommandWindowClearConfirmation=Btrue</span><br><span class="line">RLWidthB2_WB_2014b_1_1=I204</span><br><span class="line">RLWidthB2_WB_2014b_1_0=I130</span><br><span class="line">EditorMRU8=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\src\\readme-color.txt</span><br><span class="line">EditorMRU7=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\src\\matlabThemeChooser.m</span><br><span class="line">EditorMRU6=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\src\\applyPrfFile.m</span><br><span class="line">EditorMRU5=SF:\\matlab R2019b\\bin\\matlab-theme-changer-master\\prf\\darcula.prf</span><br><span class="line">EditorMRU4=SF:\\matlab R2019b\\bin\\ColorSetting.m</span><br><span class="line">EditorMRU3=SF:\\matlab R2019b\\bin\\applyPrfFile.m</span><br><span class="line">EditorMRU2=SF:\\matlab R2019b\\bin\\darcula.prf</span><br><span class="line">EditorMRU1=SF:\\matlab R2019b\\bin\\matlabThemeChooser.m</span><br><span class="line">RLPrevInitB2_WB_2014b_1=Btrue</span><br><span class="line">HasAppendedMlxToFileExtensionsKey=Btrue</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>建议先备份该文件</strong><br>然后将该文件的内容修改为如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">ColorsUseSystem=Bfalse</span><br><span class="line">ColorsUseMLintAutoFixBackground=Btrue</span><br><span class="line">Editor.VariableHighlighting.Automatic=Btrue</span><br><span class="line">Editor.NonlocalVariableHighlighting=Btrue</span><br><span class="line">EditorCodepadHighVisible=Btrue</span><br><span class="line">EditorCodeBlockDividers=Btrue</span><br><span class="line">Editorhighlight-caret-row-boolean=Bfalse</span><br><span class="line">EditorRightTextLineVisible=Btrue</span><br><span class="line">EditorRightTextLimitLineWidth=I1</span><br><span class="line">ColorsText=C-5654586</span><br><span class="line">ColorsBackground=C-14803426</span><br><span class="line">Colors_M_Keywords=C-3377102</span><br><span class="line">Colors_M_Comments=C-8355712</span><br><span class="line">Colors_M_Strings=C-9795751</span><br><span class="line">Colors_M_UnterminatedStrings=C-4440260</span><br><span class="line">Colors_M_SystemCommands=C-7707333</span><br><span class="line">Colors_M_Errors=C-6411993</span><br><span class="line">Colors_M_TypeSection=C-14739</span><br><span class="line">Color_CmdWinErrors=C-38040</span><br><span class="line">Color_CmdWinWarnings=C-26368</span><br><span class="line">Colors_HTML_HTMLLinks=C-14124066</span><br><span class="line">Colors_M_Warnings=C-11382726</span><br><span class="line">ColorsMLintAutoFixBackground=C-12569813</span><br><span class="line">Editor.VariableHighlighting.Color=C-13477571</span><br><span class="line">Editor.NonlocalVariableHighlighting.TextColor=C-6785366</span><br><span class="line">Editorhighlight-lines=C-16777216</span><br><span class="line">Editorhighlight-caret-row-boolean=Btrue</span><br><span class="line">Editorhighlight-caret-row-boolean-color=C-14145496</span><br><span class="line">EditorRightTextLineVisible=Btrue</span><br><span class="line">EditorRightTextLimitLineColor=C-11711155</span><br><span class="line">EditorRightTextLineLimit=I80</span><br><span class="line">ColorsSearchResult=C-15379935</span><br><span class="line">Desktop.Font.Code=F0 13 Monospaced</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="五、拓展"><a href="#五、拓展" class="headerlink" title="五、拓展"></a>五、拓展</h2><p>还可以在工具栏→预设进一步修改<br><img src="https://img-blog.csdnimg.cn/20201117184632717.png#pic_center" alt="在这里插入图片描述"><br>可以进一步修改颜色和字体大小。<br><img src="https://img-blog.csdnimg.cn/20201117184710942.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201117184716293.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/22/%E3%80%90Git%E3%80%91gitee%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E3%80%81%E9%81%87%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/" rel="prev" title="【Git】gitee使用过程中学习记录、遇到的错误记录与解决方案(持续更新中)">
+      <i class="fa fa-chevron-left"></i> 【Git】gitee使用过程中学习记录、遇到的错误记录与解决方案(持续更新中)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/06/22/%E3%80%90Multisim14.0%E3%80%91buck%E7%94%B5%E8%B7%AF%E7%9A%84%E4%BB%BF%E7%9C%9F%E5%AE%9E%E7%8E%B0/" rel="next" title="【Multisim14.0】buck电路的仿真实现">
+      【Multisim14.0】buck电路的仿真实现 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BF%AE%E6%94%B9%E5%89%8D"><span class="nav-number">2.</span> <span class="nav-text">二、修改前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BF%AE%E6%94%B9%E5%90%8E"><span class="nav-number">3.</span> <span class="nav-text">三、修改后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text">四、操作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%8B%93%E5%B1%95"><span class="nav-number">5.</span> <span class="nav-text">五、拓展</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hw-lin"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hw-lin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hw-lin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+      Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数
+     */
+		var t1 = Date.UTC(2021,06,22,00,00,00); //北京时间2021-6-22 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

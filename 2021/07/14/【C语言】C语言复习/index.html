@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hardware-lin.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="C语言菜鸟教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【C】C语言复习">
+<meta property="og:url" content="http://hardware-lin.github.io/2021/07/14/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hw-lin&#39;s Blog">
+<meta property="og:description" content="C语言菜鸟教程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-14T04:31:19.389Z">
+<meta property="article:modified_time" content="2021-07-28T13:19:41.977Z">
+<meta property="article:author" content="Hw-lin">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://hardware-lin.github.io/2021/07/14/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【C】C语言复习 | Hw-lin's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hw-lin's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://hardware-lin.github.io/2021/07/14/%E3%80%90C%E8%AF%AD%E8%A8%80%E3%80%91C%E8%AF%AD%E8%A8%80%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Hw-lin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hw-lin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【C】C语言复习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-14 12:31:19" itemprop="dateCreated datePublished" datetime="2021-07-14T12:31:19+08:00">2021-07-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-28 21:19:41" itemprop="dateModified" datetime="2021-07-28T21:19:41+08:00">2021-07-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h1><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-tutorial.html">菜鸟教程</a></p>
+<span id="more"></span>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>两种方式定义常量：</p>
+<ul>
+<li>#define预处理器</li>
+<li>const关键字</li>
+</ul>
+<h2 id="储存类"><a href="#储存类" class="headerlink" title="储存类"></a>储存类</h2><ul>
+<li>auto</li>
+<li>register</li>
+<li>static</li>
+<li>extern</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>算术运算符</li>
+<li>关系运算符</li>
+<li>逻辑运算符</li>
+<li>位运算符</li>
+<li>赋值运算符</li>
+<li>杂项运算符</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">sizeof()</td>
+<td align="left">返回变量的大小。</td>
+<td align="left">sizeof(a) 将返回 4，其中 a 是整数。</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">返回变量的地址。</td>
+<td align="left">&a; 将给出变量的实际地址。</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">指向一个变量。</td>
+<td align="left">*a; 将指向一个变量。</td>
+</tr>
+<tr>
+<td align="left">? :</td>
+<td align="left">条件表达式</td>
+<td align="left">如果条件为真 ? 则值为 X : 否则值为 Y</td>
+</tr>
+</tbody></table>
+<h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><ul>
+<li><p>if</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if(boolean_expression)</span><br><span class="line">&#123;</span><br><span class="line">   /* 如果布尔表达式为真将执行的语句 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>if…else</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if(boolean_expression)</span><br><span class="line">&#123;</span><br><span class="line">   /* 如果布尔表达式为真将执行的语句 */</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">   /* 如果布尔表达式为假将执行的语句 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>嵌套if</p>
+</li>
+<li><p>switch</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">switch(expression)&#123;</span><br><span class="line">    case constant-expression  :</span><br><span class="line">       statement(s);</span><br><span class="line">       break; /* 可选的 */</span><br><span class="line">    case constant-expression  :</span><br><span class="line">       statement(s);</span><br><span class="line">       break; /* 可选的 */</span><br><span class="line">  </span><br><span class="line">    /* 您可以有任意数量的 case 语句 */</span><br><span class="line">    default : /* 可选的 */</span><br><span class="line">       statement(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>嵌套switch</p>
+</li>
+</ul>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><ul>
+<li><p>while</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while(condition)</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>for</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for ( init; condition; increment )</span><br><span class="line">&#123;</span><br><span class="line">   statement(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li>定义</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">return_type function_name( parameter list )</span><br><span class="line">&#123;</span><br><span class="line">   body of the function</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>声明</li>
+<li>调用</li>
+<li>参数<ol>
+<li>传值调用</li>
+<li>引用调用</li>
+</ol>
+</li>
+</ul>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><ul>
+<li>局部变量</li>
+<li>全局变量</li>
+<li>形式参数</li>
+</ul>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li><p>声明一维数组：<code>type arrayName [ arraySize ];</code></p>
+</li>
+<li><p>声明多维数组：<code>type name[size1][size2]...[sizeN];</code></p>
+</li>
+</ul>
+<h2 id="enum（枚举）"><a href="#enum（枚举）" class="headerlink" title="enum（枚举）"></a>enum（枚举）</h2><p>定义枚举类型的同时定义枚举变量：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enum DAY</span><br><span class="line">&#123;</span><br><span class="line">      MON=1, TUE, WED, THU, FRI, SAT, SUN</span><br><span class="line">&#125; day;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>第一个枚举成员的默认值为整型的 0，后续枚举成员的值在前一个成员上加 1。在这个例子中把第一个枚举成员的值定义为 1，第二个就为 2，以此类推。</p>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type *var-name;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>eg</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"> </span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">   int  var = 20;   /* 实际变量的声明 */</span><br><span class="line">   int  *ip;        /* 指针变量的声明 */</span><br><span class="line"> </span><br><span class="line">   ip = &amp;var;  /* 在指针变量中存储 var 的地址 */</span><br><span class="line"> </span><br><span class="line">   printf(&quot;var 变量的地址: %p\n&quot;, &amp;var  );</span><br><span class="line"> </span><br><span class="line">   /* 在指针变量中存储的地址 */</span><br><span class="line">   printf(&quot;ip 变量存储的地址: %p\n&quot;, ip );</span><br><span class="line"> </span><br><span class="line">   /* 使用指针访问值 */</span><br><span class="line">   printf(&quot;*ip 变量的值: %d\n&quot;, *ip );</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">var 变量的地址: 0x7ffeeef168d8</span><br><span class="line">ip 变量存储的地址: 0x7ffeeef168d8</span><br><span class="line">*ip 变量的值: 20</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结：</strong></p>
+</li>
+<li><p>指针就是内存地址，指针变量是用来存放内存地址的变量。</p>
+</li>
+<li><p>使用“&amp;”取地址，使用“*”访问地址。</p>
+</li>
+</ul>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串实际上是使用 <strong>null</strong> 字符 <strong>\0</strong> 终止的一维字符数组。</p>
+<p>在定义时，计算数组长度要将结束符算进去。</p>
+<p>定义方式：</p>
+<ul>
+<li>char site[6] = {‘h’ , ‘e’ , ‘l’ , ‘l’ , ‘o’ , ‘\0’};</li>
+<li>char site[] = “hello”;</li>
+</ul>
+<h2 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h2><ul>
+<li>结构体</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct tag &#123; </span><br><span class="line">    member-list</span><br><span class="line">    member-list </span><br><span class="line">    member-list  </span><br><span class="line">    ...</span><br><span class="line">&#125; variable-list ;</span><br></pre></td></tr></table></figure>
+
+<p><strong>tag</strong> 是结构体标签。</p>
+<p><strong>member-list</strong> 是标准的变量定义，比如 int i  或者 float f</p>
+<p><strong>variable-list</strong> 是结构变量。</p>
+<p>定义时至少出现2个；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">struct SIMPLE</span><br><span class="line">&#123;</span><br><span class="line">    int a;</span><br><span class="line">    int b;</span><br><span class="line">    int c;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">struct SIMPLE example1;</span><br><span class="line">struct SIMPLE example2;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>访问结构体成员</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">example1.a=1;</span><br><span class="line">example1.b=2;</span><br><span class="line">example1.c=3;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>结构体指针</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">定义结构体指针：struct Books *struct_pointer;</span><br><span class="line">结构体定义：struct Books Book1;</span><br><span class="line">地址：struct_pointer = &amp;Book1;</span><br><span class="line">成员访问：struct_pointer-&gt;title;</span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line"> </span><br><span class="line">struct Books</span><br><span class="line">&#123;</span><br><span class="line">   char  title[50];</span><br><span class="line">   char  author[50];</span><br><span class="line">   char  subject[100];</span><br><span class="line">   int   book_id;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">/* 函数声明 */</span><br><span class="line">void printBook( struct Books *book );</span><br><span class="line">int main( )</span><br><span class="line">&#123;</span><br><span class="line">   struct Books Book1;        /* 声明 Book1，类型为 Books */</span><br><span class="line">   struct Books Book2;        /* 声明 Book2，类型为 Books */</span><br><span class="line"> </span><br><span class="line">   /* Book1 详述 */</span><br><span class="line">   strcpy( Book1.title, &quot;C Programming&quot;);</span><br><span class="line">   strcpy( Book1.author, &quot;Nuha Ali&quot;); </span><br><span class="line">   strcpy( Book1.subject, &quot;C Programming Tutorial&quot;);</span><br><span class="line">   Book1.book_id = 6495407;</span><br><span class="line"> </span><br><span class="line">   /* Book2 详述 */</span><br><span class="line">   strcpy( Book2.title, &quot;Telecom Billing&quot;);</span><br><span class="line">   strcpy( Book2.author, &quot;Zara Ali&quot;);</span><br><span class="line">   strcpy( Book2.subject, &quot;Telecom Billing Tutorial&quot;);</span><br><span class="line">   Book2.book_id = 6495700;</span><br><span class="line"> </span><br><span class="line">   /* 通过传 Book1 的地址来输出 Book1 信息 */</span><br><span class="line">   printBook( &amp;Book1 );</span><br><span class="line"> </span><br><span class="line">   /* 通过传 Book2 的地址来输出 Book2 信息 */</span><br><span class="line">   printBook( &amp;Book2 );</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line">void printBook( struct Books *book )</span><br><span class="line">&#123;</span><br><span class="line">   printf( &quot;Book title : %s\n&quot;, book-&gt;title);</span><br><span class="line">   printf( &quot;Book author : %s\n&quot;, book-&gt;author);</span><br><span class="line">   printf( &quot;Book subject : %s\n&quot;, book-&gt;subject);</span><br><span class="line">   printf( &quot;Book book_id : %d\n&quot;, book-&gt;book_id);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">Book title : C Programming</span><br><span class="line">Book author : Nuha Ali</span><br><span class="line">Book subject : C Programming Tutorial</span><br><span class="line">Book book_id : 6495407</span><br><span class="line">Book title : Telecom Billing</span><br><span class="line">Book author : Zara Ali</span><br><span class="line">Book subject : Telecom Billing Tutorial</span><br><span class="line">Book book_id : 6495700</span><br></pre></td></tr></table></figure>
+
+<h2 id="共用体"><a href="#共用体" class="headerlink" title="共用体"></a>共用体</h2><p>​    <strong>共用体</strong>是一种特殊的数据类型，允许在相同的内存位置存储不同的数据类型。可以定义一个带有多成员的共用体，但是任何时候只能有一个成员带有值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">union [union tag]</span><br><span class="line">&#123;</span><br><span class="line">   member definition;</span><br><span class="line">   member definition;</span><br><span class="line">   ...</span><br><span class="line">   member definition;</span><br><span class="line">&#125; [one or more union variables];</span><br></pre></td></tr></table></figure>
+
+<h2 id="typedef"><a href="#typedef" class="headerlink" title="typedef"></a>typedef</h2><p><strong>#define</strong> 是 C 指令，用于为各种数据类型定义别名，与 <strong>typedef</strong> 类似，但是它们有以下几点不同：</p>
+<ul>
+<li><strong>typedef</strong> 仅限于为类型定义符号名称，**#define** 不仅可以为类型定义别名，也能为数值定义别名，比如可以定义 1 为 ONE。</li>
+<li><strong>typedef</strong> 是由编译器执行解释的，**#define** 语句是由预编译器进行处理的。</li>
+</ul>
+<h2 id="输入-amp-输出"><a href="#输入-amp-输出" class="headerlink" title="输入&amp;输出"></a>输入&amp;输出</h2><ul>
+<li>getchar() &amp; putchar()函数</li>
+<li>scanf() &amp;printf()函数</li>
+</ul>
+<p>使用前需要 <code>#include &lt;stdio.h&gt;</code></p>
+<h2 id="预处理器"><a href="#预处理器" class="headerlink" title="预处理器"></a>预处理器</h2><p>C 预处理器本质是一个文本替换工具</p>
+<table>
+<thead>
+<tr>
+<th>#define</th>
+<th>定义宏</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>#include</td>
+<td>包含一个源代码文件</td>
+</tr>
+<tr>
+<td>#undef</td>
+<td>取消已定义的宏</td>
+</tr>
+<tr>
+<td>#ifdef</td>
+<td>如果宏已经定义，则返回真</td>
+</tr>
+<tr>
+<td>#ifndef</td>
+<td>如果宏没有定义，则返回真</td>
+</tr>
+<tr>
+<td>#if</td>
+<td>如果给定条件为真，则编译下面代码</td>
+</tr>
+<tr>
+<td>#else</td>
+<td>#if 的替代方案</td>
+</tr>
+<tr>
+<td>#elif</td>
+<td>如果前面的 #if 给定条件不为真，当前条件为真，则编译下面代码</td>
+</tr>
+<tr>
+<td>#endif</td>
+<td>结束一个 #if……#else 条件编译块</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>头文件防止重复编译：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#ifndef _HEAD_H</span><br><span class="line">#define _HEAD_H</span><br><span class="line">...</span><br><span class="line"> // ... some declaration codes</span><br><span class="line">...</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure></li>
+<li><p>条件编译，避免使用大段注释//</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#if 常量表达式1</span><br><span class="line">// ... some codes</span><br><span class="line">#elif 常量表达式2</span><br><span class="line">// ... other codes</span><br><span class="line">#elif 常量表达式3</span><br><span class="line">// ...</span><br><span class="line">...</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><p>建议把所有的常量、宏、系统全局变量和函数原型写在头文件中，在需要的时候随时引用这些头文件。</p>
+<h3 id="引用头文件的语法"><a href="#引用头文件的语法" class="headerlink" title="引用头文件的语法"></a>引用头文件的语法</h3><ul>
+<li><p>引用系统头文件，在系统目录的标准列表中：<code>#include &lt;file&gt;</code></p>
+</li>
+<li><p>引用用户头文件，在包含当前文件目录下：<code>#include &quot;file&quot;</code>，如果在程序目录没找到就去编译器的类库路径目录下寻找该文件。</p>
+</li>
+</ul>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>强制类型转换是把变量从一种类型转换为另一种数据类型。</p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归指的是在函数的定义中使用函数自身的方法。</p>
+<p>语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void recursion()</span><br><span class="line">&#123;</span><br><span class="line">   statements;</span><br><span class="line">   ... ... ...</span><br><span class="line">   recursion(); /* 函数调用自身 */</span><br><span class="line">   ... ... ...</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   recursion();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h2 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h2><p>执行程序时，可以从命令行传值给 C 程序。这些值被称为<strong>命令行参数</strong>，它们对程序很重要，特别是想从外部控制程序，而不是在代码内对这些值进行硬编码时。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main( int argc, char *argv[] )  </span><br><span class="line">&#123;</span><br><span class="line">   if( argc == 2 )</span><br><span class="line">   &#123;</span><br><span class="line">      printf(&quot;The argument supplied is %s\n&quot;, argv[1]);</span><br><span class="line">   &#125;</span><br><span class="line">   else if( argc &gt; 2 )</span><br><span class="line">   &#123;</span><br><span class="line">      printf(&quot;Too many arguments supplied.\n&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">   else</span><br><span class="line">   &#123;</span><br><span class="line">      printf(&quot;One argument expected.\n&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>argv[0]</strong> 存储程序的名称，<strong>argv[1]</strong> 是一个指向第一个命令行参数的指针，如果没有提供任何参数，argc 将为 1，否则，如果传递了一个参数，<strong>argc</strong> 将被设置为 2。</p>
+<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><ol>
+<li>冒泡排序</li>
+<li>选择排序</li>
+<li>插入排序</li>
+<li>希尔排序</li>
+<li>归并排序</li>
+<li>快速排序</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/07/11/%E3%80%90Git%E3%80%91Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="prev" title="【Git】Git学习记录">
+      <i class="fa fa-chevron-left"></i> 【Git】Git学习记录
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/14/%E3%80%90MD%E3%80%91markdown%E5%AD%A6%E4%B9%A0/" rel="next" title="【MD】Markdown学习">
+      【MD】Markdown学习 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">C语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">1.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%82%A8%E5%AD%98%E7%B1%BB"><span class="nav-number">1.4.</span> <span class="nav-text">储存类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.5.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD"><span class="nav-number">1.6.</span> <span class="nav-text">判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.7.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">1.8.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">1.9.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">1.10.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#enum%EF%BC%88%E6%9E%9A%E4%B8%BE%EF%BC%89"><span class="nav-number">1.11.</span> <span class="nav-text">enum（枚举）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">1.12.</span> <span class="nav-text">指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.13.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">1.14.</span> <span class="nav-text">结构体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E7%94%A8%E4%BD%93"><span class="nav-number">1.15.</span> <span class="nav-text">共用体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#typedef"><span class="nav-number">1.16.</span> <span class="nav-text">typedef</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5-amp-%E8%BE%93%E5%87%BA"><span class="nav-number">1.17.</span> <span class="nav-text">输入&amp;输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8"><span class="nav-number">1.18.</span> <span class="nav-text">预处理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="nav-number">1.19.</span> <span class="nav-text">头文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">1.19.1.</span> <span class="nav-text">引用头文件的语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">1.20.</span> <span class="nav-text">强制类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-number">1.21.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0"><span class="nav-number">1.22.</span> <span class="nav-text">可变参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="nav-number">1.23.</span> <span class="nav-text">内存管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="nav-number">1.24.</span> <span class="nav-text">命令行参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95"><span class="nav-number">1.25.</span> <span class="nav-text">排序算法</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hw-lin"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hw-lin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hw-lin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+      Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数
+     */
+		var t1 = Date.UTC(2021,06,22,00,00,00); //北京时间2021-6-22 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

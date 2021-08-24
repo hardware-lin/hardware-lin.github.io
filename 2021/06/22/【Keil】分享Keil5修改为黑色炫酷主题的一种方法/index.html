@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hardware-lin.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一、前言经常使用Keil写程序，面对白底黑字多少有点伤眼，分享一个可以修改Keil为黑色背景、缓解眼部疲劳的方法。修改后的效果如下： 只能改到这种程度，要修改其他位置的颜色比如工具栏和项目栏只能修改系统设置（暂时没有搞定）有大佬能搞定的话可以支支招~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Keil】修改Keil为黑色炫酷主题">
+<meta property="og:url" content="http://hardware-lin.github.io/2021/06/22/%E3%80%90Keil%E3%80%91%E5%88%86%E4%BA%ABKeil5%E4%BF%AE%E6%94%B9%E4%B8%BA%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hw-lin&#39;s Blog">
+<meta property="og:description" content="一、前言经常使用Keil写程序，面对白底黑字多少有点伤眼，分享一个可以修改Keil为黑色背景、缓解眼部疲劳的方法。修改后的效果如下： 只能改到这种程度，要修改其他位置的颜色比如工具栏和项目栏只能修改系统设置（暂时没有搞定）有大佬能搞定的话可以支支招~">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201117180815368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2021-06-22T11:26:03.700Z">
+<meta property="article:modified_time" content="2021-07-28T13:20:12.105Z">
+<meta property="article:author" content="Hw-lin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201117180815368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center">
+
+<link rel="canonical" href="http://hardware-lin.github.io/2021/06/22/%E3%80%90Keil%E3%80%91%E5%88%86%E4%BA%ABKeil5%E4%BF%AE%E6%94%B9%E4%B8%BA%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【Keil】修改Keil为黑色炫酷主题 | Hw-lin's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hw-lin's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://hardware-lin.github.io/2021/06/22/%E3%80%90Keil%E3%80%91%E5%88%86%E4%BA%ABKeil5%E4%BF%AE%E6%94%B9%E4%B8%BA%E9%BB%91%E8%89%B2%E7%82%AB%E9%85%B7%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%80%E7%A7%8D%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Hw-lin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hw-lin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【Keil】修改Keil为黑色炫酷主题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-22 19:26:03" itemprop="dateCreated datePublished" datetime="2021-06-22T19:26:03+08:00">2021-06-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-28 21:20:12" itemprop="dateModified" datetime="2021-07-28T21:20:12+08:00">2021-07-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Keil/" itemprop="url" rel="index"><span itemprop="name">Keil</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>经常使用Keil写程序，面对白底黑字多少有点伤眼，分享一个可以修改Keil为黑色背景、缓解眼部疲劳的方法。<br>修改后的效果如下：<br><img src="https://img-blog.csdnimg.cn/20201117180815368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTk4ODAyNA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>只能改到这种程度，要修改其他位置的颜色比如工具栏和项目栏只能修改系统设置（暂时没有搞定）有大佬能搞定的话可以支支招~</p>
+<span id="more"></span>
+
+<h2 id="二、具体步骤"><a href="#二、具体步骤" class="headerlink" title="二、具体步骤"></a>二、具体步骤</h2><p><strong>核心</strong>是修改Keil安装路径→UV4→global.prop文件，用记事本打开该文件，修改其中的部分。</p>
+<p><strong>修改前</strong>的global.prop文件用txt打开如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line"># properties for all file types</span><br><span class="line">indent.automatic=1</span><br><span class="line">virtual.space=0</span><br><span class="line">view.whitespace=0</span><br><span class="line">view.endofline=0</span><br><span class="line">code.page=936</span><br><span class="line">caretline.visible=1</span><br><span class="line">highlight.matchingbraces=1</span><br><span class="line">print.syntax.coloring=1</span><br><span class="line">use.tab.color=1</span><br><span class="line">create.backup.files=0</span><br><span class="line">auto.load.ext.modfiles=0</span><br><span class="line">save.prj.before.dbg=0</span><br><span class="line">save.files.before.dbg=0</span><br><span class="line">function.scanner.project=1</span><br><span class="line">function.scanner.files=1</span><br><span class="line">function.scanner.modules=1</span><br><span class="line"></span><br><span class="line"># properties for c/cpp files</span><br><span class="line">syntax.colouring.cpp=1</span><br><span class="line">use.tab.cpp=0</span><br><span class="line">tabsize.cpp=4</span><br><span class="line">line.margin.visible.cpp=1</span><br><span class="line">fold.cpp=1</span><br><span class="line">monospaced.font.cpp=1</span><br><span class="line"></span><br><span class="line"># properties for asm files</span><br><span class="line">syntax.colouring.asm=1</span><br><span class="line">use.tab.asm=0</span><br><span class="line">tabsize.asm=4</span><br><span class="line">line.margin.visible.asm=1</span><br><span class="line">monospaced.font.asm=1</span><br><span class="line"></span><br><span class="line"># properties for other files</span><br><span class="line">use.tabs=0</span><br><span class="line">tabsize=4</span><br><span class="line">line.margin.visible.txt=0</span><br><span class="line">monospaced.font.txt=1</span><br><span class="line"></span><br><span class="line"># setting for code completion and syntax check</span><br><span class="line">cc.autolist=1</span><br><span class="line">cc.highlightsyntax=1</span><br><span class="line">cc.showparameters=1</span><br><span class="line">cc.triggerlist=1</span><br><span class="line">cc.triggernumchars=3</span><br><span class="line">cc.enter.as.fillup=0</span><br><span class="line">cc.usealpha4inactcode=1</span><br><span class="line">cc.alphavalue=50</span><br><span class="line"></span><br><span class="line"># autosave for editor files</span><br><span class="line">autosave=0</span><br><span class="line">autosave.interval=5</span><br><span class="line"></span><br><span class="line"># vertical edge at right margin</span><br><span class="line">edge.mode=0</span><br><span class="line">edge.column=80</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Specification for text selection and caret line</span><br><span class="line">selection.fore=#000000</span><br><span class="line">selection.back=#86C7F7</span><br><span class="line">caret.fore=#000000</span><br><span class="line">caret.back=#DEFEE6</span><br><span class="line"></span><br><span class="line"># Color for vertical edge</span><br><span class="line">edge.colour=#66FAFA</span><br><span class="line"></span><br><span class="line"># C/C++ Editor files</span><br><span class="line">template.cpp=&quot;#define&quot;,&quot;#define |&quot;;&quot;#if&quot;,&quot;#if |\r\n\r\n#endif&quot;;\\</span><br><span class="line">    &quot;#include&quot;,&quot;#include &quot;;&quot;Header&quot;,&quot;// Header:\r\n// File Name: |\r\n// Author:\r\n// Date:\r\n&quot;;\\</span><br><span class="line">    &quot;continue&quot;,&quot;continue;&quot;;&quot;do&quot;,&quot;do\r\n&#123;\r\n\t// TODO: enter the block content here\r\n\t\r\n\t|\r\n&#125; while ();\r\n&quot;;\\</span><br><span class="line">    &quot;enum&quot;,&quot;enum |\r\n&#123;\r\n\t\r\n&#125;;\r\n&quot;;&quot;for&quot;,&quot;for(|;;)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;fpointer_type&quot;,&quot;typedef int (* |F)();\r\n&quot;;&quot;function&quot;,&quot;void function(|)\r\n&#123;\r\n\r\n&#125;\r\n&quot;;\\</span><br><span class="line">    &quot;if&quot;,&quot;if (|)&quot;;&quot;ifelse&quot;,&quot;if (|)\r\n&#123;\r\n&#125;\r\nelse\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;struct&quot;,&quot;struct | \r\n&#123;\r\n\r\n&#125;;\r\n&quot;;&quot;switch&quot;,&quot;switch (|)\r\n&#123;\r\n\tcase:\r\n\t\tbreak;\r\n\tcase:\r\n\t\tbreak;\r\n\tdefault:\r\n\t\tbreak;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;void&quot;,&quot;void | ();\r\n&quot;;&quot;while&quot;,&quot;while (|)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    </span><br><span class="line">font.monospace.cpp=Courier New</span><br><span class="line">style.cpp.32=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.cpp.4=font:Courier New,size:10,fore:#008000,back:#FFFFFF</span><br><span class="line">style.cpp.10=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.cpp.1=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.cpp.2=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.cpp.5=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.cpp.6=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.cpp.11=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.cpp.9=font:Courier New,size:10,fore:#7F7F00,back:#FFFFFF</span><br><span class="line">style.cpp.7=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.cpp.34=font:Courier New,size:10,fore:#500000,back:#20FFFF</span><br><span class="line">style.cpp.35=font:Courier New,size:10,fore:#FF0000,back:#FFFFFF</span><br><span class="line">style.cpp.16=font:Courier New,size:10,fore:#B00040,back:#FFFFFF</span><br><span class="line">style.cpp.12=font:Courier New,size:10,fore:#000000,back:#E0C0E0</span><br><span class="line">style.cpp.86=font:Courier New,size:10,fore:#696969,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Asm Editor files</span><br><span class="line">font.monospace.asm=Courier New</span><br><span class="line">style.asm.32=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.1=font:Courier New,size:10,fore:#616161,back:#FFFFFF</span><br><span class="line">style.asm.2=font:Courier New,size:10,fore:#FF0000,back:#FFFFFF</span><br><span class="line">style.asm.3=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.4=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.5=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.6=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.7=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.9=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.10=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.11=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.asm.12=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.8=font:Courier New,size:10,fore:#46AA03,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Editor Text files</span><br><span class="line">font.monospace.txt=Consolas</span><br><span class="line">style.txt.32=font:Verdana,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>修改后</strong>的global.prop文件用txt打开如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"># properties for all file types</span><br><span class="line">indent.automatic=1</span><br><span class="line">virtual.space=0</span><br><span class="line">view.whitespace=0</span><br><span class="line">view.endofline=0</span><br><span class="line">code.page=936</span><br><span class="line">caretline.visible=1</span><br><span class="line">highlight.matchingbraces=1</span><br><span class="line">print.syntax.coloring=1</span><br><span class="line">use.tab.color=1</span><br><span class="line">create.backup.files=0</span><br><span class="line">auto.load.ext.modfiles=0</span><br><span class="line">save.prj.before.dbg=0</span><br><span class="line">save.files.before.dbg=0</span><br><span class="line">function.scanner.project=1</span><br><span class="line">function.scanner.files=1</span><br><span class="line">function.scanner.modules=1</span><br><span class="line"></span><br><span class="line"># properties for c/cpp files</span><br><span class="line">syntax.colouring.cpp=1</span><br><span class="line">use.tab.cpp=0</span><br><span class="line">tabsize.cpp=4</span><br><span class="line">line.margin.visible.cpp=1</span><br><span class="line">fold.cpp=1</span><br><span class="line">monospaced.font.cpp=1</span><br><span class="line"></span><br><span class="line"># properties for asm files</span><br><span class="line">syntax.colouring.asm=1</span><br><span class="line">use.tab.asm=0</span><br><span class="line">tabsize.asm=4</span><br><span class="line">line.margin.visible.asm=1</span><br><span class="line">monospaced.font.asm=1</span><br><span class="line"></span><br><span class="line"># properties for other files</span><br><span class="line">use.tabs=0</span><br><span class="line">tabsize=4</span><br><span class="line">line.margin.visible.txt=0</span><br><span class="line">monospaced.font.txt=1</span><br><span class="line"></span><br><span class="line"># setting for code completion and syntax check</span><br><span class="line">cc.autolist=1</span><br><span class="line">cc.highlightsyntax=1</span><br><span class="line">cc.showparameters=1</span><br><span class="line">cc.triggerlist=1</span><br><span class="line">cc.triggernumchars=3</span><br><span class="line">cc.enter.as.fillup=0</span><br><span class="line">cc.usealpha4inactcode=1</span><br><span class="line">cc.alphavalue=50</span><br><span class="line"></span><br><span class="line"># autosave for editor files</span><br><span class="line">autosave=0</span><br><span class="line">autosave.interval=5</span><br><span class="line"></span><br><span class="line"># vertical edge at right margin</span><br><span class="line">edge.mode=0</span><br><span class="line">edge.column=80</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Specification for text selection and caret line</span><br><span class="line">selection.fore=#000000</span><br><span class="line">selection.back=#005EB3</span><br><span class="line">caret.fore=#FFFFFF</span><br><span class="line">caret.back=#000000</span><br><span class="line"></span><br><span class="line"># Color for vertical edge</span><br><span class="line">edge.colour=#66FAFA</span><br><span class="line"></span><br><span class="line"># C/C++ Editor files</span><br><span class="line">template.cpp=&quot;#define&quot;,&quot;#define |&quot;;&quot;#if&quot;,&quot;#if |\r\n\r\n#endif&quot;;\\</span><br><span class="line">    &quot;#include&quot;,&quot;#include &quot;;&quot;Header&quot;,&quot;// Header:\r\n// File Name: |\r\n// Author:\r\n// Date:\r\n&quot;;\\</span><br><span class="line">    &quot;continue&quot;,&quot;continue;&quot;;&quot;do&quot;,&quot;do\r\n&#123;\r\n\t// TODO: enter the block content here\r\n\t\r\n\t|\r\n&#125; while ();\r\n&quot;;\\</span><br><span class="line">    &quot;enum&quot;,&quot;enum |\r\n&#123;\r\n\t\r\n&#125;;\r\n&quot;;&quot;for&quot;,&quot;for(|;;)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;fpointer_type&quot;,&quot;typedef int (* |F)();\r\n&quot;;&quot;function&quot;,&quot;void function(|)\r\n&#123;\r\n\r\n&#125;\r\n&quot;;\\</span><br><span class="line">    &quot;if&quot;,&quot;if (|)&quot;;&quot;ifelse&quot;,&quot;if (|)\r\n&#123;\r\n&#125;\r\nelse\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;struct&quot;,&quot;struct | \r\n&#123;\r\n\r\n&#125;;\r\n&quot;;&quot;switch&quot;,&quot;switch (|)\r\n&#123;\r\n\tcase:\r\n\t\tbreak;\r\n\tcase:\r\n\t\tbreak;\r\n\tdefault:\r\n\t\tbreak;\r\n&#125;&quot;;\\</span><br><span class="line">    &quot;void&quot;,&quot;void | ();\r\n&quot;;&quot;while&quot;,&quot;while (|)\r\n&#123;\r\n&#125;&quot;;\\</span><br><span class="line">    </span><br><span class="line">font.monospace.cpp=Fixedsys</span><br><span class="line">font.acpmonofontname.cpp=Fixedsys</span><br><span class="line">font.acppropfontname.cpp=Fixedsys</span><br><span class="line">style.cpp.32=font:Fixedsys,size:14,fore:#9CDCFE,back:#1E1E1E</span><br><span class="line">style.cpp.4=font:Fixedsys,size:14,fore:#4EC9B0,back:#1E1E1E</span><br><span class="line">style.cpp.10=font:Fixedsys,size:14,fore:#DCDCDC,back:#1E1E1E</span><br><span class="line">style.cpp.1=font:Fixedsys,size:14,fore:#57A64A,back:#1E1E1E</span><br><span class="line">style.cpp.2=font:Fixedsys,size:14,fore:#007F00,back:#1E1E1E</span><br><span class="line">style.cpp.5=font:Fixedsys,size:14,fore:#007ACC,back:#1E1E1E</span><br><span class="line">style.cpp.6=font:Fixedsys,size:14,fore:#FF80FF,back:#1E1E1E</span><br><span class="line">style.cpp.11=font:Fixedsys,size:14,fore:#DCDCDC,back:#1E1E1E</span><br><span class="line">style.cpp.9=font:Fixedsys,size:14,fore:#4EC9B0,back:#1E1E1E</span><br><span class="line">style.cpp.7=font:Fixedsys,size:14,fore:#FF80FF,back:#1E1E1E</span><br><span class="line">style.cpp.34=font:Fixedsys,size:14,fore:#500000,back:#007ACC</span><br><span class="line">style.cpp.35=font:Fixedsys,size:14,fore:#FF0000,back:#1E1E1E</span><br><span class="line">style.cpp.16=font:Fixedsys,size:14,fore:#9CDCFE,back:#1E1E1E</span><br><span class="line">style.cpp.12=font:Fixedsys,size:14,fore:#FF80FF,back:#1E1E1E</span><br><span class="line">style.cpp.86=font:Fixedsys,size:14,fore:#696969,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Asm Editor files</span><br><span class="line">font.monospace.asm=Courier New</span><br><span class="line">style.asm.32=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.1=font:Courier New,size:10,fore:#616161,back:#FFFFFF</span><br><span class="line">style.asm.2=font:Courier New,size:10,fore:#FF0000,back:#FFFFFF</span><br><span class="line">style.asm.3=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.4=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.5=font:Courier New,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line">style.asm.6=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.7=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.9=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.10=font:Courier New,size:10,fore:#0000FF,back:#FFFFFF</span><br><span class="line">style.asm.11=font:Courier New,size:10,fore:#007F00,back:#FFFFFF</span><br><span class="line">style.asm.12=font:Courier New,size:10,fore:#7F007F,back:#FFFFFF</span><br><span class="line">style.asm.8=font:Courier New,size:10,fore:#46AA03,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Editor Text files</span><br><span class="line">font.monospace.txt=Consolas</span><br><span class="line">style.txt.32=font:Verdana,size:10,fore:#000000,back:#FFFFFF</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/22/%E3%80%90AD%E3%80%91Altium%20designer2020%E5%A4%A7%E5%AD%A6%E9%98%B6%E6%AE%B5%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%EF%BC%88%E4%B8%80%EF%BC%89/" rel="prev" title="【AD】Altium designer2020大学阶段快速入门（一）">
+      <i class="fa fa-chevron-left"></i> 【AD】Altium designer2020大学阶段快速入门（一）
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/06/22/%E3%80%90Git%E3%80%91gitee%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E3%80%81%E9%81%87%E5%88%B0%E7%9A%84%E9%94%99%E8%AF%AF%E8%AE%B0%E5%BD%95%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD)/" rel="next" title="【Git】gitee使用过程中学习记录、遇到的错误记录与解决方案(持续更新中)">
+      【Git】gitee使用过程中学习记录、遇到的错误记录与解决方案(持续更新中) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">一、前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">二、具体步骤</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hw-lin"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hw-lin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hw-lin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+      Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数
+     */
+		var t1 = Date.UTC(2021,06,22,00,00,00); //北京时间2021-6-22 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

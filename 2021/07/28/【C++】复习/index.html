@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hardware-lin.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="C++ 学习记录复习一下C++的类和一些其他知识。来源： 菜鸟教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【C++】复习">
+<meta property="og:url" content="http://hardware-lin.github.io/2021/07/28/%E3%80%90C++%E3%80%91%E5%A4%8D%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hw-lin&#39;s Blog">
+<meta property="og:description" content="C++ 学习记录复习一下C++的类和一些其他知识。来源： 菜鸟教程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-28T12:39:30.950Z">
+<meta property="article:modified_time" content="2021-07-28T13:19:31.598Z">
+<meta property="article:author" content="Hw-lin">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://hardware-lin.github.io/2021/07/28/%E3%80%90C++%E3%80%91%E5%A4%8D%E4%B9%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【C++】复习 | Hw-lin's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hw-lin's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://hardware-lin.github.io/2021/07/28/%E3%80%90C++%E3%80%91%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Hw-lin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hw-lin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【C++】复习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-28 20:39:30 / 修改时间：21:19:31" itemprop="dateCreated datePublished" datetime="2021-07-28T20:39:30+08:00">2021-07-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="C-学习"><a href="#C-学习" class="headerlink" title="C++ 学习"></a>C++ 学习</h1><p>记录复习一下C++的类和一些其他知识。<strong>来源</strong>：</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/">菜鸟教程</a></p>
+<span id="more"></span>
+
+<h2 id="类-amp-对象"><a href="#类-amp-对象" class="headerlink" title="类&amp;对象"></a>类&amp;对象</h2><h3 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class name</span><br><span class="line">&#123;</span><br><span class="line">	Access specifiers:</span><br><span class="line">		Data members/variables;</span><br><span class="line">		Member functions();		</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class name name1;</span><br><span class="line">class name name2;</span><br></pre></td></tr></table></figure>
+
+<h3 id="访问数据成员："><a href="#访问数据成员：" class="headerlink" title="访问数据成员："></a>访问数据成员：</h3><table>
+<thead>
+<tr>
+<th>访问修饰符</th>
+<th>访问方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public</td>
+<td>.</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>使用类成员函数或.</td>
+</tr>
+<tr>
+<td>private</td>
+<td>使用类成员函数</td>
+</tr>
+</tbody></table>
+<h3 id="类成员函数"><a href="#类成员函数" class="headerlink" title="类成员函数"></a>类成员函数</h3><p>定义和原型在类内部，类成员函数是类的一个成员，可以操作类的任意对象，访问对象中所有成员。</p>
+<p>成员函数可以写在类定义内部，也可以在类外部定义（使用**范围解析运算符::**）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">double Box::getvolume(void)</span><br><span class="line">&#123;</span><br><span class="line">	return length*breadth*height;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用成员函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class name.function();</span><br></pre></td></tr></table></figure>
+
+<h3 id="类访问修饰符"><a href="#类访问修饰符" class="headerlink" title="类访问修饰符"></a>类访问修饰符</h3><table>
+<thead>
+<tr>
+<th>public</th>
+<th>在类的外部可以被访问</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private(默认)</td>
+<td>类的外部不可访问，只有类和友元函数可访问，不能被派生类访问</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>与private类似，但可以被派生类访问</td>
+</tr>
+</tbody></table>
+<h3 id="构造函数与析构函数"><a href="#构造函数与析构函数" class="headerlink" title="构造函数与析构函数"></a>构造函数与析构函数</h3><ul>
+<li><p>构造函数：创建类的新对象时执行。可以用来初始化对象</p>
+</li>
+<li><p>析构函数：删除所创建的对象时执行。</p>
+</li>
+</ul>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><table>
+<thead>
+<tr>
+<th align="left">访问</th>
+<th align="left">public</th>
+<th align="left">protected</th>
+<th align="left">private</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">同一个类</td>
+<td align="left">yes</td>
+<td align="left">yes</td>
+<td align="left">yes</td>
+</tr>
+<tr>
+<td align="left">派生类</td>
+<td align="left">yes</td>
+<td align="left">yes</td>
+<td align="left">no</td>
+</tr>
+<tr>
+<td align="left">外部的类</td>
+<td align="left">yes</td>
+<td align="left">no</td>
+<td align="left">no</td>
+</tr>
+</tbody></table>
+<p>假设有一个基类 <strong>Shape</strong>，<strong>Rectangle</strong> 是它的派生类，如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"> </span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">// 基类</span><br><span class="line">class Shape </span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      void setWidth(int w)</span><br><span class="line">      &#123;</span><br><span class="line">         width = w;</span><br><span class="line">      &#125;</span><br><span class="line">      void setHeight(int h)</span><br><span class="line">      &#123;</span><br><span class="line">         height = h;</span><br><span class="line">      &#125;</span><br><span class="line">   protected:</span><br><span class="line">      int width;</span><br><span class="line">      int height;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">// 派生类</span><br><span class="line">class Rectangle: public Shape</span><br><span class="line">&#123;</span><br><span class="line">   public:</span><br><span class="line">      int getArea()</span><br><span class="line">      &#123; </span><br><span class="line">         return (width * height); </span><br><span class="line">      &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">   Rectangle Rect;</span><br><span class="line"> </span><br><span class="line">   Rect.setWidth(5);</span><br><span class="line">   Rect.setHeight(7);</span><br><span class="line"> </span><br><span class="line">   // 输出对象的面积</span><br><span class="line">   cout &lt;&lt; &quot;Total area: &quot; &lt;&lt; Rect.getArea() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="重载运算符和重载函数"><a href="#重载运算符和重载函数" class="headerlink" title="重载运算符和重载函数"></a>重载运算符和重载函数</h2><p>C++ 允许在同一作用域中的某个<strong>函数</strong>和<strong>运算符</strong>指定多个定义，分别称为<strong>函数重载</strong>和<strong>运算符重载</strong>。</p>
+<p>重载声明是指一个与之前已经在该作用域内声明过的函数或方法具有相同名称的声明，但是它们的参数列表和定义（实现）不相同。</p>
+<h2 id="数据抽象与数据封装"><a href="#数据抽象与数据封装" class="headerlink" title="数据抽象与数据封装"></a>数据抽象与数据封装</h2><p>数据抽象是指，只向外界提供关键信息，并隐藏其后台的实现细节，即只表现必要的信息而不呈现细节。</p>
+<p>例如cout，不需要理解 <strong>cout</strong> 是如何在用户的屏幕上显示文本。只需要知道公共接口即可，cout 的底层实现可以自由改变。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">class Adder&#123;</span><br><span class="line">   public:</span><br><span class="line">      // 构造函数</span><br><span class="line">      Adder(int i = 0)</span><br><span class="line">      &#123;</span><br><span class="line">        total = i;</span><br><span class="line">      &#125;</span><br><span class="line">      // 对外的接口</span><br><span class="line">      void addNum(int number)</span><br><span class="line">      &#123;</span><br><span class="line">          total += number;</span><br><span class="line">      &#125;</span><br><span class="line">      // 对外的接口</span><br><span class="line">      int getTotal()</span><br><span class="line">      &#123;</span><br><span class="line">          return total;</span><br><span class="line">      &#125;;</span><br><span class="line">   private:</span><br><span class="line">      // 对外隐藏的数据</span><br><span class="line">      int total;</span><br><span class="line">&#125;;</span><br><span class="line">int main( )</span><br><span class="line">&#123;</span><br><span class="line">   Adder a;</span><br><span class="line">   </span><br><span class="line">   a.addNum(10);</span><br><span class="line">   a.addNum(20);</span><br><span class="line">   a.addNum(30);</span><br><span class="line"> </span><br><span class="line">   cout &lt;&lt; &quot;Total &quot; &lt;&lt; a.getTotal() &lt;&lt;endl;</span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口（抽象类）"><a href="#接口（抽象类）" class="headerlink" title="接口（抽象类）"></a>接口（抽象类）</h2><ul>
+<li>如果类中至少有一个函数被声明为纯虚函数，则这个类就是抽象类。</li>
+<li>纯虚函数是通过在声明中使用 “= 0” 来指定的。</li>
+<li>抽象类不能被用于实例化对象，它只能作为<strong>接口</strong>使用。</li>
+<li>设计<strong>抽象类</strong>（通常称为 ABC）的目的，是为了给其他类提供一个可以继承的适当的基类。</li>
+<li>如果没有在派生类中重写纯虚函数，就尝试实例化该类的对象，会导致编译错误。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line"> </span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">// 基类</span><br><span class="line">class Shape </span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">   // 提供接口框架的纯虚函数</span><br><span class="line">   virtual int getArea() = 0;</span><br><span class="line">   void setWidth(int w)</span><br><span class="line">   &#123;</span><br><span class="line">      width = w;</span><br><span class="line">   &#125;</span><br><span class="line">   void setHeight(int h)</span><br><span class="line">   &#123;</span><br><span class="line">      height = h;</span><br><span class="line">   &#125;</span><br><span class="line">protected:</span><br><span class="line">   int width;</span><br><span class="line">   int height;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">// 派生类</span><br><span class="line">class Rectangle: public Shape</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">   int getArea()</span><br><span class="line">   &#123; </span><br><span class="line">      return (width * height); </span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br><span class="line">class Triangle: public Shape</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">   int getArea()</span><br><span class="line">   &#123; </span><br><span class="line">      return (width * height)/2; </span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">   Rectangle Rect;</span><br><span class="line">   Triangle  Tri;</span><br><span class="line"> </span><br><span class="line">   Rect.setWidth(5);</span><br><span class="line">   Rect.setHeight(7);</span><br><span class="line">   // 输出对象的面积</span><br><span class="line">   cout &lt;&lt; &quot;Total Rectangle area: &quot; &lt;&lt; Rect.getArea() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   Tri.setWidth(5);</span><br><span class="line">   Tri.setHeight(7);</span><br><span class="line">   // 输出对象的面积</span><br><span class="line">   cout &lt;&lt; &quot;Total Triangle area: &quot; &lt;&lt; Tri.getArea() &lt;&lt; endl; </span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result:</span><br><span class="line">Total Rectangle area: 35</span><br><span class="line">Total Triangle area: 17</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件和流"><a href="#文件和流" class="headerlink" title="文件和流"></a>文件和流</h2><table>
+<thead>
+<tr>
+<th align="left">数据类型</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ofstream</td>
+<td align="left">该数据类型表示输出文件流，用于创建文件并向文件写入信息。</td>
+</tr>
+<tr>
+<td align="left">ifstream</td>
+<td align="left">该数据类型表示输入文件流，用于从文件读取信息。</td>
+</tr>
+<tr>
+<td align="left">fstream</td>
+<td align="left">该数据类型通常表示文件流，且同时具有 ofstream 和 ifstream 两种功能，这意味着它可以创建文件，向文件写入信息，从文件读取信息。</td>
+</tr>
+</tbody></table>
+<h2 id="动态内存"><a href="#动态内存" class="headerlink" title="动态内存"></a>动态内存</h2><p>C++ 程序中的内存分为两个部分：</p>
+<ul>
+<li><strong>栈：</strong>在函数内部声明的所有变量都将占用栈内存。</li>
+<li><strong>堆：</strong>这是程序中未使用的内存，在程序运行时可用于动态分配内存。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">一维数组</span><br><span class="line">// 动态分配,数组长度为 m</span><br><span class="line">int *array=new int [m];</span><br><span class="line"> </span><br><span class="line">//释放内存</span><br><span class="line">delete [] array;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">二维数组</span><br><span class="line">int **array</span><br><span class="line">// 假定数组第一维长度为 m， 第二维长度为 n</span><br><span class="line">// 动态分配空间</span><br><span class="line">array = new int *[m];</span><br><span class="line">for( int i=0; i&lt;m; i++ )</span><br><span class="line">&#123;</span><br><span class="line">    array[i] = new int [n]  ;</span><br><span class="line">&#125;</span><br><span class="line">//释放</span><br><span class="line">for( int i=0; i&lt;m; i++ )</span><br><span class="line">&#123;</span><br><span class="line">    delete [] array[i];</span><br><span class="line">&#125;</span><br><span class="line">delete [] array;</span><br></pre></td></tr></table></figure>
+
+<h2 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h2><h3 id="定义命名空间"><a href="#定义命名空间" class="headerlink" title="定义命名空间"></a>定义命名空间</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">namespace namespace_name &#123;</span><br><span class="line">   // 代码声明</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="调用命名空间"><a href="#调用命名空间" class="headerlink" title="调用命名空间"></a>调用命名空间</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name::code;  // code 可以是变量或函数</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">也可以使用 using namespace 指令，这样在使用命名空间时就可以不用在前面加上命名空间的名称。这个指令会告诉编译器，后续的代码将使用指定的命名空间中的名称。</span><br></pre></td></tr></table></figure>
+
+<h2 id="STL（标准模板库）"><a href="#STL（标准模板库）" class="headerlink" title="STL（标准模板库）"></a>STL（标准模板库）</h2><p>C++ 标准模板库的核心包括以下三个组件：</p>
+<table>
+<thead>
+<tr>
+<th align="left">组件</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">容器（Containers）</td>
+<td align="left">容器是用来管理某一类对象的集合。C++ 提供了各种不同类型的容器，比如 deque、list、vector、map 等。</td>
+</tr>
+<tr>
+<td align="left">算法（Algorithms）</td>
+<td align="left">算法作用于容器。它们提供了执行各种操作的方式，包括对容器内容执行初始化、排序、搜索和转换等操作。</td>
+</tr>
+<tr>
+<td align="left">迭代器（iterators）</td>
+<td align="left">迭代器用于遍历对象集合的元素。这些集合可能是容器，也可能是容器的子集。</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   // 创建一个向量存储 int</span><br><span class="line">   vector&lt;int&gt; vec; </span><br><span class="line">   int i;</span><br><span class="line"> </span><br><span class="line">   // 显示 vec 的原始大小</span><br><span class="line">   cout &lt;&lt; &quot;vector size = &quot; &lt;&lt; vec.size() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   // 推入 5 个值到向量中</span><br><span class="line">   for(i = 0; i &lt; 5; i++)&#123;</span><br><span class="line">      vec.push_back(i);</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   // 显示 vec 扩展后的大小</span><br><span class="line">   cout &lt;&lt; &quot;extended vector size = &quot; &lt;&lt; vec.size() &lt;&lt; endl;</span><br><span class="line"> </span><br><span class="line">   // 访问向量中的 5 个值</span><br><span class="line">   for(i = 0; i &lt; 5; i++)&#123;</span><br><span class="line">      cout &lt;&lt; &quot;value of vec [&quot; &lt;&lt; i &lt;&lt; &quot;] = &quot; &lt;&lt; vec[i] &lt;&lt; endl;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   // 使用迭代器 iterator 访问值</span><br><span class="line">   vector&lt;int&gt;::iterator v = vec.begin();</span><br><span class="line">   while( v != vec.end()) &#123;</span><br><span class="line">      cout &lt;&lt; &quot;value of v = &quot; &lt;&lt; *v &lt;&lt; endl;</span><br><span class="line">      v++;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">result:</span><br><span class="line">vector size = 0</span><br><span class="line">extended vector size = 5</span><br><span class="line">value of vec [0] = 0</span><br><span class="line">value of vec [1] = 1</span><br><span class="line">value of vec [2] = 2</span><br><span class="line">value of vec [3] = 3</span><br><span class="line">value of vec [4] = 4</span><br><span class="line">value of v = 0</span><br><span class="line">value of v = 1</span><br><span class="line">value of v = 2</span><br><span class="line">value of v = 3</span><br><span class="line">value of v = 4</span><br></pre></td></tr></table></figure>
+
+<p>关于上面实例中所使用的各种函数，有几点要注意：</p>
+<ul>
+<li>push_back( ) 成员函数在向量的末尾插入值，如果有必要会扩展向量的大小。</li>
+<li>size( ) 函数显示向量的大小。</li>
+<li>begin( ) 函数返回一个指向向量开头的迭代器。</li>
+<li>end( ) 函数返回一个指向向量末尾的迭代器。</li>
+</ul>
+<h2 id="C-标准库"><a href="#C-标准库" class="headerlink" title="C++标准库"></a>C++标准库</h2><ul>
+<li><strong>标准函数库：</strong> 这个库是由通用的、独立的、不属于任何类的函数组成的。函数库继承自 <strong>C 语言</strong>。</li>
+<li><strong>面向对象类库：</strong> 这个库是类及其相关函数的集合。</li>
+</ul>
+<h3 id="标准函数库"><a href="#标准函数库" class="headerlink" title="标准函数库"></a>标准函数库</h3><p>标准函数库分为以下几类：</p>
+<ul>
+<li>输入/输出 I/O</li>
+<li>字符串和字符处理</li>
+<li>数学</li>
+<li>时间、日期和本地化</li>
+<li>动态分配</li>
+<li>其他</li>
+<li>宽字符函数</li>
+</ul>
+<h3 id="面向对象类库"><a href="#面向对象类库" class="headerlink" title="面向对象类库"></a>面向对象类库</h3><p>标准的 C++ 面向对象类库定义了大量支持一些常见操作的类，比如输入/输出 I/O、字符串处理、数值处理。面向对象类库包含以下内容：</p>
+<ul>
+<li>标准的 C++ I/O 类</li>
+<li>String 类</li>
+<li>数值类</li>
+<li>STL 容器类</li>
+<li>STL 算法</li>
+<li>STL 函数对象</li>
+<li>STL 迭代器</li>
+<li>STL 分配器</li>
+<li>本地化库</li>
+<li>异常处理类</li>
+<li>杂项支持库</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/07/28/%E3%80%90MIT%E8%87%AA%E5%AD%A6%E3%80%916.002%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%94%E8%AE%B0/" rel="prev" title="【MIT自学】6.002电路与电子学笔记">
+      <i class="fa fa-chevron-left"></i> 【MIT自学】6.002电路与电子学笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/07/29/%E3%80%90LeetCode%E3%80%91%E7%AE%97%E6%B3%95%E7%AE%80%E5%8D%95%E9%A2%98Day1/" rel="next" title="【LeetCode】算法简单题Day1">
+      【LeetCode】算法简单题Day1 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">C++ 学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB-amp-%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.1.</span> <span class="nav-text">类&amp;对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">类定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.1.2.</span> <span class="nav-text">定义对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98%EF%BC%9A"><span class="nav-number">1.1.3.</span> <span class="nav-text">访问数据成员：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.4.</span> <span class="nav-text">类成员函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-number">1.1.5.</span> <span class="nav-text">类访问修饰符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%8E%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">1.1.6.</span> <span class="nav-text">构造函数与析构函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-number">1.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%BD%BD%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E9%87%8D%E8%BD%BD%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">重载运算符和重载函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%8A%BD%E8%B1%A1%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85"><span class="nav-number">1.4.</span> <span class="nav-text">数据抽象与数据封装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%EF%BC%88%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%89"><span class="nav-number">1.5.</span> <span class="nav-text">接口（抽象类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E6%B5%81"><span class="nav-number">1.6.</span> <span class="nav-text">文件和流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98"><span class="nav-number">1.7.</span> <span class="nav-text">动态内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">1.8.</span> <span class="nav-text">命名空间</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">1.8.1.</span> <span class="nav-text">定义命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B0%83%E7%94%A8%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">1.8.2.</span> <span class="nav-text">调用命名空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STL%EF%BC%88%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%EF%BC%89"><span class="nav-number">1.9.</span> <span class="nav-text">STL（标准模板库）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-%E6%A0%87%E5%87%86%E5%BA%93"><span class="nav-number">1.10.</span> <span class="nav-text">C++标准库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%87%BD%E6%95%B0%E5%BA%93"><span class="nav-number">1.10.1.</span> <span class="nav-text">标准函数库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%BA%93"><span class="nav-number">1.10.2.</span> <span class="nav-text">面向对象类库</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hw-lin"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hw-lin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hw-lin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+      Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数
+     */
+		var t1 = Date.UTC(2021,06,22,00,00,00); //北京时间2021-6-22 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

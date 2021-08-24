@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"hardware-lin.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="深度学习入门笔记Rosenblatt模型123456789# dataset.pyimport numpy as npdef get_beans(counts):	xs &#x3D; np.random.rand(counts)	xs &#x3D; np.sort(xs)	ys &#x3D; [1.2*x+np.random.rand()&#x2F;10 for x in xs]	return xs,ys">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【机器学习】深度学习入门">
+<meta property="og:url" content="http://hardware-lin.github.io/2021/08/11/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hw-lin&#39;s Blog">
+<meta property="og:description" content="深度学习入门笔记Rosenblatt模型123456789# dataset.pyimport numpy as npdef get_beans(counts):	xs &#x3D; np.random.rand(counts)	xs &#x3D; np.sort(xs)	ys &#x3D; [1.2*x+np.random.rand()&#x2F;10 for x in xs]	return xs,ys">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-11T13:13:16.244Z">
+<meta property="article:modified_time" content="2021-08-15T03:10:22.425Z">
+<meta property="article:author" content="Hw-lin">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://hardware-lin.github.io/2021/08/11/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>【机器学习】深度学习入门 | Hw-lin's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hw-lin's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://hardware-lin.github.io/2021/08/11/%E3%80%90%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Hw-lin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hw-lin's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【机器学习】深度学习入门
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-11 21:13:16" itemprop="dateCreated datePublished" datetime="2021-08-11T21:13:16+08:00">2021-08-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-15 11:10:22" itemprop="dateModified" datetime="2021-08-15T11:10:22+08:00">2021-08-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>15k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="深度学习入门笔记"><a href="#深度学习入门笔记" class="headerlink" title="深度学习入门笔记"></a>深度学习入门笔记</h1><h2 id="Rosenblatt模型"><a href="#Rosenblatt模型" class="headerlink" title="Rosenblatt模型"></a>Rosenblatt模型</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># dataset.py</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">def get_beans(counts):</span><br><span class="line">	xs = np.random.rand(counts)</span><br><span class="line">	xs = np.sort(xs)</span><br><span class="line">	ys = [1.2*x+np.random.rand()/10 for x in xs]</span><br><span class="line">	return xs,ys</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"># rosenblatt.py</span><br><span class="line">import dataset</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line"></span><br><span class="line"># 配置图像</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;bean size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line"></span><br><span class="line">w = 0.05</span><br><span class="line">alpha = 0.05</span><br><span class="line">for i in range(100):</span><br><span class="line">    for j in range(100):</span><br><span class="line">        x = xs[j]</span><br><span class="line">        y = ys[j]</span><br><span class="line">        y_pre = w * x</span><br><span class="line">        error = y - y_pre</span><br><span class="line">        w = w + error * x * alpha</span><br><span class="line"></span><br><span class="line">print(&quot;w=&quot;, w)</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>import numpy as np  # as xxx作为别名</li>
+<li>for i in range(100) 生成0-99的循环100次</li>
+<li>plt.scatter(xs,ys)#  绘制散点图</li>
+</ul>
+<h2 id="代价函数cost-function"><a href="#代价函数cost-function" class="headerlink" title="代价函数cost_function"></a>代价函数cost_function</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#代价函数由平方误差推导得到</span><br><span class="line">#代价函数：e=(y-w*x)^2=x^2*w^2+(-2x*y)*w+y^2</span><br><span class="line">#a=x^2</span><br><span class="line">#b=-2x*y</span><br><span class="line">#求解斜率：k=2aw+b</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#  cost_function.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line"># 配置图像</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;bean size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line"># plt.show()</span><br><span class="line"></span><br><span class="line">ws = np.arange(0, 3, 0.01)</span><br><span class="line">es_a = []  # 定义列表</span><br><span class="line">for w in ws:</span><br><span class="line">    y_pre = xs * w</span><br><span class="line">    es = (1 / 100) * np.sum((ys - y_pre) ** 2)</span><br><span class="line">    es_a.append(es)  # 列表末尾添加新对象</span><br><span class="line">es_min = min(es_a)</span><br><span class="line">print(&quot;es最小值&quot; + str(es_min))</span><br><span class="line">w_num = es_a.index(es_min)</span><br><span class="line">print(&quot;w的下标&quot; + str(w_num))</span><br><span class="line">print(str(ws[w_num]))</span><br><span class="line"># 配置图像</span><br><span class="line"># plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line"># plt.xlabel(&quot;w&quot;)</span><br><span class="line"># plt.ylabel(&quot;es_average&quot;)</span><br><span class="line"># plt.plot(ws, es_a)</span><br><span class="line"># plt.show()</span><br><span class="line"></span><br><span class="line">plt.title(&quot;final&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;xs&quot;)</span><br><span class="line">plt.ylabel(&quot;y_pre&quot;)</span><br><span class="line">ys = xs * ws[w_num]</span><br><span class="line">plt.plot(xs, ys)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>np.arange()</li>
+<li>list.append()  #  列表末尾添加新对象</li>
+<li>np.sum()  #  元素求和</li>
+<li>list.min()  #  获得列表中的最小值</li>
+<li>list.index()  #  获得首次出现该元素的序列值</li>
+</ul>
+<h2 id="梯度下降和反向传播"><a href="#梯度下降和反向传播" class="headerlink" title="梯度下降和反向传播"></a>梯度下降和反向传播</h2><ul>
+<li>随机梯度下降</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"># sgd1.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(500)</span><br><span class="line">w = 0.01</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"># 随机梯度下降</span><br><span class="line">for _ in range(500):</span><br><span class="line">    for i in range(500):</span><br><span class="line">        x = xs[i]</span><br><span class="line">        y = ys[i]</span><br><span class="line">        k = 2 * (x ** 2) * w + (-2 * x * y)</span><br><span class="line">        alpha = 0.1</span><br><span class="line">        w = w - alpha * k</span><br><span class="line">        plt.clf()  # 清空窗口</span><br><span class="line">        plt.scatter(xs, ys)</span><br><span class="line">        y_pre = w * xs</span><br><span class="line">        plt.xlim(0, 1.2)</span><br><span class="line">        plt.ylim(0, 1.2)</span><br><span class="line">        plt.plot(xs, y_pre)</span><br><span class="line">        plt.pause(0.01)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>批量梯度下降</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"># sgd2.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(500)</span><br><span class="line">w = 0.01</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"># 批量梯度下降</span><br><span class="line">alpha = 0.1</span><br><span class="line">for _ in range(50):</span><br><span class="line">    for i in range(10):</span><br><span class="line">        xs_sum = xs[10*_+i]</span><br><span class="line">        ys_sum = ys[10*_+i]</span><br><span class="line">        k = 2 * (xs_sum ** 2) * w + (-2 * xs_sum * ys_sum)</span><br><span class="line">        k = k/10</span><br><span class="line">        w = w - alpha * k</span><br><span class="line">    plt.clf()  # 清空窗口</span><br><span class="line">    y_pre = w * xs</span><br><span class="line">    plt.xlim(0, 1.2)</span><br><span class="line">    plt.ylim(0, 1.2)</span><br><span class="line">    plt.scatter(xs, ys)</span><br><span class="line">    plt.plot(xs, y_pre)</span><br><span class="line">    plt.pause(0.01)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>固定步长梯度下降</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># sgd3.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(500)</span><br><span class="line">w = 0.01</span><br><span class="line">y_pre = w * xs</span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"># 固定步长梯度下降</span><br><span class="line">step = 0.01  #步长</span><br><span class="line">alpha = 0.1</span><br><span class="line">for _ in range(50):</span><br><span class="line">    for i in range(10):</span><br><span class="line">        xs_sum = xs[10 * _ + i]</span><br><span class="line">        ys_sum = ys[10 * _ + i]</span><br><span class="line">        k = 2 * (xs_sum ** 2) * w + (-2 * xs_sum * ys_sum)</span><br><span class="line">        k = k / 10</span><br><span class="line">        if k &gt; 0:</span><br><span class="line">            w = w - step</span><br><span class="line">        else:</span><br><span class="line">            w = w + step</span><br><span class="line">    plt.clf()  # 清空窗口</span><br><span class="line">    y_pre = w * xs</span><br><span class="line">    plt.xlim(0, 1.2)</span><br><span class="line">    plt.ylim(0, 1.2)</span><br><span class="line">    plt.scatter(xs, ys)</span><br><span class="line">    plt.plot(xs, y_pre)</span><br><span class="line">    plt.pause(0.01)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>plt.clf()#清空窗口</li>
+<li>plt.xlim(a,b)</li>
+<li>plt.ylim(a,b)</li>
+<li>plt.pause(time)#延时</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"># 预测函数为y=wx+b时，进行的方差代价函数图绘制（3维）</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">from mpl_toolkits.mplot3d import Axes3D</span><br><span class="line"></span><br><span class="line">m = 100</span><br><span class="line">xs, ys = dataset.get_beans(m)</span><br><span class="line">plt.title(&quot;Size-Toxicity Function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&#x27;Bean Size&#x27;)</span><br><span class="line">plt.ylabel(&#x27;Toxicity&#x27;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line"></span><br><span class="line">w = 0.01</span><br><span class="line">b = 0.01</span><br><span class="line">y_pre = xs * w + b</span><br><span class="line">plt.plot(xs, y_pre)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">fig = plt.figure()</span><br><span class="line">ax = Axes3D(fig)</span><br><span class="line">ax.set_zlim(0, 2)</span><br><span class="line">#  随机梯度下降</span><br><span class="line">ws = np.arange(0, 2, 0.1)</span><br><span class="line">bs = np.arange(-3, 3, 0.1)</span><br><span class="line"></span><br><span class="line">for w in ws:</span><br><span class="line">    es = []</span><br><span class="line">    for b in bs:</span><br><span class="line">        y_pre = xs * w + b</span><br><span class="line">        e = (1 / m) * np.sum((ys - y_pre) ** 2)</span><br><span class="line">        es.append(e)</span><br><span class="line">    figure = ax.plot(bs, es, w, zdir=&#x27;y&#x27;)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># dataset.py</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">def get_beans(counts):</span><br><span class="line">	xs = np.random.rand(counts)</span><br><span class="line">	xs = np.sort(xs)</span><br><span class="line">	ys = np.zeros(counts)</span><br><span class="line">	for i in range(counts):</span><br><span class="line">		x = xs[i]</span><br><span class="line">		yi = 0.7*x+(0.5-np.random.rand())/50+0.5</span><br><span class="line">		if yi &gt; 0.8:</span><br><span class="line">			ys[i] = 1</span><br><span class="line">	return xs,ys</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"># activation.py</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line">w = 0.01</span><br><span class="line">b = 0.01</span><br><span class="line">z = w * xs + b</span><br><span class="line">a = 1 / (1 + np.exp(-z))</span><br><span class="line"></span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line">plt.plot(xs, a)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"># 随机梯度下降</span><br><span class="line">for _ in range(5000):</span><br><span class="line">    alpha = 0.05</span><br><span class="line">    for i in range(100):</span><br><span class="line">        x = xs[i]</span><br><span class="line">        y = ys[i]</span><br><span class="line"></span><br><span class="line">        z = w * x + b</span><br><span class="line">        a = 1 / (1 + np.exp(-z))  # 激活函数</span><br><span class="line">        e = (y - a) ** 2  # 代价函数</span><br><span class="line"></span><br><span class="line">        # 链式法则，反向传播，调整参数</span><br><span class="line">        deda = -2 * (y - a)</span><br><span class="line">        dadz = a * (1 - a)</span><br><span class="line">        dzdw = x</span><br><span class="line">        dedw = deda * dadz * dzdw</span><br><span class="line">        dzdb = 1</span><br><span class="line">        dedb = deda * dadz * dzdb</span><br><span class="line"></span><br><span class="line">        w = w - dedw * alpha</span><br><span class="line">        b = b - dedb * alpha  # 反向传播</span><br><span class="line">    if _ % 100 == 0:</span><br><span class="line">        plt.clf()  # 清空窗口</span><br><span class="line">        plt.scatter(xs, ys)</span><br><span class="line">        z = w * xs + b</span><br><span class="line">        a = 1 / (1 + np.exp(-z))</span><br><span class="line">        plt.xlim(0, 1)</span><br><span class="line">        plt.ylim(0, 1.2)</span><br><span class="line">        plt.plot(xs, a)</span><br><span class="line">        plt.pause(0.01)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>引进了sigmoid函数作为神经网络的激活函数，将变量映射到0，1之间</p>
+<p>$$<br>a= {1\over (1+exp(-z))}<br>$$</p>
+<p>$$<br>0&lt;=a&lt;=1<br>$$</p>
+<h2 id="隐藏层"><a href="#隐藏层" class="headerlink" title="隐藏层"></a>隐藏层</h2><p>引入一层隐藏层，第一层有2个神经元。</p>
+<p>权重和偏置的下标较为繁琐，容易混乱。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">xs, ys = dataset.get_beans(100)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 定义激活函数</span><br><span class="line">def sigmoid(x):</span><br><span class="line">    return 1 / (1 + np.exp(-x))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 定义前向传播函数</span><br><span class="line">def forward_progration(x):</span><br><span class="line">    z11_1 = w11_1 * x + b1_1</span><br><span class="line">    a11_1 = sigmoid(z11_1)</span><br><span class="line">    z21_1 = w21_1 * x + b2_1</span><br><span class="line">    a21_1 = sigmoid(z21_1)</span><br><span class="line">    z1_2 = w11_2 * a11_1 + w12_2 * a21_1 + b1_2</span><br><span class="line">    a1_2 = sigmoid(z1_2)</span><br><span class="line">    return z11_1, a11_1, z21_1, a21_1, z1_2, a1_2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.title(&quot;size-toxicity function&quot;, fontsize=12)</span><br><span class="line">plt.xlabel(&quot;size&quot;)</span><br><span class="line">plt.ylabel(&quot;toxicity&quot;)</span><br><span class="line">plt.scatter(xs, ys)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br><span class="line"># 第一层神经元</span><br><span class="line"># 参数的下标：ab_c,a表示第a个神经元，b表示对应第b个输入，c表示第c层</span><br><span class="line">w11_1 = np.random.rand()</span><br><span class="line">w21_1 = np.random.rand()</span><br><span class="line">b1_1 = np.random.rand()</span><br><span class="line">b2_1 = np.random.rand()</span><br><span class="line"># 第二层神经元，输出</span><br><span class="line">w11_2 = np.random.rand()</span><br><span class="line">w12_2 = np.random.rand()</span><br><span class="line">b1_2 = np.random.rand()</span><br><span class="line"></span><br><span class="line"># 随机梯度下降</span><br><span class="line">for _ in range(5000):</span><br><span class="line">    alpha = 0.05</span><br><span class="line">    for i in range(100):</span><br><span class="line">        x = xs[i]</span><br><span class="line">        y = ys[i]</span><br><span class="line"></span><br><span class="line">        # 前向传播</span><br><span class="line">        z11_1, a11_1, z21_1, a21_1, z1_2, a1_2 = forward_progration(x)</span><br><span class="line">        # 代价函数</span><br><span class="line">        e = (y - a1_2) ** 2</span><br><span class="line"></span><br><span class="line">        # 链式法则</span><br><span class="line">        deda1_2 = -2 * (y - a1_2)</span><br><span class="line">        da1_2dz1_2 = a1_2 * (1 - a1_2)</span><br><span class="line">        dz1_2dw11_2 = a11_1</span><br><span class="line">        dz1_2dw21_2 = a21_1</span><br><span class="line">        dedw11_2 = deda1_2 * da1_2dz1_2 * dz1_2dw11_2</span><br><span class="line">        dedw21_2 = deda1_2 * da1_2dz1_2 * dz1_2dw21_2</span><br><span class="line"></span><br><span class="line">        dz1_2db1_2 = 1</span><br><span class="line">        dedb1_2 = deda1_2 * da1_2dz1_2 * dz1_2db1_2</span><br><span class="line"></span><br><span class="line">        dz1_2da11_1 = w11_2</span><br><span class="line">        da11_1dz11_1 = a11_1 * (1 - a11_1)</span><br><span class="line">        dz11_1dw11_1 = x</span><br><span class="line">        dedw11_1 = deda1_2 * da1_2dz1_2 * dz1_2da11_1 * da11_1dz11_1 * dz11_1dw11_1</span><br><span class="line">        dz1_1db1_1 = 1</span><br><span class="line">        dedb1_1 = deda1_2 * da1_2dz1_2 * dz1_2da11_1 * da11_1dz11_1 * dz1_1db1_1</span><br><span class="line"></span><br><span class="line">        dz1_2da12_1 = w12_2</span><br><span class="line">        da12_1dz21_1 = a21_1 * (1 - a21_1)</span><br><span class="line">        dz21_1dw21_1 = x</span><br><span class="line">        dedw21_1 = deda1_2 * da1_2dz1_2 * dz1_2da12_1 * da12_1dz21_1 * dz21_1dw21_1</span><br><span class="line">        dz21_1db2_1 = 1</span><br><span class="line">        dedb2_1 = deda1_2 * da1_2dz1_2 * dz1_2da12_1 * da12_1dz21_1 * dz21_1db2_1</span><br><span class="line"></span><br><span class="line">        # 反向传播</span><br><span class="line">        w11_1 = w11_1 - alpha * dedw11_1</span><br><span class="line">        w21_1 = w21_1 - alpha * dedw21_1</span><br><span class="line">        b1_1 = b1_1 - alpha * dedb1_1</span><br><span class="line">        b2_1 = b2_1 - alpha * dedb2_1</span><br><span class="line">        w11_2 = w11_2 - alpha * dedw11_2</span><br><span class="line">        w12_2 = w12_2 - alpha * dedw21_2</span><br><span class="line">        b1_2 = b1_2 - alpha * dedb1_2</span><br><span class="line"></span><br><span class="line">    if _ % 100 == 0:</span><br><span class="line">        plt.clf()  # 清空窗口</span><br><span class="line">        plt.scatter(xs, ys)</span><br><span class="line">        z11_1, a11_1, z21_1, a21_1, z1_2, a1_2 = forward_progration(xs)</span><br><span class="line">        plt.xlim(0, 2.5)</span><br><span class="line">        plt.ylim(0, 1.2)</span><br><span class="line">        plt.plot(xs, a1_2)</span><br><span class="line">        plt.pause(0.01)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Keras框架"><a href="#Keras框架" class="headerlink" title="Keras框架"></a>Keras框架</h2><h3 id="Anaconda安装Keras"><a href="#Anaconda安装Keras" class="headerlink" title="Anaconda安装Keras"></a>Anaconda安装Keras</h3><ol>
+<li>首先安装anaconda，然后在Pycharm中配置使用。</li>
+<li>点击Anaconda Prompt进入命令行</li>
+<li>输入命令：conda create -n xxx python=3.8</li>
+<li>输入命令：conda activate xxx</li>
+<li>进入xxx后，输入:conda install tensorflow-gpu</li>
+<li>输入:conda install keras-gpu</li>
+<li>y回车确认</li>
+<li>等待安装后，进入pycharm新建项目，选择配置好的anaconda环境作为python的解释器</li>
+<li>完成！</li>
+</ol>
+<p><code>（Anaconda会自动帮我们安装适配的CUDA和Cudnn）</code></p>
+<p>具体怎么使用Keras的代码可以看下面章节。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Keras的中文文档写道：</span><br><span class="line">如果你以 TensorFlow 或 CNTK 后端运行，只要检测到任何可用的 GPU，那么代码将自动在 GPU 上运行。</span><br></pre></td></tr></table></figure>
+
+<p>但是我目前还没成功过，都是在CPU上进行训练的。。。</p>
+<h3 id="具体使用代码"><a href="#具体使用代码" class="headerlink" title="具体使用代码"></a>具体使用代码</h3><p>Keras中文文档网站：<a target="_blank" rel="noopener" href="https://keras.io/zh/">https://keras.io/zh/</a></p>
+<p>通过Keras框架的代码，可以简洁地完成前向传播，激活函数，损失函数（代价函数）。</p>
+<p>使用时，仅需要考虑输入数据的维度，隐藏层神经元数量。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import plot_utils</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line"></span><br><span class="line">m = 100</span><br><span class="line">X, Y = dataset.get_beans4(m)</span><br><span class="line">plot_utils.show_scatter(X, Y)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(units=2, activation=&#x27;sigmoid&#x27;, input_dim=2))</span><br><span class="line">model.add(Dense(units=1, activation=&#x27;sigmoid&#x27;))</span><br><span class="line"></span><br><span class="line"># model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=&#x27;sgd&#x27;, metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])# 配置学习率lr=0.05</span><br><span class="line">model.fit(X, Y, epochs=5000, batch_size=10)</span><br><span class="line"></span><br><span class="line">pres = model.predict(X)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"># plot_utils.show_scatter_curve(X, Y, pres)</span><br><span class="line">plot_utils.show_scatter_surface(X, Y, model)</span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="深度学习-DeepLearning"><a href="#深度学习-DeepLearning" class="headerlink" title="深度学习 DeepLearning"></a>深度学习 DeepLearning</h2><p>隐藏层超过3层就叫做深度神经网络</p>
+<p>tensorflow游乐场（可视化）：<a target="_blank" rel="noopener" href="http://playground.tensorflow.org/">http://playground.tensorflow.org/</a></p>
+<p>隐藏层1个神经元，就使得loss函数=0.5对应空间中的一条线，经过激活函数后会变成单个曲线</p>
+<p>隐藏层2个神经元，就使得loss函数=0.5对应空间中的两条相交线，经过激活函数后会变成2个曲线</p>
+<p>隐藏层3个神经元，就使得loss函数=0.5对应空间中的3条相交线，经过激活函数后会变成2个曲线</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"># dataset.py</span><br><span class="line">import numpy as np</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">def get_beans(counts):</span><br><span class="line">	posX,posY = genSpiral(int(counts/2),0,1)</span><br><span class="line">	negX,negY = genSpiral(int(counts/2),np.pi,0)</span><br><span class="line">	X = np.vstack((posX,negX))</span><br><span class="line">	Y = np.hstack((posY,negY))</span><br><span class="line">	return X,Y</span><br><span class="line"></span><br><span class="line">def genSpiral(counts,deltaT, label):</span><br><span class="line">	X = np.zeros((counts,2))</span><br><span class="line">	Y = np.zeros(counts)</span><br><span class="line">	for i in range(counts):</span><br><span class="line">		r = i / counts * 5</span><br><span class="line">		t = 1.75 * i / counts * 2 * np.pi + deltaT;</span><br><span class="line">		x1 = r * np.sin(t) + random.uniform(-0.1,0.1)</span><br><span class="line">		x2 = r * np.cos(t) + random.uniform(-0.1,0.1)</span><br><span class="line">		X[i] = np.array([x1,x2])</span><br><span class="line">		Y[i] = label</span><br><span class="line">	return X,Y </span><br><span class="line"></span><br><span class="line">def dist(a, b):</span><br><span class="line">	dx = a[&#x27;x&#x27;] - b[&#x27;x&#x27;];</span><br><span class="line">	dy = a[&#x27;y&#x27;]- b[&#x27;y&#x27;];</span><br><span class="line">	return np.sqrt(dx * dx + dy * dy);</span><br><span class="line">def getCircleLabel(p, center):</span><br><span class="line">	radius = 1;</span><br><span class="line">	if dist(p, center) &lt; (radius * 0.5):</span><br><span class="line">		return 1</span><br><span class="line">	else:</span><br><span class="line">		return 0</span><br><span class="line"></span><br><span class="line">def randUniform(a=-1, b=1):</span><br><span class="line">  return np.random.rand() * (b - a) + a;</span><br><span class="line"></span><br><span class="line">def classifyCircleData(numSamples=100, noise=0):</span><br><span class="line">	points = [];</span><br><span class="line">	Y = []</span><br><span class="line">	X = []</span><br><span class="line">	radius = 1;</span><br><span class="line">	num = int(numSamples/2)</span><br><span class="line">	for i in range(num):</span><br><span class="line">		r = randUniform(0, radius * 0.5);</span><br><span class="line">		angle = randUniform(0, 2 * np.pi);</span><br><span class="line">		x = r * np.sin(angle);</span><br><span class="line">		y = r * np.cos(angle);</span><br><span class="line">		noiseX = randUniform(-radius, radius) * noise;</span><br><span class="line">		noiseY = randUniform(-radius, radius) * noise;</span><br><span class="line">		label = getCircleLabel(&#123;&#x27;x&#x27;: x + noiseX, &#x27;y&#x27;: y + noiseY&#125;, &#123;&#x27;x&#x27;: 0, &#x27;y&#x27;: 0&#125;);</span><br><span class="line">		X.append([x+1,y+1])</span><br><span class="line">		Y.append(label)</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">	for i in range(num):</span><br><span class="line">		r = randUniform(radius * 0.7, radius);</span><br><span class="line">		angle = randUniform(0, 2 * np.pi);</span><br><span class="line">		x = r * np.sin(angle);</span><br><span class="line">		y = r * np.cos(angle);</span><br><span class="line">		noiseX = randUniform(-radius, radius) * noise;</span><br><span class="line">		noiseY = randUniform(-radius, radius) * noise;</span><br><span class="line">		label = getCircleLabel(&#123;&#x27;x&#x27;: x + noiseX, &#x27;y&#x27;: y + noiseY&#125;, &#123;&#x27;x&#x27;: 0, &#x27;y&#x27;: 0&#125;);</span><br><span class="line">		X.append([x+1,y+1])</span><br><span class="line">		Y.append(label)</span><br><span class="line"></span><br><span class="line">	X = np.array(X)</span><br><span class="line">	Y = np.array(Y)</span><br><span class="line"></span><br><span class="line">	return X,Y</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"># main.py</span><br><span class="line">import time</span><br><span class="line">import dataset</span><br><span class="line">import numpy as np</span><br><span class="line">import plot_utils</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line"></span><br><span class="line">m = 100</span><br><span class="line">X, Y = dataset.get_beans(m)</span><br><span class="line">plot_utils.show_scatter(X, Y)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(units=8, activation=&#x27;relu&#x27;, input_dim=2))</span><br><span class="line">model.add(Dense(units=8, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=8, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=1, activation=&#x27;sigmoid&#x27;))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=&#x27;sgd&#x27;, metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.compile(loss=&#x27;mean_squared_error&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.fit(X, Y, epochs=5000, batch_size=10)</span><br><span class="line"></span><br><span class="line">pres = model.predict(X)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"># plot_utils.show_scatter_curve(X, Y, pres)</span><br><span class="line">plot_utils.show_scatter_surface(X, Y, model)</span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h2><h3 id="图像识别初步，使用mnist数据集进行训练，未采用卷积"><a href="#图像识别初步，使用mnist数据集进行训练，未采用卷积" class="headerlink" title="图像识别初步，使用mnist数据集进行训练，未采用卷积"></a>图像识别初步，使用mnist数据集进行训练，未采用卷积</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#图像识别初步，使用mnist数据集进行训练，未采用卷积</span><br><span class="line">import time</span><br><span class="line">from tensorflow.keras.datasets import mnist</span><br><span class="line"># import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line">from tensorflow.keras.utils import to_categorical</span><br><span class="line"></span><br><span class="line">(X_train, Y_train), (X_test, Y_test) = mnist.load_data()</span><br><span class="line">print(&quot;X_train shape:&quot; + str(X_train.shape))</span><br><span class="line">print(&quot;Y_train shape:&quot; + str(Y_train.shape))</span><br><span class="line">print(&quot;X_test shape:&quot; + str(X_test.shape))</span><br><span class="line">print(&quot;Y_test shape:&quot; + str(Y_test.shape))</span><br><span class="line"></span><br><span class="line">print(Y_train[0])</span><br><span class="line">plt.imshow(X_train[0], cmap=&#x27;gray&#x27;)</span><br><span class="line">plt.show()</span><br><span class="line">X_train = X_train.reshape(60000, 784) / 255.0</span><br><span class="line">X_test = X_test.reshape(10000, 784) / 255.0</span><br><span class="line"></span><br><span class="line">Y_train = to_categorical(Y_train, 10)</span><br><span class="line">Y_test = to_categorical(Y_test, 10)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line">model.add(Dense(units=256, activation=&#x27;relu&#x27;, input_dim=784))</span><br><span class="line">model.add(Dense(units=256, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=256, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=10, activation=&#x27;softmax&#x27;))</span><br><span class="line"># 送入训练</span><br><span class="line"></span><br><span class="line">model.compile(loss=&#x27;categorical_crossentropy&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">model.fit(X_train, Y_train, epochs=5000, batch_size=1024)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"></span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line">print(model.get_weights())</span><br><span class="line">loss, accuracy = model.evaluate(X_test, Y_test)</span><br><span class="line">print(&quot;loss&quot; + str(loss))</span><br><span class="line">print(&quot;accuracy&quot; + str(accuracy))</span><br><span class="line"></span><br><span class="line"># 最后accuracy大概为96%</span><br></pre></td></tr></table></figure>
+
+<h3 id="LeNet-5（经典卷积神经网络）复现"><a href="#LeNet-5（经典卷积神经网络）复现" class="headerlink" title="LeNet-5（经典卷积神经网络）复现"></a>LeNet-5（经典卷积神经网络）复现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">#  LeNet-5（经典卷积神经网络）复现</span><br><span class="line">import time</span><br><span class="line">from tensorflow.keras.datasets import mnist</span><br><span class="line"># import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line">from tensorflow.keras.optimizers import SGD</span><br><span class="line">from tensorflow.keras.utils import to_categorical</span><br><span class="line">from tensorflow.keras.layers import Conv2D  # 二维卷积</span><br><span class="line">from tensorflow.keras.layers import AveragePooling2D  # 二维池化</span><br><span class="line">from tensorflow.keras.layers import Flatten  # 展平后，接入全连接层</span><br><span class="line"></span><br><span class="line">(X_train, Y_train), (X_test, Y_test) = mnist.load_data()</span><br><span class="line"></span><br><span class="line">X_train = X_train.reshape(60000, 28, 28, 1) / 255.0</span><br><span class="line">X_test = X_test.reshape(10000, 28, 28, 1) / 255.0</span><br><span class="line"></span><br><span class="line">Y_train = to_categorical(Y_train, 10)</span><br><span class="line">Y_test = to_categorical(Y_test, 10)</span><br><span class="line"></span><br><span class="line">time_start = time.time()</span><br><span class="line"></span><br><span class="line">model = Sequential()</span><br><span class="line"># filters表示过滤器（卷积核）数目，kernel_size表示卷积核大小，strides表示步长，padding：使用valid或same表示卷积的两种方式，</span><br><span class="line">model.add(</span><br><span class="line">    Conv2D(filters=6, kernel_size=(5, 5), strides=(1, 1), input_shape=(28, 28, 1), padding=&#x27;valid&#x27;, activation=&#x27;relu&#x27;))</span><br><span class="line">#  池化层，为2*2</span><br><span class="line">model.add(AveragePooling2D(pool_size=(2, 2)))</span><br><span class="line">#  不用输入input_shape,Keras会自动计算输入</span><br><span class="line">model.add(Conv2D(filters=16, kernel_size=(5, 5), strides=(1, 1), padding=&#x27;valid&#x27;, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(AveragePooling2D(pool_size=(2, 2)))</span><br><span class="line"># 展平后送入全连接层Dense</span><br><span class="line">model.add(Flatten())</span><br><span class="line">model.add(Dense(units=120, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=84, activation=&#x27;relu&#x27;))</span><br><span class="line">model.add(Dense(units=10, activation=&#x27;softmax&#x27;))</span><br><span class="line"># 对于最终结果为多种类，一般采用softmax激活函数来进行激活，效果较好。</span><br><span class="line"># 送入训练</span><br><span class="line"></span><br><span class="line"># 采用多分类交叉熵代价函数categorical_crossentropy，效果较好；（之前采用的是均方误差函数）</span><br><span class="line">model.compile(loss=&#x27;categorical_crossentropy&#x27;, optimizer=SGD(lr=0.05), metrics=[&#x27;accuracy&#x27;])</span><br><span class="line">#  epochs表示训练次数，batch_size表示每次取出数据进行计算的数目</span><br><span class="line">model.fit(X_train, Y_train, epochs=50, batch_size=1024)</span><br><span class="line"></span><br><span class="line">time_end = time.time()</span><br><span class="line"># 评估测试表</span><br><span class="line">print(&#x27;time cost&#x27;, time_end - time_start, &#x27;s&#x27;)</span><br><span class="line">print(model.get_weights())</span><br><span class="line">loss, accuracy = model.evaluate(X_test, Y_test)</span><br><span class="line">print(&quot;loss&quot; + str(loss))</span><br><span class="line">print(&quot;accuracy&quot; + str(accuracy))</span><br><span class="line"></span><br><span class="line">#  最终accuracy大概为98%</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/07/29/%E3%80%90Hexo%E3%80%91%E8%BD%AC%E8%BD%BD%EF%BC%9Ahexo%E5%8F%91%E7%94%9Ferror%EF%BC%9Aspawn%20failed%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" rel="prev" title="【Hexo】 转载：hexo发生error：spawn failed错误的解决方法">
+      <i class="fa fa-chevron-left"></i> 【Hexo】 转载：hexo发生error：spawn failed错误的解决方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/11/%E3%80%90Hexo%E3%80%91Hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE%E4%BB%8E0%E5%88%B01/" rel="next" title="【Hexo】Hexo个人博客配置">
+      【Hexo】Hexo个人博客配置 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">深度学习入门笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Rosenblatt%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">Rosenblatt模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0cost-function"><span class="nav-number">1.2.</span> <span class="nav-text">代价函数cost_function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%92%8C%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="nav-number">1.3.</span> <span class="nav-text">梯度下降和反向传播</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%90%E8%97%8F%E5%B1%82"><span class="nav-number">1.5.</span> <span class="nav-text">隐藏层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keras%E6%A1%86%E6%9E%B6"><span class="nav-number">1.6.</span> <span class="nav-text">Keras框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Anaconda%E5%AE%89%E8%A3%85Keras"><span class="nav-number">1.6.1.</span> <span class="nav-text">Anaconda安装Keras</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%A0%81"><span class="nav-number">1.6.2.</span> <span class="nav-text">具体使用代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-DeepLearning"><span class="nav-number">1.7.</span> <span class="nav-text">深度学习 DeepLearning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="nav-number">1.8.</span> <span class="nav-text">卷积神经网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E5%88%9D%E6%AD%A5%EF%BC%8C%E4%BD%BF%E7%94%A8mnist%E6%95%B0%E6%8D%AE%E9%9B%86%E8%BF%9B%E8%A1%8C%E8%AE%AD%E7%BB%83%EF%BC%8C%E6%9C%AA%E9%87%87%E7%94%A8%E5%8D%B7%E7%A7%AF"><span class="nav-number">1.8.1.</span> <span class="nav-text">图像识别初步，使用mnist数据集进行训练，未采用卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LeNet-5%EF%BC%88%E7%BB%8F%E5%85%B8%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%89%E5%A4%8D%E7%8E%B0"><span class="nav-number">1.8.2.</span> <span class="nav-text">LeNet-5（经典卷积神经网络）复现</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Hw-lin"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Hw-lin</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hw-lin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">55k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">50 分钟</span>
+</div>
+
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* 
+      Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+      year - 作为date对象的年份，为4位年份值
+      month - 0-11之间的整数，做为date对象的月份
+      day - 1-31之间的整数，做为date对象的天数
+      hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+      minutes - 0-59之间的整数，做为date对象的分钟数
+      seconds - 0-59之间的整数，做为date对象的秒数
+      microseconds - 0-999之间的整数，做为date对象的毫秒数
+     */
+		var t1 = Date.UTC(2021,06,22,00,00,00); //北京时间2021-6-22 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}
+	siteTime();
+</script>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
