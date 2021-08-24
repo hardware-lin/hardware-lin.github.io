@@ -1191,8 +1191,8 @@ $$
 <h2 id="检查路径"><a href="#检查路径" class="headerlink" title="检查路径"></a>检查路径</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%checkPath.m</span><br><span class="line">function feasible=checkPath(n,newPos,map)</span><br><span class="line">feasible=true;</span><br><span class="line">dir=atan2(newPos(1)-n(1),newPos(2)-n(2));</span><br><span class="line">for r=0:0.5:sqrt(sum((n-newPos).^2))</span><br><span class="line">    posCheck=n+r.*[sin(dir) cos(dir)];</span><br><span class="line">    if ~(feasiblePoint(ceil(posCheck),map) &amp;&amp; feasiblePoint(floor(posCheck),map) &amp;&amp; ... </span><br><span class="line">            feasiblePoint([ceil(posCheck(1)) floor(posCheck(2))],map) &amp;&amp; feasiblePoint([floor(posCheck(1)) ceil(posCheck(2))],map))</span><br><span class="line">        feasible=false;break;</span><br><span class="line">    end</span><br><span class="line">    if ~feasiblePoint(newPos,map), feasible=false; end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
 
 <h2 id="可达点"><a href="#可达点" class="headerlink" title="可达点"></a>可达点</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%feasiblePoint.m</span><br><span class="line">%判断可达性。</span><br><span class="line">function feasible=feasiblePoint(point,map)</span><br><span class="line">feasible=true;</span><br><span class="line">% check if collission-free spot and inside maps</span><br><span class="line">if ~(point(1)&gt;=1 &amp;&amp; point(1)&lt;=size(map,1) &amp;&amp; point(2)&gt;=1 &amp;&amp; point(2)&lt;=size(map,2) &amp;&amp; map(point(1),point(2))==1)</span><br><span class="line">    feasible=false;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p>![路径](C:\TMP\WeChat Files\503f38f022267988b10f3e86a97f0c1.png)</p>
-<p>![最终效果](C:\TMP\WeChat Files\277135c247cf4ecedaf4a4d04c90bfd.png)</p>
+
+
 ]]></content>
       <categories>
         <category>Robotics</category>
